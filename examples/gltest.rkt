@@ -42,13 +42,23 @@
 
   ; draw our exciting WHITE RECTANGLE!!!
   (glClear GL_COLOR_BUFFER_BIT)
-  (glBegin GL_QUADS)
-  (glVertex2dv (f64vector -0.5 -0.5)) ; wow, we can even specify a vector!
-  (glVertex2d 0.5 -0.5)
-  (glVertex2d 0.5 0.5)
-  (glVertex2d -0.5 0.5)
-  (glEnd))
+  ; the coordinates
+  (define vertex-array
+    (f64vector -0.5 -0.5
+               0.5 -0.5
+               0.5 0.5
+               -0.5 0.5))
 
+  ; Let's be "modern" and use the array functions (introduced in OpenGL 1.1).
+  ; Note that you need to ask GL everything 3 times:
+  ; 1. Here is an array I'd like you to draw...
+  (glVertexPointer 2 (gl-vector->type vertex-array) 0 (f64vector->cpointer vertex-array))
+  ; 2. Yes, I really want you to use it, I was not simply fooling around.
+  (glEnableClientState GL_VERTEX_ARRAY)
+  ; 3. Allright, now draw the silly thing already!
+  (glDrawArrays GL_QUADS 0 4)
+  ; Clean up state.
+  (glDisableClientState GL_VERTEX_ARRAY))
 
 (define gl-canvas% 
   (class canvas%
