@@ -1,0 +1,15 @@
+# Generated Racket file
+gl_specs.rkt
+# Generated files
+generated/
+# Compiled filed
+compiled/
+doc/
+# Vim backup files
+*~
+# Vim swap files
+.*.swp
+#Generated docs
+*.html
+*.css
+*.js

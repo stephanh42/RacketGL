@@ -6,7 +6,9 @@
 (define-struct function-spec
                (name
                 (params #:mutable)
-                (return #:mutable)))
+                (return #:mutable)
+                (version #:mutable)
+                (deprecated #:mutable)))
 
 (define-struct mode-dependent-type (in out))
 
@@ -22,6 +24,21 @@
       (_int64 . _s64vector)
       (_float . _f32vector)
       (_double* . _f64vector))))
+
+(define vector-to-contract
+  (make-hash
+    '(
+      (_bytes . bytes?)
+      (_s8vector . s8vector?)
+      (_u16vector . u16vector?)
+      (_s16vector . s16vector?)
+      (_u32vector . u32vector?)
+      (_s32vector . s32vector?)
+      (_u64vector . u64vector?)
+      (_s64vector . s64vector?)
+      (_f32vector . f32vector?)
+      (_f64vector . f64vector?))))
+
 
 (define (pointer-to type . args)
   (if (and (equal? args '(1)) (not (eq? type '_void)))
@@ -155,7 +172,7 @@
 
     (define (new-function m)
       (let* ((name (list-ref m 1))
-             (spec (function-spec name '() #f)))
+             (spec (function-spec name '() #f #f #f)))
         (set! result (cons spec result))
         (set! current-function-spec spec)))
 
@@ -170,15 +187,23 @@
       (let ((return-type (list-ref m 1)))
         (set-function-spec-return! current-function-spec return-type)))
 
+    (define (handle-version m)
+      (set-function-spec-version! current-function-spec (list-ref m 1)))
+
+    (define (handle-deprecated m)
+      (set-function-spec-deprecated! current-function-spec (list-ref m 1)))
+
     (for ((l (in-lines input-port)))
          (cond
            ((regexp-match #px"^([a-zA-Z0-9_]+)\\(.*\\)" l) => new-function)
            ((regexp-match #px"^\\s+return\\s+(\\S+)" l) => handle-return)
+           ((regexp-match #px"^\\s+version\\s+([0-9.]+)" l) => handle-version)
+           ((regexp-match #px"^\\s+deprecated\\s+([0-9.]+)" l) => handle-deprecated)
            ((regexp-match #px"^\\s+param\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)(?:\\s+\\[(.*)\\])?" l) => handle-param)))
 
-    result))
+    (reverse result)))
 
-(define type-map (make-hash (call-with-input-file "gl.tm" read-type-map)))
+(define type-map (make-hash (call-with-input-file "specfiles/gl.tm" read-type-map)))
 
 (hash-set! type-map "void" "GLvoid")
 
@@ -234,6 +259,7 @@
 (define (sanitize name)
   (if (eq? name 'values) 'the-values name))
 
+; return function type and arity
 (define (to-ffi-fun funspec)
   (let* ((params (map 
                    (lambda (p)
@@ -241,16 +267,19 @@
                            ': (to-ffi-type p)))
                    (function-spec-params funspec)))
          (output-params (map car (filter (lambda (p) (output-type? (list-ref p 2))) params)))
-         (rettype (return-to-ffi-type (function-spec-return funspec))))
-    (cond
-      ((null? output-params)
-       `(,@params -> ,rettype))
-      ((eq? rettype '_void)
-       (if (= 1 (length output-params))
-         `(,@params -> ,rettype -> ,(car output-params))
-         `(,@params -> ,rettype -> (values ,@ output-params))))
-      (else
-       `(,@params -> (result : ,rettype) -> (values result ,@ output-params))))))
+         (rettype (return-to-ffi-type (function-spec-return funspec)))
+         (arity (- (length params) (length output-params))))
+    (values
+      (cond
+        ((null? output-params)
+         `(,@params -> ,rettype))
+        ((eq? rettype '_void)
+         (if (= 1 (length output-params))
+           `(,@params -> ,rettype -> ,(car output-params))
+           `(,@params -> ,rettype -> (values ,@ output-params))))
+        (else
+          `(,@params -> (result : ,rettype) -> (values result ,@ output-params))))
+      arity)))
 
 
 (define (select-mode t mode)
@@ -274,9 +303,119 @@
      (or (contains-string? (car expr)) (contains-string? (cdr expr))))
     (else #f)))
 
-(call-with-input-file "enum.spec" read-enums)
+(define (cleanup-type-for-doc type)
+  (cond
+    ((list? type)
+     (let ((head (car type)))
+       (case head
+         ((_ptr) (cleanup-type-for-doc (list-ref type 2)))
+         ((_vector) `(vectorof ,(cleanup-type-for-doc (list-ref type 2))))
+         (else
+           (hash-ref vector-to-contract head type)))))
+    ((symbol? type)
+     (case type
+       ((_void) 'void?)
+       ((_int8) '(integer-in -128 127))
+       ((_uint8) '(integer-in 0 255))
+       ((_int16) '(integer-in -32768 32767))
+       ((_uint16) '(integer-in 0 65535))
+       ((_int32 _intptr _int64) 'exact-integer?)
+       ((_uint32 _uint64) 'exact-nonnegative-integer?)
+       ((_float) 'flonum?)
+       ((_double*) 'real?)
+       ((_bool) 'boolean?)
+       ((_pointer) 'cpointer?)
+       ((_string*/utf-8) '(or/c string? bytes?))
+       (else 
+         (hash-ref vector-to-contract type type))))
+    (else type)))
 
-(for ((spec (in-list (call-with-input-file "gl.spec" read-function-specs))))
-     (let ((fun-t (to-ffi-fun spec)))
-       (when (contains-string? fun-t) (display "; "))
-       (printf "(define-gl gl~a ~s)~%" (function-spec-name spec) fun-t)))
+(define (fun-type->doc fun-type)
+  (define (scan-inputs fun-type inputs outputs)
+    (let ((head (car fun-type)))
+      (cond
+        ((eq? head '->)
+         (values (reverse inputs) 
+                 (scan-outputs (cdr fun-type) outputs)))
+        (else
+          (let* ((name (car head))
+                 (type (list-ref head 2))
+                 (clean-type (cleanup-type-for-doc type)))
+            (if (output-type? type)
+              (scan-inputs (cdr fun-type) inputs (cons (cons name clean-type) outputs))
+              (scan-inputs (cdr fun-type)
+                       (cons (list name clean-type) inputs)
+                       outputs)))))))
+
+  (define (process-outputs output output-assoc)
+    (cond
+      ((assq output output-assoc) => cdr)
+      (else 'any/c)))
+
+  (define (named-type? expr)
+    (and (list? expr) (= (length expr) 3) (eq? (list-ref expr 1) ':)))
+
+  (define (scan-outputs fun-type output-assoc)
+    (let* ((ret-type (car fun-type))
+           (ret-type (if (named-type? ret-type) (list-ref ret-type 2) ret-type))
+           (ret-type (cleanup-type-for-doc ret-type))
+           (ret-expr (if (= (length fun-type) 3)
+                       (list-ref fun-type 2)
+                       #f))
+           (output-assoc (cons (cons 'result ret-type) output-assoc)))
+    (cond
+      ((not ret-expr) 
+       (if (eq? ret-type 'void?) 'any ret-type))
+      ((and (pair? ret-expr) (eq? (car ret-expr) 'values))
+       (cons
+         'values
+         (map (lambda (o) (process-outputs o output-assoc)) (cdr ret-expr))))
+      (else (process-outputs ret-expr output-assoc)))))
+
+  (scan-inputs fun-type '() '()))
+
+(define (print-doc port name fun-type spec)
+  (let-values (((args-doc return-doc) (fun-type->doc fun-type)))
+    (fprintf port "@defproc[~s ~s]~%" 
+             (cons (string->symbol (string-append "gl" name)) args-doc) 
+             return-doc)
+    (when (function-spec-deprecated spec)
+      (fprintf port "Deprecated in version ~a.~%" (function-spec-deprecated spec)))
+;   (fprintf port "See the @hyperlink[\"http://www.opengl.org/sdk/docs/man4/xhtml/gl~a.xml\"]{gl~a manpage}.~%"
+;            name name)
+    ))
+
+(define (print-doc-header doc-port version)
+  (fprintf doc-port "#lang scribble/manual~%")
+  (fprintf doc-port "@title{OpenGL version ~a}~%" version))
+
+(define get-doc-port
+  (let ((doc-hash (make-hash)))
+    (lambda (version)
+      (hash-ref doc-hash version
+                (lambda ()
+                  (let ((port (open-output-file (format "generated/gl_specs~a.scrbl" version)
+                                                #:exists 'replace)))
+                    (print-doc-header port version)
+                    (hash-set! doc-hash version port)
+                    port))))))
+
+(define (fun-type->contract fun-type)
+  (let-values (((args-doc return-doc) (fun-type->doc fun-type)))
+    `(->> ,@(map cadr args-doc) ,return-doc)))
+
+
+(call-with-input-file "specfiles/enum.spec" read-enums)
+
+
+(for ((spec (in-list (call-with-input-file "specfiles/gl.spec" read-function-specs))))
+  (let-values (((fun-t arity) (to-ffi-fun spec))
+               ((name) (function-spec-name spec)))
+
+    (if (contains-string? fun-t) 
+      (display "; ")
+      (when (not (regexp-match #px"[A-Z]$" name))
+        (let ((doc-port (get-doc-port (function-spec-version spec))))
+          (print-doc doc-port name fun-t spec))))
+
+    (printf "(define-gl gl~a ~s ~s ~s)~%" name arity fun-t (fun-type->contract fun-t))))

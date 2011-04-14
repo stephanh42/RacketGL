@@ -30,15 +30,15 @@
 ;; See "http://www.neilvandyke.org/opengl-plt/" for more information.
 ;;
 ;; Updated to newer sgl interface by Scott Owens
+;; Modified to rgl interface by Stephan Houben
 
 #lang racket/gui
 
-(require "rgl.rkt" ffi/vector)
+(require (planet stephanh/rgl:1:0/rgl)
+         ffi/vector)
 
 
 (define controls? #t)
-
-(define (f32vector-make . args) (list->f32vector args))
 
 (define gears-canvas%
   (class* canvas% ()
@@ -248,7 +248,7 @@
          (glLoadIdentity)
          (glTranslated 0.0 0.0 -40.0)
 
-         (glLightfv GL_LIGHT0 GL_POSITION (f32vector-make 5.0 5.0 10.0 0.0))
+         (glLightfv GL_LIGHT0 GL_POSITION (f32vector 5.0 5.0 10.0 0.0))
          (glEnable GL_CULL_FACE)
          (glEnable GL_LIGHTING)
          (glEnable GL_LIGHT0)
@@ -260,7 +260,7 @@
            (glNewList gear1 GL_COMPILE)
            (glMaterialfv GL_FRONT
                            GL_AMBIENT_AND_DIFFUSE
-                           (f32vector-make 0.8 0.1 0.0 1.0))
+                           (f32vector 0.8 0.1 0.0 1.0))
            (build-gear 1.0 4.0 1.0 20 0.7)
            (glEndList)
 
@@ -268,7 +268,7 @@
            (glNewList gear2 GL_COMPILE)
            (glMaterialfv GL_FRONT
                            GL_AMBIENT_AND_DIFFUSE
-                           (f32vector-make 0.0 0.8 0.2 1.0))
+                           (f32vector 0.0 0.8 0.2 1.0))
            (build-gear 0.5 2.0 2.0 10 0.7)
            (glEndList)
 
@@ -276,7 +276,7 @@
            (glNewList gear3 GL_COMPILE)
            (glMaterialfv GL_FRONT
                            GL_AMBIENT_AND_DIFFUSE
-                           (f32vector-make 0.2 0.2 1.0 1.0))
+                           (f32vector 0.2 0.2 1.0 1.0))
            (build-gear 1.3 2.0 0.5 10 0.7)
            (glEndList)
 

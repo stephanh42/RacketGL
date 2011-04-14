@@ -1,6 +1,9 @@
-#lang racket
+#lang racket/base
 
-(require ffi/unsafe ffi/vector ffi/cvector)
+(require 
+  racket/promise racket/future racket/include racket/set 
+  (rename-in racket/contract (-> ->>))
+  ffi/unsafe ffi/vector)
 
 (define stype (system-type))
 
@@ -51,32 +54,35 @@
                        (function-ptr ptr type))
                      (make-undefined-procedure name))))))
 
-
-; For Windows, lazy MUST be #t since the actual lookup with getProcAddress
-; can only be done once a GL context is bound.
-; For X, it can be #f if you are so inclined.
-(define lazy #t)
-
-(define (create-gl-procedure name type)
-  (if lazy
-    (let ((proc (delay (lookup-gl-procedure name type))))
-      (lambda args (apply (force proc) args)))
-    (lookup-gl-procedure name type)))
+; Load everything lazily.
+; This speeds things up in general and is essential on Windows
+; where GL procedures can only be looked up once a GL context is bound.
+(define (create-gl-procedure name arity type)
+  (let ((proc (delay (lookup-gl-procedure name type))))
+    (procedure-rename
+      (procedure-reduce-arity
+        (lambda args (apply (force proc) args))
+        arity)
+      name)))
 
 (define-syntax define-gl
   (syntax-rules ()
-   ((_ name (type ...))
+   ((_ name arity (type ...) contract)
     (begin
-      (define name (create-gl-procedure 'name (_fun* type ...)))
-      (provide name)))))
+      (define name (create-gl-procedure 'name arity (_fun* type ...)))
+      (provide/contract (name contract))))))
 
-(include "gl_specs.rkt")
+(include "generated/gl_specs.rkt")
 
 (define (split-spaces str)
   (regexp-split #px"\\s+" str))
 
 ;; Query information in a convenient way.
-(provide gl-version gl-extensions gl-has-extension?)
+;(provide gl-version gl-extensions gl-has-extension?)
+(provide/contract 
+  (gl-version (->> (listof exact-integer?)))
+  (gl-extensions (->> set-eq?))
+  (gl-has-extension? (->> symbol? boolean?)))
 
 (define gl-version
   (let ((version 
@@ -94,3 +100,26 @@
 
 (define (gl-has-extension? ext)
   (set-member? (gl-extensions) ext))
+
+; A "gl-vector" is any homogenous vector of a type which is used with the OpenGL API.
+(provide/contract (gl-vector? (->> any/c boolean?)))
+
+(define (gl-vector? obj)
+  (or (bytes? obj) (s8vector? obj) (u16vector? obj) (s16vector? obj)
+      (u32vector? obj) (s32vector? obj) (f32vector? obj) (f64vector? obj)))
+
+
+;; Get the appropriate type enum for a Racket vector.
+;; Useful for glVertexPointer and friends.
+(provide/contract (gl-vector->type (->> gl-vector? exact-integer?)))
+
+(define (gl-vector->type vec)
+  (cond
+    ((bytes? vec) GL_UNSIGNED_BYTE)
+    ((s8vector? vec) GL_BYTE)
+    ((u16vector? vec) GL_UNSIGNED_SHORT)
+    ((s16vector? vec) GL_SHORT)
+    ((u32vector? vec) GL_UNSIGNED_INT)
+    ((s32vector? vec) GL_INT)
+    ((f32vector? vec) GL_FLOAT)
+    ((f64vector? vec) GL_DOUBLE)))
