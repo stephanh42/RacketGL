@@ -72,7 +72,7 @@
       (define name (create-gl-procedure 'name arity (_fun* type ...)))
       (provide/contract (name contract))))))
 
-(include "generated/gl_specs.rkt")
+(include "generated/gl_specs.inc")
 
 (define (split-spaces str)
   (regexp-split #px"\\s+" str))

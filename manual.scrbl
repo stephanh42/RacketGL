@@ -2,7 +2,7 @@
 
 @title{The RacketGL library}
 
-@defmodule[(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 0)))]
+@defmodule[(planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 1))]
 
 The RacketGL library is an automatically-generated wrapper
 around the OpenGL library.

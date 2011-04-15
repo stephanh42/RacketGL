@@ -4,7 +4,7 @@
 
 #lang racket/gui
 
-(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 0)))
+(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 1)))
 (require ffi/vector)
 
 (define frame 
