@@ -10,6 +10,15 @@
                 (version #:mutable)
                 (deprecated #:mutable)))
 
+(define-struct constant-spec
+               (name
+                (value #:mutable)))
+
+(define-struct enum-spec
+               (name
+                 type
+                 (constants #:mutable)))
+
 (define-struct mode-dependent-type (in out))
 
 (define type-to-vector
@@ -129,10 +138,58 @@
 
     result))
 
+(define type-map (make-hash (call-with-input-file "specfiles/gl.tm" read-type-map)))
+(hash-set! type-map "void" "GLvoid")
+
+(define (print-enum spec)
+  (let ((name (enum-spec-name spec))
+        (vals (for/list ((cs (in-list (enum-spec-constants spec)))
+                         #:when (constant-spec-value cs))
+                        (string->symbol (format "GL_~a" (constant-spec-name cs))))))
+    (printf "(define gl~a? ~s)~%"
+            name
+            `(let ((s (seteqv ,@vals))) (lambda (v) (set-member? s v))))))
+
+(define (print-bitfield spec)
+  (let ((name (enum-spec-name spec))
+        (vals (for/list ((cs (in-list (enum-spec-constants spec)))
+                         #:when (constant-spec-value cs))
+                        (string->symbol (format "GL_~a" (constant-spec-name cs))))))
+    (printf "(define gl~a? ~s)~%"
+            name
+            `(let ((m (bitwise-ior ,@vals)))
+               (lambda (v) (and (exact-nonnegative-integer? v) (= v (bitwise-and v m))))))))
+
 (define (read-enums input-port)
 
   (let ((visited (set))
-        (pname-map (make-hasheqv)))
+        (pname-map (make-hasheqv))
+        (constants (make-hash))
+        (enums (make-hash))
+        (current-enum #f))
+
+    (define (get-constant-spec name)
+      (hash-ref constants name
+                (lambda ()
+                  (let ((new-spec (constant-spec name #f)))
+                    (hash-set! constants name new-spec)
+                    new-spec))))
+
+    (define (define-enum name)
+      (let ((spec (hash-ref enums name
+                            (lambda ()
+                              (let ((type (hash-ref type-map name #f)))
+                                (if (or (equal? type "GLenum") (equal? type "GLbitfield"))
+                                  (let ((new-spec (enum-spec name type '())))
+                                    (hash-set! enums name new-spec)
+                                    new-spec)
+                                  #f))))))
+        (set! current-enum spec)))
+
+    (define (add-to-current-enum cs)
+      (when current-enum
+        (set-enum-spec-constants! current-enum (cons cs (enum-spec-constants current-enum)))))
+
 
     (define (parse-pname enum line)
       (cond
@@ -140,30 +197,51 @@
          => (lambda (m) (hash-set! pname-map (string->number enum) 
                                    (string->number (list-ref m 1)))))))
 
-    (define (define-enum name value line)
+    (define (define-constant name value line)
       (unless (set-member? visited name)
         (printf "(define GL_~a ~a)~%" name value)
         (printf "(provide GL_~a)~%" name)
         (set! visited (set-add visited name))
+        (let ((cs (get-constant-spec name)))
+          (set-constant-spec-value! cs value)
+          (add-to-current-enum cs))
         (parse-pname value line)))
 
 
     (for ((l (in-lines input-port)))
          (cond
+           ((regexp-match #px"^\\s*([a-zA-Z0-9_]+)\\s+enum:" l)
+            =>
+            (lambda (m)
+              (define-enum (list-ref m 1))))
+
+           ((regexp-match #px"^\\s*use\\s+([a-zA-Z0-9_]+)\\s+([a-zA-Z0-9_]+)" l)
+            =>
+            (lambda (m)
+              (add-to-current-enum (get-constant-spec (list-ref m 2)))))
+ 
            ((regexp-match #px"^\\s+([a-zA-Z0-9_]+)\\s*=\\s*([0-9]+)\\s*(#.*)?$" l)
             =>
             (lambda (m)
-              (define-enum (list-ref m 1) (list-ref m 2) l)))
+              (define-constant (list-ref m 1) (list-ref m 2) l)))
 
            ((regexp-match #px"^\\s+([a-zA-Z0-9_]+)\\s*=\\s*0[xX]([0-9a-fA-F]+)\\s*(#.*)?$" l)
             =>
             (lambda (m)
-              (define-enum (list-ref m 1) (string-append "#x" (list-ref m 2)) l)))))
+              (define-constant (list-ref m 1) (string-append "#x" (list-ref m 2)) l)))))
 
     (printf "~s~%"
             `(define pname-map (make-immutable-hasheqv
-                                 ',(for/list (((k v) (in-hash pname-map))) `(,k . ,v)))))))
+                                 ',(for/list (((k v) (in-hash pname-map))) `(,k . ,v)))))
 
+    (for (((k v) (in-hash enums)))
+         (let ((type (enum-spec-type v)))
+           (cond
+             ((equal? type "GLenum") (print-enum v))
+             ((equal? type "GLbitfield") (print-bitfield v)))
+           (printf "(provide gl~a?)~%" k)))
+
+    enums))
 
 
 (define (read-function-specs input-port)
@@ -203,12 +281,14 @@
 
     (reverse result)))
 
-(define type-map (make-hash (call-with-input-file "specfiles/gl.tm" read-type-map)))
-
-(hash-set! type-map "void" "GLvoid")
+(define enums
+  (call-with-input-file "specfiles/enum.spec" read-enums))
 
 (define (base-to-ffi-type type)
   (cond
+    ((hash-ref enums type #f) 
+     =>
+     (lambda (t2) t2))
     ((hash-ref type-map type #f)
      =>
      (lambda (t2) (hash-ref basic-type-map t2 t2)))
@@ -303,8 +383,19 @@
      (or (contains-string? (car expr)) (contains-string? (cdr expr))))
     (else #f)))
 
+(define (cleanup-type-for-ffi type)
+  (cond
+    ((pair? type)
+     (cons (cleanup-type-for-ffi (car type))
+           (cleanup-type-for-ffi (cdr type))))
+    ((enum-spec? type)
+     (base-to-ffi-type (enum-spec-type type)))
+    (else type)))
+
 (define (cleanup-type-for-doc type)
   (cond
+    ((enum-spec? type)
+     (string->symbol (format "gl~a?" (enum-spec-name type))))
     ((list? type)
      (let ((head (car type)))
        (case head
@@ -405,17 +496,16 @@
     `(->> ,@(map cadr args-doc) ,return-doc)))
 
 
-(call-with-input-file "specfiles/enum.spec" read-enums)
-
 
 (for ((spec (in-list (call-with-input-file "specfiles/gl.spec" read-function-specs))))
-  (let-values (((fun-t arity) (to-ffi-fun spec))
-               ((name) (function-spec-name spec)))
+  (let*-values (((fun-t arity) (to-ffi-fun spec))
+                ((name) (function-spec-name spec))
+                ((fun-t-ffi) (cleanup-type-for-ffi fun-t)))
 
-    (if (contains-string? fun-t) 
+    (if (contains-string? fun-t-ffi) 
       (display "; ")
       (when (not (regexp-match #px"[A-Z]$" name))
         (let ((doc-port (get-doc-port (function-spec-version spec))))
           (print-doc doc-port name fun-t spec))))
 
-    (printf "(define-gl gl~a ~s ~s ~s)~%" name arity fun-t (fun-type->contract fun-t))))
+    (printf "(define-gl gl~a ~s ~s ~s)~%" name arity fun-t-ffi (fun-type->contract fun-t))))
