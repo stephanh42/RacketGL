@@ -31,6 +31,7 @@
 
     (define x-rotation 0)
     (define y-rotation 0)
+    (define zoom 1)
  
     (define/override (on-paint)
       (with-gl-context               
@@ -41,6 +42,7 @@
           (glClearColor 0.0 0.0 0.3 0.0) ; darkish blue
           (glClear (bitwise-ior GL_COLOR_BUFFER_BIT GL_DEPTH_BUFFER_BIT))
           (glPushMatrix)
+          (glScaled zoom zoom zoom)
           (glRotated y-rotation 1 0 0)
           (glRotated x-rotation 0 1 0)
           (draw)
@@ -64,11 +66,32 @@
                  (refresh)))))
           ((left-up)
            (set! handle-motion void))
-          ((motion) (handle-motion x y)))))))
+          ((motion) (handle-motion x y)))))
+
+    (define/override (on-char event)
+      (case (send event get-key-code)
+        ((#\+) (set! zoom (* zoom 4/3)) (refresh))
+        ((#\-) (set! zoom (/ zoom 4/3)) (refresh))
+        ((wheel-up) (set! zoom (* zoom 9/8)) (refresh))
+        ((wheel-down) (set! zoom (/ zoom 9/8)) (refresh))))))
 
 
-
-
+(define (show-gl-info frame canvas)
+  (let-values (((renderer version vendor)
+                (send canvas with-gl-context
+                      (lambda () 
+                        (values
+                          (glGetString GL_RENDERER)
+                          (glGetString GL_VERSION)
+                          (glGetString GL_VENDOR))))))
+    (define label
+      (format "RENDERER: ~a~%VERSION: ~a~%VENDOR: ~a"
+              renderer version vendor))
+    (define dialog (new dialog% [parent frame] [label "OpenGL info"]))          
+    (define msg (new message%
+                     [parent dialog]
+                     [label label]))
+    (send dialog show #t)))
 
 
 (define (view draw (setup void))
@@ -78,10 +101,20 @@
          [width 300]
          [height 300]))
 
+  (define menubar
+    (new menu-bar% [parent frame]))
+
+  (define help-menu
+    (new menu% [parent menubar] [label "&Help"]))
+
   (define c
     (new gl-viewer% 
          (style '(gl no-autoclear)) 
          (parent frame) 
          (draw draw) (setup setup)))
+
+  (define gl-info-item
+    (new menu-item% [parent help-menu] [label "GL info"]
+         [callback (lambda (i e) (show-gl-info frame c))]))
 
   (send frame show #t))
