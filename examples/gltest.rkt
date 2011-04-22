@@ -6,12 +6,7 @@
 
 (require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 1)))
 (require ffi/vector)
-
-(define frame 
-  (new frame% 
-       [label "Example"]
-       [width 300]
-       [height 300]))
+(require "viewer.rkt")
 
 (define (print-info)
   ; print available extensions
@@ -31,16 +26,7 @@
     (printf "glGet on GL_VERTEX_ARRAY = ~s~%" (s32vector-ref v 0))))
  
 
-(define first-call #t)
-
 (define (draw)
-  ; print some info on the first call
-  (when first-call
-    (set! first-call #f)
-    (print-info))
-
-  ; draw our exciting WHITE RECTANGLE!!!
-  (glClear GL_COLOR_BUFFER_BIT)
   ; the coordinates
   (define vertex-array
     (f64vector -0.5 -0.5
@@ -59,21 +45,6 @@
   ; Clean up state.
   (glDisableClientState GL_VERTEX_ARRAY))
 
-(define gl-canvas% 
-  (class canvas%
-    (super-new)
-    (inherit with-gl-context swap-gl-buffers)
-
-    (define/override (on-paint)     
-      (with-gl-context (lambda () (draw)))
-      (swap-gl-buffers))))
 
 
-(define c
-  (new gl-canvas%
-     [style '(gl)]  ; if you don't specify style gl it won't work
-     [parent frame]))
-
-(send c set-canvas-background (send the-color-database find-color "black"))
-
-(send frame show #t)
+(view draw print-info)

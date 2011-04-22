@@ -81,7 +81,7 @@
       (cons "GLshort" '_int16)
       (cons "GLvoid" '_void)
       (cons "const GLubyte *" (pointer-to '_uint8))
-      ;    (cons "GLsync" _GLsync)
+      (cons "GLsync" '_pointer)
       ;    (cons "GLhandleARB" _GLhandleARB)
       (cons "GLboolean" '_bool)
       (cons "struct _cl_event *" '_pointer)
@@ -146,19 +146,18 @@
         (vals (for/list ((cs (in-list (enum-spec-constants spec)))
                          #:when (constant-spec-value cs))
                         (string->symbol (format "GL_~a" (constant-spec-name cs))))))
-    (printf "(define gl~a? ~s)~%"
+    (printf "(define-enum gl~a? ~s)~%"
             name
-            `(let ((s (seteqv ,@vals))) (lambda (v) (set-member? s v))))))
+            vals)))
 
 (define (print-bitfield spec)
   (let ((name (enum-spec-name spec))
         (vals (for/list ((cs (in-list (enum-spec-constants spec)))
                          #:when (constant-spec-value cs))
                         (string->symbol (format "GL_~a" (constant-spec-name cs))))))
-    (printf "(define gl~a? ~s)~%"
+    (printf "(define-bitfield gl~a? ~s)~%"
             name
-            `(let ((m (bitwise-ior ,@vals)))
-               (lambda (v) (and (exact-nonnegative-integer? v) (= v (bitwise-and v m))))))))
+            vals)))
 
 (define (read-enums input-port)
 
@@ -191,10 +190,10 @@
         (set-enum-spec-constants! current-enum (cons cs (enum-spec-constants current-enum)))))
 
 
-    (define (parse-pname enum line)
+    (define (parse-pname name line)
       (cond
         ((regexp-match #px"#\\s+([0-9]+)\\s+" line)
-         => (lambda (m) (hash-set! pname-map (string->number enum) 
+         => (lambda (m) (hash-set! pname-map (string->symbol (format "GL_~a" name))
                                    (string->number (list-ref m 1)))))))
 
     (define (define-constant name value line)
@@ -205,7 +204,7 @@
         (let ((cs (get-constant-spec name)))
           (set-constant-spec-value! cs value)
           (add-to-current-enum cs))
-        (parse-pname value line)))
+        (parse-pname name line)))
 
 
     (for ((l (in-lines input-port)))
@@ -231,15 +230,17 @@
               (define-constant (list-ref m 1) (string-append "#x" (list-ref m 2)) l)))))
 
     (printf "~s~%"
-            `(define pname-map (make-immutable-hasheqv
-                                 ',(for/list (((k v) (in-hash pname-map))) `(,k . ,v)))))
+            `(define pname-map (hasheqv
+                                 ,@(for/list (((k v) (in-hash pname-map)) 
+                                              #:when (not (= v 1))
+                                              (y (list k v)))
+                                             y))))
 
     (for (((k v) (in-hash enums)))
          (let ((type (enum-spec-type v)))
            (cond
              ((equal? type "GLenum") (print-enum v))
-             ((equal? type "GLbitfield") (print-bitfield v)))
-           (printf "(provide gl~a?)~%" k)))
+             ((equal? type "GLbitfield") (print-bitfield v)))))
 
     enums))
 
@@ -303,7 +304,7 @@
         ((regexp-match #px"^([a-zA-Z]+)\\*([0-9]+)$" str) 
          =>
          (lambda (m) (list '* (string->symbol (list-ref m 1)) (string->number (list-ref m 2)))))
-        ((equal? str "COMPSIZE(pname)") '((hash-ref pname-map pname)))
+        ((equal? str "COMPSIZE(pname)") '((hash-ref pname-map pname 1)))
         (else 
           (printf "; Unparseable array size expression: ~a~%" str)
           '())))
@@ -497,7 +498,7 @@
 
 
 
-(for ((spec (in-list (call-with-input-file "specfiles/gl.spec" read-function-specs))))
+(for ((spec (in-list (call-with-input-file "specfiles/gl.spec.FIXED" read-function-specs))))
   (let*-values (((fun-t arity) (to-ffi-fun spec))
                 ((name) (function-spec-name spec))
                 ((fun-t-ffi) (cleanup-type-for-ffi fun-t)))

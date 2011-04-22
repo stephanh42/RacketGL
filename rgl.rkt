@@ -72,6 +72,23 @@
       (define name (create-gl-procedure 'name arity (_fun* type ...)))
       (provide/contract (name contract))))))
 
+(define-syntax define-enum
+  (syntax-rules ()
+   ((_ name (constants ...))
+    (begin
+      (define name (let ((s (seteqv constants ...)))
+                     (lambda (v) (set-member? s v))))
+      (provide/contract (name (->> any/c boolean?)))))))
+
+(define-syntax define-bitfield
+  (syntax-rules ()
+   ((_ name (constants ...))
+    (begin
+      (define name (let ((m (bitwise-ior constants ...)))
+                     (lambda (v) (= v (bitwise-and v m)))))
+      (provide/contract (name (->> any/c boolean?)))))))
+
+
 (include "generated/gl_specs.inc")
 
 (define (split-spaces str)
