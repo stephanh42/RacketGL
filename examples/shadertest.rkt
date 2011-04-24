@@ -8,35 +8,28 @@
 (require ffi/vector)
 (require "viewer.rkt")
 
-(define (check-gl-error where)
-  (let ((err (glGetError)))
-    (unless (= err GL_NO_ERROR)
-      (error "GL error:" where err))))
-
 
 (define (load-program-source shader port)
   (let* ((lines (for/vector ((line (in-lines port))) line))
          (sizes (for/list ((line (in-vector lines))) (string-length line)))
          (sizes (list->s32vector sizes)))
-   (glShaderSource shader (vector-length lines) lines sizes)
-   (check-gl-error 'glShaderSource)))
+   (glShaderSource shader (vector-length lines) lines sizes)))
 
 (define (load-program port)
   (let ((program (glCreateProgram))
         (shader (glCreateShader GL_FRAGMENT_SHADER)))
     (load-program-source shader port)
     (glCompileShader shader)
-    (check-gl-error 'glCompileShader)
     (glAttachShader program shader)
-    (check-gl-error 'glAttachShader)
     (glLinkProgram program)
-    (check-gl-error 'glLinkProgram)
     program))
 
 (define program #f)
 
 (define (setup)
-  (set! program (call-with-input-file "test.glsl" load-program)))
+  (if (gl-version-at-least? '(2 0))
+    (set! program (call-with-input-file "test.glsl" load-program))
+    (printf "This OpenGL does not support shaders, you'll get a plain white rectangle.~%")))
 
 (define (draw)
   ; the coordinates
@@ -53,8 +46,8 @@
                0 0.5))
 
 
-  (glUseProgram program)
-  (check-gl-error 'glUseProgram)
+  (when program
+    (glUseProgram program))
 
   ; Let's be "modern" and use the array functions (introduced in OpenGL 1.1).
   ; Note that you need to ask GL everything 3 times:
@@ -70,7 +63,8 @@
   ; Clean up state.
   (glDisableClientState GL_TEXTURE_COORD_ARRAY)
   (glDisableClientState GL_VERTEX_ARRAY)
-  (glUseProgram 0))
+  (when program
+    (glUseProgram 0)))
 
 
 

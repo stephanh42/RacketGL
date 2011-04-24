@@ -31,3 +31,22 @@ of the OpenGL C API.
 @include-section["generated/gl_specs3.1.scrbl"]
 @include-section["generated/gl_specs3.2.scrbl"]
 @include-section["generated/gl_specs4.1.scrbl"]
+
+@section{Additional utility procedures}
+
+@defproc[(gl-version) (listof exact-integer?)]{
+Returns the OpenGL version, as a list of exact integers.
+For example, version 3.1.2 would return a list (3 1 2).
+}
+
+@defproc[(gl-extensions) set-eq?]{
+  Returns the supported OpenGL extensions, as a set of symbols.
+}
+
+@defproc[(gl-has-extension? (extension symbol?)) boolean?]{
+  Checks whether the given extension is supported.
+}
+
+@defproc[(gl-version-at-least? (version (listof exact-integer?))) boolean?]{
+  Checks if the OpenGL version is at least the given version.
+}

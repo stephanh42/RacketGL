@@ -57,19 +57,22 @@
 ; Load everything lazily.
 ; This speeds things up in general and is essential on Windows
 ; where GL procedures can only be looked up once a GL context is bound.
-(define (create-gl-procedure name arity type)
+(define (create-gl-procedure name arity type checker)
   (let ((proc (delay (lookup-gl-procedure name type))))
     (procedure-rename
       (procedure-reduce-arity
-        (lambda args (apply (force proc) args))
+        (lambda args 
+          (begin0
+            (apply (force proc) args)
+            (checker name)))
         arity)
       name)))
 
 (define-syntax define-gl
   (syntax-rules ()
-   ((_ name arity (type ...) contract)
+   ((_ name arity (type ...) contract checker)
     (begin
-      (define name (create-gl-procedure 'name arity (_fun* type ...)))
+      (define name (create-gl-procedure 'name arity (_fun* type ...) checker))
       (provide/contract (name contract))))))
 
 (define-syntax define-enum
@@ -88,6 +91,21 @@
                      (lambda (v) (= v (bitwise-and v m)))))
       (provide/contract (name (->> any/c boolean?)))))))
 
+; Check GL result
+(define (check-gl-error name)
+  (unless between-begin-end
+    (let ((err (glGetError)))
+      (unless (zero? err)
+        (let ((msg (hash-ref error-messages err
+                             (lambda () (format "Error code ~s." err)))))
+          (error (format "OpenGL error in procedure ~a: ~a" name msg)))))))
+
+(define (check-gl-error-begin name)
+  (set! between-begin-end #t))
+
+(define (check-gl-error-end name)
+  (set! between-begin-end #f)
+  (check-gl-error name))
 
 (include "generated/gl_specs.inc")
 
@@ -99,7 +117,8 @@
 (provide/contract 
   (gl-version (->> (listof exact-integer?)))
   (gl-extensions (->> set-eq?))
-  (gl-has-extension? (->> symbol? boolean?)))
+  (gl-has-extension? (->> symbol? boolean?))
+  (gl-version-at-least? (->> (listof exact-integer?) boolean?)))
 
 (define gl-version
   (let ((version 
@@ -117,6 +136,21 @@
 
 (define (gl-has-extension? ext)
   (set-member? (gl-extensions) ext))
+
+(define (version>= v1 v2)
+  (cond
+    ((null? v2) #t)
+    ((null? v1) #f)
+    (else
+      (let ((n1 (car v1))
+            (n2 (car v2)))
+        (cond 
+          ((= n1 n2)
+           (version>= (cdr v1) (cdr v2)))
+          (else (> n1 n2)))))))
+
+(define (gl-version-at-least? version)
+  (version>= (gl-version) version))
 
 ; A "gl-vector" is any homogenous vector of a type which is used with the OpenGL API.
 (provide/contract (gl-vector? (->> any/c boolean?)))
@@ -140,3 +174,14 @@
     ((s32vector? vec) GL_INT)
     ((f32vector? vec) GL_FLOAT)
     ((f64vector? vec) GL_DOUBLE)))
+
+(define error-messages (hasheqv
+        GL_NO_ERROR "No error has been recorded."
+        GL_INVALID_ENUM "An unacceptable value is specified for an enumerated argument."
+        GL_INVALID_VALUE "A numeric  argument is out of range."
+        GL_INVALID_OPERATION "The specified operation is not allowed in the current state."
+        GL_STACK_OVERFLOW "This command would cause a stack overflow."
+        GL_STACK_UNDERFLOW "This command would cause a stack underflow."
+        GL_OUT_OF_MEMORY "There is not enough memory left to execute the command."))
+
+(define between-begin-end #f)

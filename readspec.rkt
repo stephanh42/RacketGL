@@ -1,5 +1,12 @@
 #lang racket
 
+; It would be really cool if we could do strict checking of
+; the enums. And in fact the info appears to be available in enum.spec
+; and I wrote the code to do it. But I quickly found out that enum.spec
+; is too buggy to be useful for that purpose. 
+; Eveything a C compiler doesn't check is likely to be unreliable in that file...
+(define strongly-typed-enums #f)
+
 (define-struct param-spec
                (name type mode shape size))
 
@@ -236,11 +243,12 @@
                                               (y (list k v)))
                                              y))))
 
-    (for (((k v) (in-hash enums)))
-         (let ((type (enum-spec-type v)))
-           (cond
-             ((equal? type "GLenum") (print-enum v))
-             ((equal? type "GLbitfield") (print-bitfield v)))))
+    (when strongly-typed-enums
+      (for (((k v) (in-hash enums)))
+           (let ((type (enum-spec-type v)))
+             (cond
+               ((equal? type "GLenum") (print-enum v))
+               ((equal? type "GLbitfield") (print-bitfield v))))))
 
     enums))
 
@@ -396,7 +404,9 @@
 (define (cleanup-type-for-doc type)
   (cond
     ((enum-spec? type)
-     (string->symbol (format "gl~a?" (enum-spec-name type))))
+     (if strongly-typed-enums
+       (string->symbol (format "gl~a?" (enum-spec-name type)))
+       (cleanup-type-for-doc (base-to-ffi-type (enum-spec-type type)))))
     ((list? type)
      (let ((head (car type)))
        (case head
@@ -497,6 +507,11 @@
     `(->> ,@(map cadr args-doc) ,return-doc)))
 
 
+(define name->checker
+  (hash 
+    "Begin" 'check-gl-error-begin
+    "End" 'check-gl-error-end
+    "GetError" 'void))
 
 (for ((spec (in-list (call-with-input-file "specfiles/gl.spec.FIXED" read-function-specs))))
   (let*-values (((fun-t arity) (to-ffi-fun spec))
@@ -509,4 +524,5 @@
         (let ((doc-port (get-doc-port (function-spec-version spec))))
           (print-doc doc-port name fun-t spec))))
 
-    (printf "(define-gl gl~a ~s ~s ~s)~%" name arity fun-t-ffi (fun-type->contract fun-t))))
+    (printf "(define-gl gl~a ~s ~s ~s ~s)~%" name arity fun-t-ffi (fun-type->contract fun-t)
+            (hash-ref name->checker name 'check-gl-error))))
