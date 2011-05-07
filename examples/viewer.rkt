@@ -1,3 +1,5 @@
+;; A simple viewer window for OpenGL.
+;; Allows user to rotate and zoom the scene.
 #lang racket/gui
 
 (require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 1)))
@@ -91,6 +93,12 @@
     (define msg (new message%
                      [parent dialog]
                      [label label]))
+    (define extensions-list (new list-box% 
+                                 [parent dialog] 
+                                 [label "EXTENSIONS:"]
+                                 [choices
+                                   (for/list ((ext (in-set (gl-extensions))))
+                                             (symbol->string ext))]))
     (send dialog show #t)))
 
 

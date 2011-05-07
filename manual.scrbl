@@ -4,11 +4,21 @@
 
 @defmodule[(planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 1))]
 
+@(require (for-label racket/gui/base))
+
 The RacketGL library is an automatically-generated wrapper
 around the OpenGL library.
 Being automatically-generated means that it is quite complete.
 It also means that the wrapping may not be as nice as a manual
 wrapping.
+
+Please note that these procedures are all very much @bold{unsafe};
+in particular, if you call any of them while no OpenGL context
+is active, you are almost certain to crash Racket.
+An OpenGL context is typically establised by using the
+@(xmethod canvas% with-gl-context) method.
+If you are running from within DrRacket, I would recommend
+to get used to saving your OpenGL program before running it.
 
 This document contains, for reference, the calling conventions
 for all the non-extension OpenGL procedures.
