@@ -96,6 +96,7 @@
     (define extensions-list (new list-box% 
                                  [parent dialog] 
                                  [label "EXTENSIONS:"]
+                                 [style '(single vertical-label)]
                                  [choices
                                    (for/list ((ext (in-set (gl-extensions))))
                                              (symbol->string ext))]))
