@@ -2,7 +2,7 @@
 ;; Allows user to rotate and zoom the scene.
 #lang racket/gui
 
-(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 1)))
+(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 2)))
 
 (provide view)
 

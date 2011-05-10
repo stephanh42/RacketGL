@@ -1,7 +1,7 @@
 ;; Example library which loads a bitmap into a texture.
 #lang racket/gui
 
-(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 1)))
+(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 2)))
 (require ffi/vector)
 
 (provide bitmap->texture load-texture)

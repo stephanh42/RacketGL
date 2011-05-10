@@ -4,7 +4,7 @@
 
 #lang racket/gui
 
-(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 1)))
+(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 2)))
 (require ffi/vector)
 (require "viewer.rkt")
 
@@ -37,7 +37,8 @@
   ; Let's be "modern" and use the array functions (introduced in OpenGL 1.1).
   ; Note that you need to ask GL everything 3 times:
   ; 1. Here is an array I'd like you to draw...
-  (glVertexPointer 2 (gl-vector->type vertex-array) 0 (f64vector->cpointer vertex-array))
+  (let-values (((type cptr) (gl-vector->type/cpointer vertex-array)))
+    (glVertexPointer 2 type 0 cptr))
   ; 2. Yes, I really want you to use it, I was not simply fooling around.
   (glEnableClientState GL_VERTEX_ARRAY)
   ; 3. Allright, now draw the silly thing already!

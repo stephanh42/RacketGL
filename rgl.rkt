@@ -162,18 +162,45 @@
 
 ;; Get the appropriate type enum for a Racket vector.
 ;; Useful for glVertexPointer and friends.
-(provide/contract (gl-vector->type (->> gl-vector? exact-integer?)))
+;; Also get length and cpointer in one operation.
+(provide/contract 
+  (gl-vector->type (->> gl-vector? exact-integer?))
+  (gl-vector->cpointer (->> gl-vector? cpointer?))
+  (gl-vector->length (->> gl-vector? exact-nonnegative-integer?))
+  (gl-vector->type/cpointer (->> gl-vector? (values exact-integer? cpointer?)))
+  (gl-vector->type/cpointer/length (->> gl-vector? (values exact-integer? cpointer? exact-nonnegative-integer?))))
+
+(define (gl-vector->info vec)
+  (cond
+    ((bytes? vec) (values GL_UNSIGNED_BYTE values bytes-length))
+    ((s8vector? vec) (values GL_BYTE s8vector->cpointer s8vector-length))
+    ((u16vector? vec) (values GL_UNSIGNED_SHORT u16vector->cpointer u16vector-length))
+    ((s16vector? vec) (values GL_SHORT s16vector->cpointer s16vector-length))
+    ((u32vector? vec) (values GL_UNSIGNED_INT u32vector->cpointer u32vector-length))
+    ((s32vector? vec) (values GL_INT s32vector->cpointer s32vector-length))
+    ((f32vector? vec) (values GL_FLOAT f32vector->cpointer f32vector-length))
+    ((f64vector? vec) (values GL_DOUBLE f64vector->cpointer f64vector-length))))
+
 
 (define (gl-vector->type vec)
-  (cond
-    ((bytes? vec) GL_UNSIGNED_BYTE)
-    ((s8vector? vec) GL_BYTE)
-    ((u16vector? vec) GL_UNSIGNED_SHORT)
-    ((s16vector? vec) GL_SHORT)
-    ((u32vector? vec) GL_UNSIGNED_INT)
-    ((s32vector? vec) GL_INT)
-    ((f32vector? vec) GL_FLOAT)
-    ((f64vector? vec) GL_DOUBLE)))
+  (let-values (((type ->cpointer length) (gl-vector->info vec)))
+              type))
+
+(define (gl-vector->cpointer vec)
+  (let-values (((type ->cpointer length) (gl-vector->info vec)))
+              (->cpointer vec)))
+
+(define (gl-vector->length vec)
+  (let-values (((type ->cpointer length) (gl-vector->info vec)))
+              (length vec)))
+
+(define (gl-vector->type/cpointer vec)
+  (let-values (((type ->cpointer length) (gl-vector->info vec)))
+              (values type (->cpointer vec))))
+
+(define (gl-vector->type/cpointer/length vec)
+  (let-values (((type ->cpointer length) (gl-vector->info vec)))
+              (values type (->cpointer vec) (length vec))))
 
 (define error-messages (hasheqv
         GL_NO_ERROR "No error has been recorded."
