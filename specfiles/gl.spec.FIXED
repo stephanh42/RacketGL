@@ -7137,7 +7137,7 @@ GetTransformFeedbackVarying(program, index, bufSize, length, size, type, name)
 	param		length		SizeI out array [1]
 	param		size		SizeI out array [1]
 	param		type		GLenum out array [1]
-	param		name		Char out array [COMPSIZE(length)]
+	param		name		Char out array [COMPSIZE(bufSize)]
 	category	VERSION_3_0
 	dlflags		notlistable
 	version		3.0
@@ -10362,7 +10362,7 @@ GetAttachedObjectsARB(containerObj, maxCount, count, obj)
 	param		containerObj	handleARB in value
 	param		maxCount	SizeI in value
 	param		count		SizeI out array [1]
-	param		obj		handleARB out array [count]
+	param		obj		handleARB out array [maxCount]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -12852,14 +12852,14 @@ GetActiveSubroutineUniformiv(program, shadertype, index, pname, values)
 	glxflags	ignore
 	offset		?
 
-GetActiveSubroutineUniformName(program, shadertype, index, bufsize, length, name)
+GetActiveSubroutineUniformName(program, shadertype, index, bufSize, length, name)
 	return		void
 	param		program		UInt32 in value
 	param		shadertype	GLenum in value
 	param		index		UInt32 in value
-	param		bufsize		SizeI in value
+	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
-	param		name		Char out array [bufsize]
+	param		name		Char out array [bufSize]
 	category	ARB_shader_subroutine
 	dlflags		notlistable
 	version		1.2
@@ -12868,14 +12868,14 @@ GetActiveSubroutineUniformName(program, shadertype, index, bufsize, length, name
 	glxflags	ignore
 	offset		?
 
-GetActiveSubroutineName(program, shadertype, index, bufsize, length, name)
+GetActiveSubroutineName(program, shadertype, index, bufSize, length, name)
 	return		void
 	param		program		UInt32 in value
 	param		shadertype	GLenum in value
 	param		index		UInt32 in value
-	param		bufsize		SizeI in value
+	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
-	param		name		Char out array [bufsize]
+	param		name		Char out array [bufSize]
 	category	ARB_shader_subroutine
 	dlflags		notlistable
 	version		1.2
@@ -13175,7 +13175,7 @@ GetProgramBinary(program, bufSize, length, binaryFormat, binary)
 	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
 	param		binaryFormat	GLenum out array [1]
-	param		binary		Void out array [COMPSIZE(length)]
+	param		binary		Void out array [COMPSIZE(bufSize)]
 	category	ARB_get_program_binary
 	dlflags		notlistable
 	version		4.1
@@ -13998,7 +13998,7 @@ GetProgramPipelineInfoLog(pipeline, bufSize, length, infoLog)
 	param		pipeline	UInt32 in value
 	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
-	param		infoLog		Char out array [COMPSIZE(length)]
+	param		infoLog		Char out array [COMPSIZE(bufSize)]
 	category	ARB_separate_shader_objects
 	dlflags		notlistable
 	version		4.1
@@ -14349,16 +14349,16 @@ DebugMessageCallbackARB(callback, userParam)
 	glxflags	ignore
 	offset		?
 
-GetDebugMessageLogARB(count, bufsize, sources, types, ids, severities, lengths, messageLog)
+GetDebugMessageLogARB(count, bufSize, sources, types, ids, severities, lengths, messageLog)
 	return		UInt32
 	param		count		UInt32 in value
-	param		bufsize		SizeI in value
+	param		bufSize		SizeI in value
 	param		sources		GLenum out array [count]
 	param		types		GLenum out array [count]
 	param		ids		UInt32 out array [count]
 	param		severities	GLenum out array [count]
 	param		lengths		SizeI out array [count]
-	param		messageLog	Char out array [COMPSIZE(lengths)]
+	param		messageLog	Char out array [COMPSIZE(bufSize)]
 	category	ARB_debug_output
 	dlflags		notlistable
 	version		4.1
@@ -26197,7 +26197,7 @@ GetTransformFeedbackVaryingEXT(program, index, bufSize, length, size, type, name
 	param		length		SizeI out array [1]
 	param		size		SizeI out array [1]
 	param		type		GLenum out array [1]
-	param		name		Char out array [COMPSIZE(length)]
+	param		name		Char out array [COMPSIZE(bufSize)]
 	category	EXT_transform_feedback
 	dlflags		notlistable
 	version		2.0
@@ -31311,15 +31311,15 @@ DebugMessageCallbackAMD(callback, userParam)
 	glxflags	ignore
 	offset		?
 
-GetDebugMessageLogAMD(count, bufsize, categories, severities, ids, lengths, message)
+GetDebugMessageLogAMD(count, bufSize, categories, severities, ids, lengths, message)
 	return		UInt32
 	param		count		UInt32 in value
-	param		bufsize		SizeI in value
+	param		bufSize		SizeI in value
 	param		categories	GLenum out array [count]
 	param		severities	UInt32 out array [count]
 	param		ids		UInt32 out array [count]
 	param		lengths		SizeI out array [count]
-	param		message		Char out array [bufsize]
+	param		message		Char out array [bufSize]
 	category	AMD_debug_output
 	dlflags		notlistable
 	version		4.1
@@ -31407,7 +31407,7 @@ VDPAUGetSurfaceivNV(surface, pname, bufSize, length, values)
 	param		pname		GLenum in value
 	param		bufSize		SizeI in value
 	param		length		SizeI out reference
-	param		values		Int32 out array [length]
+	param		values		Int32 out array [bufSize]
 	category	NV_vdpau_interop
 	version		4.1
 	extension
