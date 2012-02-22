@@ -5594,7 +5594,7 @@ GetQueryiv(target, pname, params)
 	return		void
 	param		target		GLenum in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [*]
 	category	VERSION_1_5
 	dlflags		notlistable
 	version		1.5
@@ -5607,7 +5607,7 @@ GetQueryObjectiv(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [*]
 	category	VERSION_1_5
 	dlflags		notlistable
 	version		1.5
@@ -5620,7 +5620,7 @@ GetQueryObjectuiv(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		UInt32 out array [pname]
+	param		params		UInt32 out array [*]
 	category	VERSION_1_5
 	dlflags		notlistable
 	version		1.5
@@ -6004,7 +6004,7 @@ GetProgramiv(program, pname, params)
 	return		void
 	param		program		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [*]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6031,7 +6031,7 @@ GetShaderiv(shader, pname, params)
 	return		void
 	param		shader		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [*]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -9931,7 +9931,7 @@ GetQueryivARB(target, pname, params)
 	return		void
 	param		target		GLenum in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [*]
 	category	ARB_occlusion_query
 	dlflags		notlistable
 	version		1.5
@@ -9942,7 +9942,7 @@ GetQueryObjectivARB(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [*]
 	category	ARB_occlusion_query
 	dlflags		notlistable
 	version		1.5
@@ -9953,7 +9953,7 @@ GetQueryObjectuivARB(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		UInt32 out array [pname]
+	param		params		UInt32 out array [*]
 	category	ARB_occlusion_query
 	dlflags		notlistable
 	version		1.5
@@ -10321,7 +10321,7 @@ GetObjectParameterfvARB(obj, pname, params)
 	return		void
 	param		obj		handleARB in value
 	param		pname		GLenum in value
-	param		params		Float32 out array [pname]
+	param		params		Float32 out array [*]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -10334,7 +10334,7 @@ GetObjectParameterivARB(obj, pname, params)
 	return		void
 	param		obj		handleARB in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [*]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -23941,7 +23941,7 @@ GetVertexAttribArrayObjectfvATI(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		ArrayObjectPNameATI in value
-	param		params		Float32 out array [pname]
+	param		params		Float32 out array [*]
 	category	ATI_vertex_attrib_array_object
 	dlflags		notlistable
 	version		1.2
@@ -23954,7 +23954,7 @@ GetVertexAttribArrayObjectivATI(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		ArrayObjectPNameATI in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [*]
 	category	ATI_vertex_attrib_array_object
 	dlflags		notlistable
 	version		1.2
@@ -24512,7 +24512,7 @@ GetQueryObjecti64vEXT(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int64EXT out array [pname]
+	param		params		Int64EXT out array [*]
 	category	EXT_timer_query
 	dlflags		notlistable
 	version		1.5
@@ -24524,7 +24524,7 @@ GetQueryObjectui64vEXT(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		UInt64EXT out array [pname]
+	param		params		UInt64EXT out array [*]
 	category	EXT_timer_query
 	dlflags		notlistable
 	version		1.5
