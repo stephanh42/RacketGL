@@ -4,17 +4,16 @@
 
 #lang racket/gui
 
-(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 2)))
+(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 3)))
 (require ffi/vector)
 (require "viewer.rkt")
-(require "bitmap.rkt")
 
 
 (define texture #f)
 
 (define (setup)
   ;; Note that we can only load textures once we have an OpenGL context!
-  (set! texture (load-texture "plt-logo-red-gradient.png")))
+  (set! texture (load-texture "plt-logo-red-gradient.png" #:repeat 'both)))
 
 (define (draw)
   ; the coordinates
@@ -25,9 +24,9 @@
                -0.5 0.5))
 
   (define texcoord-array
-    (s16vector 0 1
-               1 1
-               1 0
+    (s16vector 0 2
+               2 2
+               2 0
                0 0))
 
   (glBindTexture GL_TEXTURE_2D texture)

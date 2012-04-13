@@ -1,8 +1,10 @@
 #lang scribble/manual
 
+@(require planet/scribble)
+
 @title{The RacketGL library}
 
-@defmodule[(planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 2))]
+@(defmodule/this-package rgl)
 
 @(require (for-label racket/gui/base))
 @(require (for-label ffi/vector))
@@ -84,7 +86,48 @@ working with @racket[glVertexPointer] and similar procedures easier.
   This is slightly more efficient than getting them each individually.
 }
 
+@section{Utility procedures for textures}
 
+These procedures can be used to load 2D texture data.
+Note that these, too, should only be called when an OpenGL context is active!
+
+These procedures all load the alpha (transparancy) values as premultiplied alpha.
+Since this is the only form of alpha blending which leads to correct results in all
+cases@(cite "1"), no effort has been made to support other forms of alpha blending.
+
+If your bitmaps contain transparent values, you should therefore enable alpha blending in OpenGL as follows.
+@(racketblock
+  (glBlendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA)
+  (glEnable GL_BLEND))
+
+Note that some (older) OpenGL implementations may restrict textures to sizes which are powers of two.
+
+@defproc[(bitmap->texture (bm (is-a?c bitmap%))
+                          (#:mipmap mipmap any/c #t)
+                          (#:repeat repeat-mode (one-of/c 'none 'x 'y 'both) 'none))
+                          exact-nonnegative->integer?]{
+  Convert the bitmap into an OpenGL texture handle.
+  As a side effect, the texture is bound to target @racket[GL_TEXTURE_2D].
+
+  The parameter @racket[mipmap] (interpreted as a boolean) controls whether or not mipmapping is done.
+  Mipmapping is a technique to avoid aliasing when an image is scaled down. If you are sure that your image
+  will never be scaled down, you can save a small amount of memory and runtime by setting this parameter to @racket[#f].
+
+  The @racket[repeat-mode] controls what happens if you use texture coordinates outside the range between 0 and 1.
+  The parameter controls whether or not the image is repeated (tiled), and if it is repeated, 
+  it defines along which of the specified axes (x, y, or both) the image is to be repeated.
+}
+  
+@defproc[(load-texture (file (or/c path-string? input-port?))
+                       (#:mipmap mipmap any/c #t)
+                       (#:repeat repeat-mode (one-of/c 'none 'x 'y 'both) 'none))
+                       exact-nonnegative->integer?]{
+  Load a texture directly from a named file or input port.
+
+  The parameters @racket[mipmap] and @racket[repeat-mode]
+  have the same meaning as with @racket[bitmap->texture].
+}
+ 
 @section{Additional utility procedures}
 
 These procedures can be used to check the OpenGL version and supported extensions.
@@ -106,3 +149,11 @@ For example, version 3.1.2 would return a list (3 1 2).
 @defproc[(gl-version-at-least? (version (listof exact-integer?))) boolean?]{
   Checks if the OpenGL version is at least the given version.
 }
+
+@(bibliography
+ (bib-entry #:key "1"
+  #:title "Composing Digital Images"
+  #:author "Thomas Porter and Tom Duff"
+  #:location "Computer Graphics Volume 18, Number 3 July 1984 pp 253-259"
+  #:date "1984"
+  #:url "http://keithp.com/~keithp/porterduff/"))
