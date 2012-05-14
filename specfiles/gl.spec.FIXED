@@ -10014,7 +10014,7 @@ ShaderSourceARB(shaderObj, count, string, length)
 	param		shaderObj	handleARB in value
 	param		count		SizeI in value
 	param		string		charPointerARB in array [count]
-	param		length		Int32 in array [1]
+	param		length		Int32 in array [count]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -11421,7 +11421,7 @@ FenceSync(condition, flags)
 	param		condition	GLenum in value
 	param		flags		GLbitfield in value
 	category	ARB_sync
-	version		1.2
+	version		3.2
 	extension
 	glxropcode	?
 	glxflags	ignore
@@ -11431,7 +11431,7 @@ IsSync(sync)
 	return		Boolean
 	param		sync		sync in value
 	category	ARB_sync
-	version		1.2
+	version		3.2
 	extension
 	glxropcode	?
 	glxflags	ignore
@@ -11441,7 +11441,7 @@ DeleteSync(sync)
 	return		void
 	param		sync		sync in value
 	category	ARB_sync
-	version		1.2
+	version		3.2
 	extension
 	glxropcode	?
 	glxflags	ignore
@@ -11453,7 +11453,7 @@ ClientWaitSync(sync, flags, timeout)
 	param		flags		GLbitfield in value
 	param		timeout		UInt64 in value
 	category	ARB_sync
-	version		1.2
+	version		3.2
 	extension
 	glxropcode	?
 	glxflags	ignore
@@ -11465,7 +11465,7 @@ WaitSync(sync, flags, timeout)
 	param		flags		GLbitfield in value
 	param		timeout		UInt64 in value
 	category	ARB_sync
-	version		1.2
+	version		3.2
 	extension
 	glxropcode	?
 	glxflags	ignore
@@ -11492,7 +11492,7 @@ GetSynciv(sync, pname, bufSize, length, values)
 	param		values		Int32 out array [bufSize]
 	category	ARB_sync
 	dlflags		notlistable
-	version		1.2
+	version		3.2
 	extension
 	glxsingle	?
 	glxflags	ignore

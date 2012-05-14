@@ -107,6 +107,11 @@
   (set! between-begin-end #f)
   (check-gl-error name))
 
+(provide/contract
+  (GLsync? (->> any/c boolean?)))
+
+(define-cpointer-type _GLsync)
+
 (include "generated/gl_specs.inc")
 
 (define (split-spaces str)

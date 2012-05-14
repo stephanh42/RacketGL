@@ -36,18 +36,27 @@ The wrapper procedures automatically check for OpenGL errors after any call,
 except between @racket[glBegin] and @racket[glEnd] where this is disallowed.
 You don't have to call @racket[glGetError] yourself.
 
-@include-section["generated/gl_specs1.0.scrbl"]
-@include-section["generated/gl_specs1.1.scrbl"]
-@include-section["generated/gl_specs1.2.scrbl"]
-@include-section["generated/gl_specs1.3.scrbl"]
-@include-section["generated/gl_specs1.4.scrbl"]
-@include-section["generated/gl_specs1.5.scrbl"]
-@include-section["generated/gl_specs2.0.scrbl"]
-@include-section["generated/gl_specs2.1.scrbl"]
-@include-section["generated/gl_specs3.0.scrbl"]
-@include-section["generated/gl_specs3.1.scrbl"]
-@include-section["generated/gl_specs3.2.scrbl"]
-@include-section["generated/gl_specs4.1.scrbl"]
+@include-section["generated/gl_specs_A.inc"]
+@include-section["generated/gl_specs_B.inc"]
+@include-section["generated/gl_specs_C.inc"]
+@include-section["generated/gl_specs_D.inc"]
+@include-section["generated/gl_specs_E.inc"]
+@include-section["generated/gl_specs_F.inc"]
+@include-section["generated/gl_specs_G.inc"]
+@include-section["generated/gl_specs_H.inc"]
+@include-section["generated/gl_specs_I.inc"]
+@include-section["generated/gl_specs_L.inc"]
+@include-section["generated/gl_specs_M.inc"]
+@include-section["generated/gl_specs_N.inc"]
+@include-section["generated/gl_specs_O.inc"]
+@include-section["generated/gl_specs_P.inc"]
+@include-section["generated/gl_specs_Q.inc"]
+@include-section["generated/gl_specs_R.inc"]
+@include-section["generated/gl_specs_S.inc"]
+@include-section["generated/gl_specs_T.inc"]
+@include-section["generated/gl_specs_U.inc"]
+@include-section["generated/gl_specs_V.inc"]
+@include-section["generated/gl_specs_W.inc"]
 
 @section{Utility functions for homogenous vectors}
 
@@ -102,7 +111,7 @@ If your bitmaps contain transparent values, you should therefore enable alpha bl
 
 Note that some (older) OpenGL implementations may restrict textures to sizes which are powers of two.
 
-@defproc[(bitmap->texture (bm (is-a?c bitmap%))
+@defproc[(bitmap->texture (bm (is-a?/c bitmap%))
                           (#:mipmap mipmap any/c #t)
                           (#:repeat repeat-mode (one-of/c 'none 'x 'y 'both) 'none))
                           exact-nonnegative->integer?]{
@@ -148,6 +157,11 @@ For example, version 3.1.2 would return a list (3 1 2).
 
 @defproc[(gl-version-at-least? (version (listof exact-integer?))) boolean?]{
   Checks if the OpenGL version is at least the given version.
+}
+
+@defproc[(GLsync? (v any/c)) boolean?]{
+  Returns @racket[#t] if @racket[v] is an OpenGL sync object, 
+  @racket[#f] otherwise.
 }
 
 @(bibliography

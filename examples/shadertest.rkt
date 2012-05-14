@@ -27,7 +27,8 @@
 (define program #f)
 
 (define (setup)
-  (if (gl-version-at-least? '(2 0))
+  (if (or (gl-version-at-least? '(2 0))
+          (gl-has-extension? 'GL_ARB_shader_objects))
     (set! program (call-with-input-file "test.glsl" load-program))
     (printf "This OpenGL does not support shaders, you'll get a plain white rectangle.~%")))
 
