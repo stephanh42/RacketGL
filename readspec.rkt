@@ -65,7 +65,7 @@
     (mode-dependent-type
       `(_ptr i ,type) `(_ptr o ,type))
     (case type
-      ((_void) '_pointer)
+      ((_void) '_pointer/intptr)
       ((_byte _uint8) (mode-dependent-type 
                         '_string*/utf-8 
                         (if (null? args)
@@ -474,6 +474,7 @@
        ((_double*) 'real?)
        ((_bool) 'boolean?)
        ((_pointer) 'cpointer?)
+       ((_pointer/intptr) 'gl-pointer?)
        ((_string*/utf-8) '(or/c string? bytes?))
        (else 
          (hash-ref vector-to-contract type type))))

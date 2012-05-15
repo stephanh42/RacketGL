@@ -71,7 +71,23 @@ working with @racket[glVertexPointer] and similar procedures easier.
   @racket[u32vector], @racket[s32vector], @racket[f32vector] and @racket[f64vector].
 }
 
-@defproc[(gl-vector->type (v gl-vector?)) exact-integer?]{
+@defproc[(gl-pointer? (v any/c)) boolean?]{
+  Returns @racket[#t] iff @racket[v] satisfies either 
+  @racket[gl-vector?], @racket[cpointer?] or @racket[exact-nonnegative-integer?].
+  This defines a very liberal "pointer-to-anything" type.
+  Typically, OpenGL procedures which accept @racket[gl-pointer?] have additional requirements
+  based on the context. In other words, the fact that the contract suggests that they accept such
+  a wide range of values doesn't mean that in any particular context all values are legal.
+}
+
+@defproc[(gl-type? (v any/c)) boolean?]{
+  Return @racket[#t] iff @racket[v] is one of the constants
+  @racket[GL_UNSIGNED_BYTE], @racket[GL_BYTE], @racket[GL_UNSIGNED_SHORT], @racket[GL_SHORT], 
+  @racket[GL_UNSIGNED_INT], @racket[GL_INT],
+  @racket[GL_FLOAT], or @racket[GL_DOUBLE].
+}
+
+@defproc[(gl-vector->type (v gl-vector?)) gl-type?]{
   Determine the OpenGL type of @racket[v].
   This returns a numerical value such as @racket[GL_SHORT], @racket[GL_FLOAT], etc., which
   can be passed into @racket[glVertexPointer] and similar procedures.
@@ -85,14 +101,34 @@ working with @racket[glVertexPointer] and similar procedures easier.
   Get the length of @racket[v].
 }
 
-@defproc[(gl-vector->type/cpointer (v gl-vector?)) (values exact-integer? cpointer?)]{
+@defproc[(gl-vector->type/cpointer (v gl-vector?)) (values gl-type? cpointer?)]{
   Get the OpenGL type and C pointer of @racket[v].
   This is slightly more efficient than getting them each individually.
 }
 
-@defproc[(gl-vector->type/cpointer/length (v gl-vector?)) (values exact-integer? cpointer? exact-nonnegative-integer?)]{
+@defproc[(gl-vector->type/cpointer/length (v gl-vector?)) (values gl-type? cpointer? exact-nonnegative-integer?)]{
   Get the OpenGL type, C pointer and length of @racket[v].
   This is slightly more efficient than getting them each individually.
+}
+
+@defproc[(gl-vector-sizeof (v gl-vector?)) exact-nonnegative-integer?]{
+  Get the length of @racket[v] in bytes.
+}
+
+@defproc[(gl-vector-alignof (v gl-vector?)) exact-nonnegative-integer?]{
+  Get the alignment requirement of @racket[v].
+}
+
+@defproc[(gl-type->ctype (type gl-type?)) ctype?]{
+  Get the C type associated with the given OpenGL type.
+}
+
+@defproc[(gl-type-sizeof (type gl-type?)) exact-nonnegative-integer?]{
+  Get the length in bytes of values of type @racket[type].
+}
+
+@defproc[(gl-type-alignof (type gl-type?)) exact-nonnegative-integer?]{
+  Get the alignment requirement of values of type @racket[type].
 }
 
 @section{Utility procedures for textures}

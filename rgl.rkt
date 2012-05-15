@@ -112,6 +112,36 @@
 
 (define-cpointer-type _GLsync)
 
+; A "gl-vector" is any homogenous vector of a type which is used with the OpenGL API.
+(provide/contract 
+  (gl-vector? (->> any/c boolean?))
+  (gl-pointer? (->> any/c boolean?))
+  (gl-type? (->> any/c boolean?)))
+
+(define (gl-vector? obj)
+  (or (bytes? obj) (s8vector? obj) (u16vector? obj) (s16vector? obj)
+      (u32vector? obj) (s32vector? obj) (f32vector? obj) (f64vector? obj)))
+
+(define (gl-pointer? obj)
+  (or (cpointer? obj) (exact-nonnegative-integer? obj) (gl-vector? obj)))
+
+(define (gl-type? obj)
+  (hash-has-key? gl-types obj))
+
+; Some functions take a pointer parameter, but when a VBO is bound the pointer
+; is really interpreted as an integer offset.
+; On the Racket side, we want the function to simply accept either a pointer or an integer in that case.
+; So here is a conversion function to be used as a pre:-code sequence.
+(define (convert-vbo-pointer v)
+  (cond
+    ((cpointer? v) v)
+    ((exact-integer? v) (ptr-add #f v))
+    (else (gl-vector->cpointer v))))
+
+(define-fun-syntax _pointer/intptr
+  (syntax-id-rules (_pointer/intptr)
+    [_pointer/intptr (type: _pointer pre: (x => (convert-vbo-pointer x)))]))
+
 (include "generated/gl_specs.inc")
 
 (define (split-spaces str)
@@ -157,23 +187,20 @@
 (define (gl-version-at-least? version)
   (version>= (gl-version) version))
 
-; A "gl-vector" is any homogenous vector of a type which is used with the OpenGL API.
-(provide/contract (gl-vector? (->> any/c boolean?)))
-
-(define (gl-vector? obj)
-  (or (bytes? obj) (s8vector? obj) (u16vector? obj) (s16vector? obj)
-      (u32vector? obj) (s32vector? obj) (f32vector? obj) (f64vector? obj)))
-
-
 ;; Get the appropriate type enum for a Racket vector.
 ;; Useful for glVertexPointer and friends.
 ;; Also get length and cpointer in one operation.
 (provide/contract 
-  (gl-vector->type (->> gl-vector? exact-integer?))
+  (gl-vector->type (->> gl-vector? gl-type?))
   (gl-vector->cpointer (->> gl-vector? cpointer?))
-  (gl-vector->length (->> gl-vector? exact-nonnegative-integer?))
-  (gl-vector->type/cpointer (->> gl-vector? (values exact-integer? cpointer?)))
-  (gl-vector->type/cpointer/length (->> gl-vector? (values exact-integer? cpointer? exact-nonnegative-integer?))))
+  (gl-vector->length (->> gl-vector? gl-type?))
+  (gl-vector->type/cpointer (->> gl-vector? (values gl-type? cpointer?)))
+  (gl-vector->type/cpointer/length (->> gl-vector? (values gl-type? cpointer? exact-nonnegative-integer?)))
+  (gl-vector-sizeof (->> gl-vector? exact-nonnegative-integer?))
+  (gl-vector-alignof (->> gl-vector? exact-nonnegative-integer?))
+  (gl-type->ctype (->> gl-type? ctype?))
+  (gl-type-sizeof (->> gl-type? exact-nonnegative-integer?))
+  (gl-type-alignof (->> gl-type? exact-nonnegative-integer?)))
 
 (define (gl-vector->info vec)
   (cond
@@ -207,6 +234,32 @@
   (let-values (((type ->cpointer length) (gl-vector->info vec)))
               (values type (->cpointer vec) (length vec))))
 
+(define gl-types (hasheqv 
+  GL_UNSIGNED_BYTE _uint8
+  GL_BYTE _sint8
+  GL_UNSIGNED_SHORT _uint16
+  GL_SHORT _sint16
+  GL_UNSIGNED_INT _uint32
+  GL_INT _sint32
+  GL_FLOAT _float
+  GL_DOUBLE _double))
+
+(define (gl-type->ctype type)
+  (hash-ref gl-types type))
+
+(define (gl-type-sizeof type)
+  (ctype-sizeof (gl-type->ctype type)))
+
+(define (gl-type-alignof type)
+  (ctype-alignof (gl-type->ctype type)))
+
+(define (gl-vector-sizeof vec)
+  (let-values (((type ->cpointer length) (gl-vector->info vec)))
+    (* (length vec) (gl-type-sizeof type))))
+
+(define (gl-vector-alignof vec)
+  (gl-type-alignof (gl-vector->type vec)))
+   
 (define error-messages (hasheqv
         GL_NO_ERROR "No error has been recorded."
         GL_INVALID_ENUM "An unacceptable value is specified for an enumerated argument."
