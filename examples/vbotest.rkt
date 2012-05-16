@@ -1,10 +1,10 @@
 ;; Extremely simply OpenGL demo.
-;; Draw a shaded rectangle on the screen.
+;; Draw a shaded rectangle on the screen, using VBOs.
 ;; Also query some information on the OpenGL implementation.
 
 #lang racket/gui
 
-(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 3)))
+(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 4)))
 (require ffi/vector)
 (require "viewer.rkt")
 

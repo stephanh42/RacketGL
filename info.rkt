@@ -5,7 +5,7 @@
   '("Automatically generated bindings for the OpenGL library. "
     "Currently includes bindings up to and including OpenGL 4.1."))
 (define release-notes
-  '("1.3: Addition of texture loading procedures. Some bugfixes related to shaders."))
+  '("1.4: Improved VBO support. Reorganized documentation."))
 (define primary-file "rgl.rkt")
 (define categories '(media))
 (define scribblings '(("manual.scrbl" (multi-page))))
