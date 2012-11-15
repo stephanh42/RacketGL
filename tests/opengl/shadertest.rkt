@@ -4,16 +4,33 @@
 
 #lang racket/gui
 
-(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 4)))
+(require opengl)
 (require ffi/vector)
 (require "viewer.rkt")
 
 
-(define texture #f)
+(define (load-program-source shader port)
+  (let* ((lines (for/vector ((line (in-lines port))) line))
+         (sizes (for/list ((line (in-vector lines))) (string-length line)))
+         (sizes (list->s32vector sizes)))
+   (glShaderSource shader (vector-length lines) lines sizes)))
+
+(define (load-program port)
+  (let ((program (glCreateProgram))
+        (shader (glCreateShader GL_FRAGMENT_SHADER)))
+    (load-program-source shader port)
+    (glCompileShader shader)
+    (glAttachShader program shader)
+    (glLinkProgram program)
+    program))
+
+(define program #f)
 
 (define (setup)
-  ;; Note that we can only load textures once we have an OpenGL context!
-  (set! texture (load-texture "plt-logo-red-gradient.png" #:repeat 'both)))
+  (if (or (gl-version-at-least? '(2 0))
+          (gl-has-extension? 'GL_ARB_shader_objects))
+    (set! program (call-with-input-file "test.glsl" load-program))
+    (printf "This OpenGL does not support shaders, you'll get a plain white rectangle.~%")))
 
 (define (draw)
   ; the coordinates
@@ -24,15 +41,14 @@
                -0.5 0.5))
 
   (define texcoord-array
-    (s16vector 0 2
-               2 2
-               2 0
-               0 0))
+    (f64vector 0 0
+               0.5 0
+               0.5 0.5
+               0 0.5))
 
-  (glBindTexture GL_TEXTURE_2D texture)
-  (glEnable GL_TEXTURE_2D)
-  (glBlendFunc GL_ONE GL_ONE_MINUS_SRC_ALPHA) ; This is the correct setting for pre-multiplied alpha.
-  (glEnable GL_BLEND)
+
+  (when program
+    (glUseProgram program))
 
   ; Let's be "modern" and use the array functions (introduced in OpenGL 1.1).
   ; Note that you need to ask GL everything 3 times:
@@ -49,7 +65,9 @@
 
   ; Clean up state.
   (glDisableClientState GL_TEXTURE_COORD_ARRAY)
-  (glDisableClientState GL_VERTEX_ARRAY))
+  (glDisableClientState GL_VERTEX_ARRAY)
+  (when program
+    (glUseProgram 0)))
 
 
 

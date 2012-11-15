@@ -1,19 +1,19 @@
 #lang scribble/manual
 
-@(require planet/scribble)
+@title{OpenGL}
 
-@title{The RacketGL library}
-
-@(defmodule/this-package rgl)
+@(defmodule opengl)
 
 @(require (for-label racket/gui/base))
 @(require (for-label ffi/vector))
 
-The RacketGL library is an automatically-generated wrapper
-around the OpenGL library.
-Being automatically-generated means that it is quite complete.
-It also means that the wrapping may not be as nice as a manual
-wrapping.
+@margin-note{This product is based on the published OpenGL® API, but is not an
+implementation which is certified or licensed by Silicon Graphics, Inc.
+under the OpenGL® API.}
+
+An automatically-generated wrapper around the OpenGL library.  Being
+automatically-generated means that it is quite complete.  It also
+means that the wrapping may not be as nice as a manual wrapping.
 
 Please note that these procedures are all very much @bold{unsafe};
 in particular, if you call any of them while no OpenGL context

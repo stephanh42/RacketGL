@@ -34,7 +34,7 @@
 
 #lang racket/gui
 
-(require (planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 4)))
+(require opengl)
 (require ffi/vector)
 
 
