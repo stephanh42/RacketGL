@@ -3,7 +3,7 @@
 @defproc[(glFeedbackBuffer (size exact-integer?) (type exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFeedbackBuffer.xml"]{glFeedbackBuffer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFeedbackBuffer.xml"]{glFeedbackBuffer manpage}.
 }
 @defproc[(glFenceSync (condition exact-integer?) (flags exact-nonnegative-integer?)) GLsync?]{
 Version 3.2.
@@ -68,7 +68,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unif
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFogCoordPointer.xml"]{glFogCoordPointer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoordPointer.xml"]{glFogCoordPointer manpage}.
 }
 @defproc[(glFogCoordPointerEXT (type exact-integer?) (stride exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -82,7 +82,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/IBM/vertex_array_list
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
 }
 @defproc[(glFogCoorddEXT (coord real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -93,7 +93,7 @@ Alias of @racket[glFogCoordd].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
 }
 @defproc[(glFogCoorddvEXT (coord real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -104,7 +104,7 @@ Alias of @racket[glFogCoorddv].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
 }
 @defproc[(glFogCoordfEXT (coord flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -115,7 +115,7 @@ Alias of @racket[glFogCoordf].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
 }
 @defproc[(glFogCoordfvEXT (coord flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -134,22 +134,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/fog_function.txt
 @defproc[(glFogf (pname exact-integer?) (param flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFog.xml"]{glFog manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFog.xml"]{glFog manpage}.
 }
 @defproc[(glFogfv (pname exact-integer?) (params f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFog.xml"]{glFog manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFog.xml"]{glFog manpage}.
 }
 @defproc[(glFogi (pname exact-integer?) (param exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFog.xml"]{glFog manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFog.xml"]{glFog manpage}.
 }
 @defproc[(glFogiv (pname exact-integer?) (params s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFog.xml"]{glFog manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFog.xml"]{glFog manpage}.
 }
 @defproc[(glFragmentColorMaterialSGIX (face exact-integer?) (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/fragment_lighting.txt"]{@racket[GL_SGIX_fragment_lighting]}.
@@ -285,5 +285,5 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFrontFace.xml"]{
 @defproc[(glFrustum (left real?) (right real?) (bottom real?) (top real?) (zNear real?) (zFar real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glFrustum.xml"]{glFrustum manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFrustum.xml"]{glFrustum manpage}.
 }

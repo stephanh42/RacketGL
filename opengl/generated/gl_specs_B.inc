@@ -3,7 +3,7 @@
 @defproc[(glBegin (mode exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glBegin.xml"]{glBegin manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glBegin.xml"]{glBegin manpage}.
 }
 @defproc[(glBeginConditionalRender (id exact-nonnegative-integer?) (mode exact-integer?)) any]{
 Version 3.0.
@@ -264,7 +264,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/coordinate_frame.
 @defproc[(glBitmap (width exact-integer?) (height exact-integer?) (xorig flonum?) (yorig flonum?) (xmove flonum?) (ymove flonum?) (bitmap (or/c string? bytes?))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glBitmap.xml"]{glBitmap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glBitmap.xml"]{glBitmap manpage}.
 }
 @defproc[(glBlendColor (red flonum?) (green flonum?) (blue flonum?) (alpha flonum?)) any]{
 Version 1.2.

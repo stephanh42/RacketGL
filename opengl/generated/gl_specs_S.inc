@@ -66,12 +66,12 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glSamplerParameter
 @defproc[(glScaled (x real?) (y real?) (z real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glScale.xml"]{glScale manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glScale.xml"]{glScale manpage}.
 }
 @defproc[(glScalef (x flonum?) (y flonum?) (z flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glScale.xml"]{glScale manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glScale.xml"]{glScale manpage}.
 }
 @defproc[(glScissor (x exact-integer?) (y exact-integer?) (width exact-integer?) (height exact-integer?)) any]{
 
@@ -92,7 +92,7 @@ Version 4.1.
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3bEXT (red (integer-in -128 127)) (green (integer-in -128 127)) (blue (integer-in -128 127))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -103,7 +103,7 @@ Alias of @racket[glSecondaryColor3b].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3bvEXT (v s8vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -114,7 +114,7 @@ Alias of @racket[glSecondaryColor3bv].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3dEXT (red real?) (green real?) (blue real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -125,7 +125,7 @@ Alias of @racket[glSecondaryColor3d].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3dvEXT (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -136,7 +136,7 @@ Alias of @racket[glSecondaryColor3dv].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3fEXT (red flonum?) (green flonum?) (blue flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -147,7 +147,7 @@ Alias of @racket[glSecondaryColor3f].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3fvEXT (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -164,7 +164,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3iEXT (red exact-integer?) (green exact-integer?) (blue exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -175,7 +175,7 @@ Alias of @racket[glSecondaryColor3i].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3ivEXT (v s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -186,7 +186,7 @@ Alias of @racket[glSecondaryColor3iv].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3sEXT (red (integer-in -32768 32767)) (green (integer-in -32768 32767)) (blue (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -197,7 +197,7 @@ Alias of @racket[glSecondaryColor3s].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3svEXT (v s16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -208,7 +208,7 @@ Alias of @racket[glSecondaryColor3sv].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3ubEXT (red (integer-in 0 255)) (green (integer-in 0 255)) (blue (integer-in 0 255))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -219,7 +219,7 @@ Alias of @racket[glSecondaryColor3ub].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3ubvEXT (v (or/c string? bytes?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -230,7 +230,7 @@ Alias of @racket[glSecondaryColor3ubv].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3uiEXT (red exact-nonnegative-integer?) (green exact-nonnegative-integer?) (blue exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -241,7 +241,7 @@ Alias of @racket[glSecondaryColor3ui].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3uivEXT (v u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -252,7 +252,7 @@ Alias of @racket[glSecondaryColor3uiv].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3usEXT (red (integer-in 0 65535)) (green (integer-in 0 65535)) (blue (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -263,7 +263,7 @@ Alias of @racket[glSecondaryColor3us].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColor.xml"]{glSecondaryColor manpage}.
 }
 @defproc[(glSecondaryColor3usvEXT (v u16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -283,7 +283,7 @@ Version 1.2.
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSecondaryColorPointer.xml"]{glSecondaryColorPointer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSecondaryColorPointer.xml"]{glSecondaryColorPointer manpage}.
 }
 @defproc[(glSecondaryColorPointerEXT (size exact-integer?) (type exact-integer?) (stride exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/secondary_color.txt"]{@racket[GL_EXT_secondary_color]}.
@@ -296,7 +296,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/IBM/vertex_array_list
 @defproc[(glSelectBuffer (size exact-integer?)) u32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSelectBuffer.xml"]{glSelectBuffer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSelectBuffer.xml"]{glSelectBuffer manpage}.
 }
 @defproc[(glSelectPerfMonitorCountersAMD (monitor exact-nonnegative-integer?) (enable boolean?) (group exact-nonnegative-integer?) (numCounters exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monitor.txt"]{@racket[GL_AMD_performance_monitor]}.
@@ -305,7 +305,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monit
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glSeparableFilter2D.xml"]{glSeparableFilter2D manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSeparableFilter2D.xml"]{glSeparableFilter2D manpage}.
 }
 @defproc[(glSeparableFilter2DEXT (target exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?) (format exact-integer?) (type exact-integer?) (row gl-pointer?) (column gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
@@ -330,7 +330,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glShadeModel (mode exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glShadeModel.xml"]{glShadeModel manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glShadeModel.xml"]{glShadeModel manpage}.
 }
 @defproc[(glShaderBinary (count exact-integer?) (shaders u32vector?) (binaryformat exact-integer?) (binary gl-pointer?) (length exact-integer?)) any]{
 Version 4.1.

@@ -78,22 +78,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/envmap_bumpmap.tx
 @defproc[(glTexCoord1d (s real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord1dv (v real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord1f (s flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord1fv (v flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord1hNV (s (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -104,37 +104,37 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glTexCoord1i (s exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord1iv (v exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord1s (s (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord1sv (v (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord2d (s real?) (t real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord2dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord2f (s flonum?) (t flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord2fColor3fVertex3fSUN (s flonum?) (t flonum?) (r flonum?) (g flonum?) (b flonum?) (x flonum?) (y flonum?) (z flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/vertex.txt"]{@racket[GL_SUN_vertex]}.
@@ -169,7 +169,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/vertex.txt"]{@rac
 @defproc[(glTexCoord2fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord2hNV (s (integer-in 0 65535)) (t (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -180,42 +180,42 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glTexCoord2i (s exact-integer?) (t exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord2iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord2s (s (integer-in -32768 32767)) (t (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord2sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord3d (s real?) (t real?) (r real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord3dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord3f (s flonum?) (t flonum?) (r flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord3fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord3hNV (s (integer-in 0 65535)) (t (integer-in 0 65535)) (r (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -226,37 +226,37 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glTexCoord3i (s exact-integer?) (t exact-integer?) (r exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord3iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord3s (s (integer-in -32768 32767)) (t (integer-in -32768 32767)) (r (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord3sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord4d (s real?) (t real?) (r real?) (q real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord4dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord4f (s flonum?) (t flonum?) (r flonum?) (q flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord4fColor4fNormal3fVertex4fSUN (s flonum?) (t flonum?) (p flonum?) (q flonum?) (r flonum?) (g flonum?) (b flonum?) (a flonum?) (nx flonum?) (ny flonum?) (nz flonum?) (x flonum?) (y flonum?) (z flonum?) (w flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/vertex.txt"]{@racket[GL_SUN_vertex]}.
@@ -273,7 +273,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/vertex.txt"]{@rac
 @defproc[(glTexCoord4fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord4hNV (s (integer-in 0 65535)) (t (integer-in 0 65535)) (r (integer-in 0 65535)) (q (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -284,22 +284,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glTexCoord4i (s exact-integer?) (t exact-integer?) (r exact-integer?) (q exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord4iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord4s (s (integer-in -32768 32767)) (t (integer-in -32768 32767)) (r (integer-in -32768 32767)) (q (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoord4sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoord.xml"]{glTexCoord manpage}.
 }
 @defproc[(glTexCoordFormatNV (size exact-integer?) (type exact-integer?) (stride exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt"]{@racket[GL_NV_vertex_buffer_unified_memory]}.
@@ -332,7 +332,7 @@ Version 1.2.
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexCoordPointer.xml"]{glTexCoordPointer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexCoordPointer.xml"]{glTexCoordPointer manpage}.
 }
 @defproc[(glTexCoordPointerEXT (size exact-integer?) (type exact-integer?) (stride exact-integer?) (count exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.
@@ -346,22 +346,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/INTEL/parallel_arrays
 @defproc[(glTexEnvf (target exact-integer?) (pname exact-integer?) (param flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexEnv.xml"]{glTexEnv manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexEnv.xml"]{glTexEnv manpage}.
 }
 @defproc[(glTexEnvfv (target exact-integer?) (pname exact-integer?) (params f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexEnv.xml"]{glTexEnv manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexEnv.xml"]{glTexEnv manpage}.
 }
 @defproc[(glTexEnvi (target exact-integer?) (pname exact-integer?) (param exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexEnv.xml"]{glTexEnv manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexEnv.xml"]{glTexEnv manpage}.
 }
 @defproc[(glTexEnviv (target exact-integer?) (pname exact-integer?) (params s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexEnv.xml"]{glTexEnv manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexEnv.xml"]{glTexEnv manpage}.
 }
 @defproc[(glTexFilterFuncSGIS (target exact-integer?) (filter exact-integer?) (n exact-integer?) (weights f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/texture_filter4.txt"]{@racket[GL_SGIS_texture_filter4]}.
@@ -369,32 +369,32 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/texture_filter4.
 @defproc[(glTexGend (coord exact-integer?) (pname exact-integer?) (param real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexGen.xml"]{glTexGen manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexGen.xml"]{glTexGen manpage}.
 }
 @defproc[(glTexGendv (coord exact-integer?) (pname exact-integer?) (params f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexGen.xml"]{glTexGen manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexGen.xml"]{glTexGen manpage}.
 }
 @defproc[(glTexGenf (coord exact-integer?) (pname exact-integer?) (param flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexGen.xml"]{glTexGen manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexGen.xml"]{glTexGen manpage}.
 }
 @defproc[(glTexGenfv (coord exact-integer?) (pname exact-integer?) (params f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexGen.xml"]{glTexGen manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexGen.xml"]{glTexGen manpage}.
 }
 @defproc[(glTexGeni (coord exact-integer?) (pname exact-integer?) (param exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexGen.xml"]{glTexGen manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexGen.xml"]{glTexGen manpage}.
 }
 @defproc[(glTexGeniv (coord exact-integer?) (pname exact-integer?) (params s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTexGen.xml"]{glTexGen manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTexGen.xml"]{glTexGen manpage}.
 }
 @defproc[(glTexImage1D (target exact-integer?) (level exact-integer?) (internalformat exact-integer?) (width exact-integer?) (border exact-integer?) (format exact-integer?) (type exact-integer?) (pixels gl-pointer?)) any]{
 
@@ -601,10 +601,10 @@ Alias of @racket[glTransformFeedbackVaryings].
 @defproc[(glTranslated (x real?) (y real?) (z real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTranslate.xml"]{glTranslate manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTranslate.xml"]{glTranslate manpage}.
 }
 @defproc[(glTranslatef (x flonum?) (y flonum?) (z flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glTranslate.xml"]{glTranslate manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glTranslate.xml"]{glTranslate manpage}.
 }

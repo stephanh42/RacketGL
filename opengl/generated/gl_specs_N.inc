@@ -81,7 +81,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shading_language_
 @defproc[(glNewList (list exact-nonnegative-integer?) (mode exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNewList.xml"]{glNewList manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNewList.xml"]{glNewList manpage}.
 }
 @defproc[(glNewObjectBufferATI (size exact-integer?) (pointer gl-pointer?) (usage exact-integer?)) exact-nonnegative-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_array_object.txt"]{@racket[GL_ATI_vertex_array_object]}.
@@ -89,27 +89,27 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_array_obje
 @defproc[(glNormal3b (nx (integer-in -128 127)) (ny (integer-in -128 127)) (nz (integer-in -128 127))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormal3bv (v s8vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormal3d (nx real?) (ny real?) (nz real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormal3dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormal3f (nx flonum?) (ny flonum?) (nz flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormal3fVertex3fSUN (nx flonum?) (ny flonum?) (nz flonum?) (x flonum?) (y flonum?) (z flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/vertex.txt"]{@racket[GL_SUN_vertex]}.
@@ -120,7 +120,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/vertex.txt"]{@rac
 @defproc[(glNormal3fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormal3hNV (nx (integer-in 0 65535)) (ny (integer-in 0 65535)) (nz (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -131,22 +131,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glNormal3i (nx exact-integer?) (ny exact-integer?) (nz exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormal3iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormal3s (nx (integer-in -32768 32767)) (ny (integer-in -32768 32767)) (nz (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormal3sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormal.xml"]{glNormal manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormal.xml"]{glNormal manpage}.
 }
 @defproc[(glNormalFormatNV (type exact-integer?) (stride exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt"]{@racket[GL_NV_vertex_buffer_unified_memory]}.
@@ -161,7 +161,7 @@ Version 1.2.
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glNormalPointer.xml"]{glNormalPointer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glNormalPointer.xml"]{glNormalPointer manpage}.
 }
 @defproc[(glNormalPointerEXT (type exact-integer?) (stride exact-integer?) (count exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.

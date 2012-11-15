@@ -11,7 +11,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/PGI/misc_hints.txt"]{
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glHistogram.xml"]{glHistogram manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glHistogram.xml"]{glHistogram manpage}.
 }
 @defproc[(glHistogramEXT (target exact-integer?) (width exact-integer?) (internalformat exact-integer?) (sink boolean?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.

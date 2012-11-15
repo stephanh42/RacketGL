@@ -24,7 +24,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/index_func.txt"]{
 @defproc[(glIndexMask (mask exact-nonnegative-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndexMask.xml"]{glIndexMask manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndexMask.xml"]{glIndexMask manpage}.
 }
 @defproc[(glIndexMaterialEXT (face exact-integer?) (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/index_material.txt"]{@racket[GL_EXT_index_material]}.
@@ -33,7 +33,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/index_material.tx
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndexPointer.xml"]{glIndexPointer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndexPointer.xml"]{glIndexPointer manpage}.
 }
 @defproc[(glIndexPointerEXT (type exact-integer?) (stride exact-integer?) (count exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.
@@ -44,57 +44,57 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/IBM/vertex_array_list
 @defproc[(glIndexd (c real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexdv (c real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexf (c flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexfv (c flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexi (c exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexiv (c exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexs (c (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexsv (c (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexub (c (integer-in 0 255))) any]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexubv (c (integer-in 0 255))) any]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glInitNames) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glInitNames.xml"]{glInitNames manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glInitNames.xml"]{glInitNames manpage}.
 }
 @defproc[(glInsertComponentEXT (res exact-nonnegative-integer?) (src exact-nonnegative-integer?) (num exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt"]{@racket[GL_EXT_vertex_shader]}.
@@ -106,7 +106,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/instruments.txt"
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glInterleavedArrays.xml"]{glInterleavedArrays manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glInterleavedArrays.xml"]{glInterleavedArrays manpage}.
 }
 @defproc[(glIsAsyncMarkerSGIX (marker exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/async.txt"]{@racket[GL_SGIX_async]}.
@@ -157,7 +157,7 @@ Alias of @racket[glIsFramebuffer].
 @defproc[(glIsList (list exact-nonnegative-integer?)) boolean?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glIsList.xml"]{glIsList manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIsList.xml"]{glIsList manpage}.
 }
 @defproc[(glIsNameAMD (identifier exact-integer?) (name exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/name_gen_delete.txt"]{@racket[GL_AMD_name_gen_delete]}.

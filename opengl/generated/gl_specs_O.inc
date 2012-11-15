@@ -9,5 +9,5 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/object_purgeabl
 @defproc[(glOrtho (left real?) (right real?) (bottom real?) (top real?) (zNear real?) (zFar real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glOrtho.xml"]{glOrtho manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glOrtho.xml"]{glOrtho manpage}.
 }

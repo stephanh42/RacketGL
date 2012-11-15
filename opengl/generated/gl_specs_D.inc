@@ -56,7 +56,7 @@ Alias of @racket[glDeleteFramebuffers].
 @defproc[(glDeleteLists (list exact-nonnegative-integer?) (range exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glDeleteLists.xml"]{glDeleteLists manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glDeleteLists.xml"]{glDeleteLists manpage}.
 }
 @defproc[(glDeleteNamedStringARB (namelen exact-integer?) (name (or/c string? bytes?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shading_language_include.txt"]{@racket[GL_ARB_shading_language_include]}.
@@ -210,7 +210,7 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDisable.xml"]{gl
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glDisableClientState.xml"]{glDisableClientState manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glDisableClientState.xml"]{glDisableClientState manpage}.
 }
 @defproc[(glDisableClientStateIndexedEXT (array exact-integer?) (index exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -337,7 +337,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/mesh_array.txt"]{
 @defproc[(glDrawPixels (width exact-integer?) (height exact-integer?) (format exact-integer?) (type exact-integer?) (pixels gl-pointer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glDrawPixels.xml"]{glDrawPixels manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glDrawPixels.xml"]{glDrawPixels manpage}.
 }
 @defproc[(glDrawRangeElementArrayAPPLE (mode exact-integer?) (start exact-nonnegative-integer?) (end exact-nonnegative-integer?) (first exact-integer?) (count exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/element_array.txt"]{@racket[GL_APPLE_element_array]}.

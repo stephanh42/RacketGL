@@ -3,7 +3,7 @@
 @defproc[(glAccum (op exact-integer?) (value flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glAccum.xml"]{glAccum manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glAccum.xml"]{glAccum manpage}.
 }
 @defproc[(glActiveProgramEXT (program exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/separate_shader_objects.txt"]{@racket[GL_EXT_separate_shader_objects]}.
@@ -41,7 +41,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/fragment_shader.t
 @defproc[(glAlphaFunc (func exact-integer?) (ref flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glAlphaFunc.xml"]{glAlphaFunc manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glAlphaFunc.xml"]{glAlphaFunc manpage}.
 }
 @defproc[(glApplyTextureEXT (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/light_texture.txt"]{@racket[GL_EXT_light_texture]}.
@@ -53,7 +53,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glAreTexturesResident.xml"]{glAreTexturesResident manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glAreTexturesResident.xml"]{glAreTexturesResident manpage}.
 }
 @defproc[(glAreTexturesResidentEXT (n exact-integer?) (textures u32vector?)) (values boolean? (vectorof boolean?))]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.txt"]{@racket[GL_EXT_texture_object]}.
@@ -62,7 +62,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.tx
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glArrayElement.xml"]{glArrayElement manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glArrayElement.xml"]{glArrayElement manpage}.
 }
 @defproc[(glArrayElementEXT (i exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.

@@ -3,7 +3,7 @@
 @defproc[(glEdgeFlag (flag boolean?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEdgeFlag.xml"]{glEdgeFlag manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEdgeFlag.xml"]{glEdgeFlag manpage}.
 }
 @defproc[(glEdgeFlagFormatNV (stride exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt"]{@racket[GL_NV_vertex_buffer_unified_memory]}.
@@ -12,7 +12,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unif
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEdgeFlagPointer.xml"]{glEdgeFlagPointer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEdgeFlagPointer.xml"]{glEdgeFlagPointer manpage}.
 }
 @defproc[(glEdgeFlagPointerEXT (stride exact-integer?) (count exact-integer?) (pointer (vectorof boolean?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.
@@ -37,7 +37,7 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glEnable.xml"]{glE
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEnableClientState.xml"]{glEnableClientState manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEnableClientState.xml"]{glEnableClientState manpage}.
 }
 @defproc[(glEnableClientStateIndexedEXT (array exact-integer?) (index exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -71,7 +71,7 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glEnable.xml"]{glE
 @defproc[(glEnd) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEnd.xml"]{glEnd manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEnd.xml"]{glEnd manpage}.
 }
 @defproc[(glEndConditionalRender) any]{
 Version 3.0.
@@ -89,7 +89,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/fragment_shader.t
 @defproc[(glEndList) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEndList.xml"]{glEndList manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEndList.xml"]{glEndList manpage}.
 }
 @defproc[(glEndOcclusionQueryNV) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/occlusion_query.txt"]{@racket[GL_NV_occlusion_query]}.
@@ -136,42 +136,42 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/video_capture.txt"
 @defproc[(glEvalCoord1d (u real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord1dv (u real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord1f (u flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord1fv (u flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord2d (u real?) (v real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord2dv (u f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord2f (u flonum?) (v flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord2fv (u f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalMapsNV (target exact-integer?) (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/evaluators.txt"]{@racket[GL_NV_evaluators]}.

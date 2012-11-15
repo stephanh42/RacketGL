@@ -54,22 +54,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glVertex2d (x real?) (y real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2f (x flonum?) (y flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2hNV (x (integer-in 0 65535)) (y (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -80,42 +80,42 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glVertex2i (x exact-integer?) (y exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2s (x (integer-in -32768 32767)) (y (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3d (x real?) (y real?) (z real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3f (x flonum?) (y flonum?) (z flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3hNV (x (integer-in 0 65535)) (y (integer-in 0 65535)) (z (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -126,42 +126,42 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glVertex3i (x exact-integer?) (y exact-integer?) (z exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3s (x (integer-in -32768 32767)) (y (integer-in -32768 32767)) (z (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4d (x real?) (y real?) (z real?) (w real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4f (x flonum?) (y flonum?) (z flonum?) (w flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4hNV (x (integer-in 0 65535)) (y (integer-in 0 65535)) (z (integer-in 0 65535)) (w (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -172,22 +172,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glVertex4i (x exact-integer?) (y exact-integer?) (z exact-integer?) (w exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4s (x (integer-in -32768 32767)) (y (integer-in -32768 32767)) (z (integer-in -32768 32767)) (w (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertexArrayParameteriAPPLE (pname exact-integer?) (param exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/vertex_array_range.txt"]{@racket[GL_APPLE_vertex_array_range]}.
@@ -1169,7 +1169,7 @@ Version 1.2.
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glVertexPointer.xml"]{glVertexPointer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertexPointer.xml"]{glVertexPointer manpage}.
 }
 @defproc[(glVertexPointerEXT (size exact-integer?) (type exact-integer?) (stride exact-integer?) (count exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.

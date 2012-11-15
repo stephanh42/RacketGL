@@ -192,7 +192,7 @@
        name))
     ((set-member? manpages name)
      (list
-       (format "http://www.opengl.org/sdk/docs/man/xhtml/gl~a.xml" name)
+       (format "http://www.opengl.org/sdk/docs/man2/xhtml/gl~a.xml" name)
        name))
     (else #f)))
 
@@ -203,6 +203,14 @@
      =>
      (λ (m) (get-manpage-helper (list-ref m 1))))
     (else #f)))
+
+;; Convert a hash to a list in a deterministic order.
+(define (hash->sorted-list h)
+  (sort (hash->list h)
+        string<?
+        #:key (λ (p) (symbol->string (car p)))
+        #:cache-keys? #t))
+
 
 (define (read-enums input-port)
 
@@ -276,10 +284,12 @@
 
     (printf "~s~%"
             `(define pname-map (hasheqv
-                                 ,@(for/list (((k v) (in-hash pname-map)) 
-                                              #:when (not (= v 1))
-                                              (y (list k v)))
-                                             y))))
+                                 ,@(for*/list ((p (in-list (hash->sorted-list pname-map)))
+                                               (k (in-value (car p)))
+                                               (v (in-value (cdr p)))
+                                               #:when (not (= v 1))
+                                               (y (list k v)))
+                                              y))))
 
     (when strongly-typed-enums
       (for (((k v) (in-hash enums)))

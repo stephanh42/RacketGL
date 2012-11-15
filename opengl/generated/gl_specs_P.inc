@@ -12,7 +12,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/fragment_shader.t
 @defproc[(glPassThrough (token flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPassThrough.xml"]{glPassThrough manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPassThrough.xml"]{glPassThrough manpage}.
 }
 @defproc[(glPatchParameterfv (pname exact-integer?) (the-values f32vector?)) any]{
 Version 1.2.
@@ -38,17 +38,17 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/pixel_data_range.t
 @defproc[(glPixelMapfv (map exact-integer?) (mapsize exact-integer?) (the-values f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
 }
 @defproc[(glPixelMapuiv (map exact-integer?) (mapsize exact-integer?) (the-values u32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
 }
 @defproc[(glPixelMapusv (map exact-integer?) (mapsize exact-integer?) (the-values u16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
 }
 @defproc[(glPixelStoref (pname exact-integer?) (param flonum?)) any]{
 
@@ -76,12 +76,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/pixel_texture.tx
 @defproc[(glPixelTransferf (pname exact-integer?) (param flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPixelTransfer.xml"]{glPixelTransfer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelTransfer.xml"]{glPixelTransfer manpage}.
 }
 @defproc[(glPixelTransferi (pname exact-integer?) (param exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPixelTransfer.xml"]{glPixelTransfer manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelTransfer.xml"]{glPixelTransfer manpage}.
 }
 @defproc[(glPixelTransformParameterfEXT (target exact-integer?) (pname exact-integer?) (param flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/pixel_transform.txt"]{@racket[GL_EXT_pixel_transform]}.
@@ -98,7 +98,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/pixel_transform.t
 @defproc[(glPixelZoom (xfactor flonum?) (yfactor flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPixelZoom.xml"]{glPixelZoom manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelZoom.xml"]{glPixelZoom manpage}.
 }
 @defproc[(glPointParameterf (pname exact-integer?) (param flonum?)) any]{
 Version 1.4.
@@ -185,28 +185,28 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/polygon_offset.tx
 @defproc[(glPolygonStipple (mask (or/c string? bytes?))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPolygonStipple.xml"]{glPolygonStipple manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPolygonStipple.xml"]{glPolygonStipple manpage}.
 }
 @defproc[(glPopAttrib) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPopAttrib.xml"]{glPopAttrib manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPopAttrib.xml"]{glPopAttrib manpage}.
 }
 @defproc[(glPopClientAttrib) any]{
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPopClientAttrib.xml"]{glPopClientAttrib manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPopClientAttrib.xml"]{glPopClientAttrib manpage}.
 }
 @defproc[(glPopMatrix) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPopMatrix.xml"]{glPopMatrix manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPopMatrix.xml"]{glPopMatrix manpage}.
 }
 @defproc[(glPopName) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPopName.xml"]{glPopName manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPopName.xml"]{glPopName manpage}.
 }
 @defproc[(glPresentFrameDualFillNV (video_slot exact-nonnegative-integer?) (minPresentTime exact-nonnegative-integer?) (beginPresentTimeId exact-nonnegative-integer?) (presentDurationId exact-nonnegative-integer?) (type exact-integer?) (target0 exact-integer?) (fill0 exact-nonnegative-integer?) (target1 exact-integer?) (fill1 exact-nonnegative-integer?) (target2 exact-integer?) (fill2 exact-nonnegative-integer?) (target3 exact-integer?) (fill3 exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/present_video.txt"]{@racket[GL_NV_present_video]}.
@@ -229,7 +229,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/primitive_restart.
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPrioritizeTextures.xml"]{glPrioritizeTextures manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPrioritizeTextures.xml"]{glPrioritizeTextures manpage}.
 }
 @defproc[(glPrioritizeTexturesEXT (n exact-integer?) (textures u32vector?) (priorities f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.txt"]{@racket[GL_EXT_texture_object]}.
@@ -799,13 +799,13 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/provoking_vertex.
 @defproc[(glPushAttrib (mask exact-nonnegative-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPushAttrib.xml"]{glPushAttrib manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPushAttrib.xml"]{glPushAttrib manpage}.
 }
 @defproc[(glPushClientAttrib (mask exact-nonnegative-integer?)) any]{
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPushClientAttrib.xml"]{glPushClientAttrib manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPushClientAttrib.xml"]{glPushClientAttrib manpage}.
 }
 @defproc[(glPushClientAttribDefaultEXT (mask exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -813,10 +813,10 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glPushMatrix) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPushMatrix.xml"]{glPushMatrix manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPushMatrix.xml"]{glPushMatrix manpage}.
 }
 @defproc[(glPushName (name exact-nonnegative-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glPushName.xml"]{glPushName manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPushName.xml"]{glPushName manpage}.
 }

@@ -35,7 +35,7 @@ Alias of @racket[glGenFramebuffers].
 @defproc[(glGenLists (range exact-integer?)) exact-nonnegative-integer?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGenLists.xml"]{glGenLists manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGenLists.xml"]{glGenLists manpage}.
 }
 @defproc[(glGenNamesAMD (identifier exact-integer?) (num exact-nonnegative-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/name_gen_delete.txt"]{@racket[GL_AMD_name_gen_delete]}.
@@ -232,7 +232,7 @@ Version 3.2.
 @defproc[(glGetBufferParameteriv (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetBufferParameteriv.xml"]{glGetBufferParameteriv manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetBufferParameteriv.xml"]{glGetBufferParameteriv manpage}.
 }
 @defproc[(glGetBufferParameterivARB (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.
@@ -265,13 +265,13 @@ Alias of @racket[glGetBufferSubData].
 @defproc[(glGetClipPlane (plane exact-integer?)) f64vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetClipPlane.xml"]{glGetClipPlane manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetClipPlane.xml"]{glGetClipPlane manpage}.
 }
 @defproc[(glGetColorTable (target exact-integer?) (format exact-integer?) (type exact-integer?) (table gl-pointer?)) any]{
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTable.xml"]{glGetColorTable manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetColorTable.xml"]{glGetColorTable manpage}.
 }
 @defproc[(glGetColorTableEXT (target exact-integer?) (format exact-integer?) (type exact-integer?) (data gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/paletted_texture.txt"]{@racket[GL_EXT_paletted_texture]}.
@@ -280,7 +280,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/paletted_texture.
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTableParameter.xml"]{glGetColorTableParameter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetColorTableParameter.xml"]{glGetColorTableParameter manpage}.
 }
 @defproc[(glGetColorTableParameterfvEXT (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/paletted_texture.txt"]{@racket[GL_EXT_paletted_texture]}.
@@ -292,7 +292,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGI/color_table.txt"]
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetColorTableParameter.xml"]{glGetColorTableParameter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetColorTableParameter.xml"]{glGetColorTableParameter manpage}.
 }
 @defproc[(glGetColorTableParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/paletted_texture.txt"]{@racket[GL_EXT_paletted_texture]}.
@@ -338,7 +338,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionFilter.xml"]{glGetConvolutionFilter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetConvolutionFilter.xml"]{glGetConvolutionFilter manpage}.
 }
 @defproc[(glGetConvolutionFilterEXT (target exact-integer?) (format exact-integer?) (type exact-integer?) (image gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
@@ -347,7 +347,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionParameter.xml"]{glGetConvolutionParameter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetConvolutionParameter.xml"]{glGetConvolutionParameter manpage}.
 }
 @defproc[(glGetConvolutionParameterfvEXT (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
@@ -356,7 +356,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetConvolutionParameter.xml"]{glGetConvolutionParameter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetConvolutionParameter.xml"]{glGetConvolutionParameter manpage}.
 }
 @defproc[(glGetConvolutionParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
@@ -452,7 +452,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.tx
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogram.xml"]{glGetHistogram manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetHistogram.xml"]{glGetHistogram manpage}.
 }
 @defproc[(glGetHistogramEXT (target exact-integer?) (reset boolean?) (format exact-integer?) (type exact-integer?) (the-values gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -461,7 +461,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogramParameter.xml"]{glGetHistogramParameter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetHistogramParameter.xml"]{glGetHistogramParameter manpage}.
 }
 @defproc[(glGetHistogramParameterfvEXT (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -470,7 +470,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetHistogramParameter.xml"]{glGetHistogramParameter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetHistogramParameter.xml"]{glGetHistogramParameter manpage}.
 }
 @defproc[(glGetHistogramParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -521,12 +521,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glGetLightfv (light exact-integer?) (pname exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetLight.xml"]{glGetLight manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetLight.xml"]{glGetLight manpage}.
 }
 @defproc[(glGetLightiv (light exact-integer?) (pname exact-integer?)) s32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetLight.xml"]{glGetLight manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetLight.xml"]{glGetLight manpage}.
 }
 @defproc[(glGetListParameterfvSGIX (list exact-nonnegative-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/list_priority.txt"]{@racket[GL_SGIX_list_priority]}.
@@ -561,33 +561,33 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/evaluators.txt"]{@
 @defproc[(glGetMapdv (target exact-integer?) (query exact-integer?) (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetMap.xml"]{glGetMap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMap.xml"]{glGetMap manpage}.
 }
 @defproc[(glGetMapfv (target exact-integer?) (query exact-integer?) (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetMap.xml"]{glGetMap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMap.xml"]{glGetMap manpage}.
 }
 @defproc[(glGetMapiv (target exact-integer?) (query exact-integer?) (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetMap.xml"]{glGetMap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMap.xml"]{glGetMap manpage}.
 }
 @defproc[(glGetMaterialfv (face exact-integer?) (pname exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetMaterial.xml"]{glGetMaterial manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMaterial.xml"]{glGetMaterial manpage}.
 }
 @defproc[(glGetMaterialiv (face exact-integer?) (pname exact-integer?)) s32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetMaterial.xml"]{glGetMaterial manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMaterial.xml"]{glGetMaterial manpage}.
 }
 @defproc[(glGetMinmax (target exact-integer?) (reset boolean?) (format exact-integer?) (type exact-integer?) (the-values gl-pointer?)) any]{
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmax.xml"]{glGetMinmax manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMinmax.xml"]{glGetMinmax manpage}.
 }
 @defproc[(glGetMinmaxEXT (target exact-integer?) (reset boolean?) (format exact-integer?) (type exact-integer?) (the-values gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -596,7 +596,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmaxParameter.xml"]{glGetMinmaxParameter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMinmaxParameter.xml"]{glGetMinmaxParameter manpage}.
 }
 @defproc[(glGetMinmaxParameterfvEXT (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -605,7 +605,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetMinmaxParameter.xml"]{glGetMinmaxParameter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMinmaxParameter.xml"]{glGetMinmaxParameter manpage}.
 }
 @defproc[(glGetMinmaxParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -738,17 +738,17 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monit
 @defproc[(glGetPixelMapfv (map exact-integer?) (the-values f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
 }
 @defproc[(glGetPixelMapuiv (map exact-integer?) (the-values u32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
 }
 @defproc[(glGetPixelMapusv (map exact-integer?) (the-values u16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
 }
 @defproc[(glGetPixelTexGenParameterfvSGIS (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/pixel_texture.txt"]{@racket[GL_SGIS_pixel_texture]}.
@@ -762,7 +762,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glGetPointerv (pname exact-integer?)) gl-pointer?]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetPointerv.xml"]{glGetPointerv manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPointerv.xml"]{glGetPointerv manpage}.
 }
 @defproc[(glGetPointervEXT (pname exact-integer?)) gl-pointer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.
@@ -772,7 +772,7 @@ Alias of @racket[glGetPointerv].
 @defproc[(glGetPolygonStipple (mask bytes?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetPolygonStipple.xml"]{glGetPolygonStipple manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPolygonStipple.xml"]{glGetPolygonStipple manpage}.
 }
 @defproc[(glGetProgramBinary (program exact-nonnegative-integer?) (bufSize exact-integer?) (binary gl-pointer?)) (values exact-integer? exact-integer?)]{
 Version 4.1.
@@ -932,7 +932,7 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParame
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetSeparableFilter.xml"]{glGetSeparableFilter manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetSeparableFilter.xml"]{glGetSeparableFilter manpage}.
 }
 @defproc[(glGetSeparableFilterEXT (target exact-integer?) (format exact-integer?) (type exact-integer?) (row gl-pointer?) (column gl-pointer?) (span gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
@@ -998,12 +998,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/envmap_bumpmap.tx
 @defproc[(glGetTexEnvfv (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetTexEnv.xml"]{glGetTexEnv manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexEnv.xml"]{glGetTexEnv manpage}.
 }
 @defproc[(glGetTexEnviv (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetTexEnv.xml"]{glGetTexEnv manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexEnv.xml"]{glGetTexEnv manpage}.
 }
 @defproc[(glGetTexFilterFuncSGIS (target exact-integer?) (filter exact-integer?) (weights f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/texture_filter4.txt"]{@racket[GL_SGIS_texture_filter4]}.
@@ -1011,17 +1011,17 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/texture_filter4.
 @defproc[(glGetTexGendv (coord exact-integer?) (pname exact-integer?)) f64vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
 }
 @defproc[(glGetTexGenfv (coord exact-integer?) (pname exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
 }
 @defproc[(glGetTexGeniv (coord exact-integer?) (pname exact-integer?)) s32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
 }
 @defproc[(glGetTexImage (target exact-integer?) (level exact-integer?) (format exact-integer?) (type exact-integer?) (pixels gl-pointer?)) any]{
 

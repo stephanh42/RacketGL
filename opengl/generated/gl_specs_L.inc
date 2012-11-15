@@ -6,47 +6,47 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/fragment_lightin
 @defproc[(glLightModelf (pname exact-integer?) (param flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLightModel.xml"]{glLightModel manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLightModel.xml"]{glLightModel manpage}.
 }
 @defproc[(glLightModelfv (pname exact-integer?) (params f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLightModel.xml"]{glLightModel manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLightModel.xml"]{glLightModel manpage}.
 }
 @defproc[(glLightModeli (pname exact-integer?) (param exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLightModel.xml"]{glLightModel manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLightModel.xml"]{glLightModel manpage}.
 }
 @defproc[(glLightModeliv (pname exact-integer?) (params s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLightModel.xml"]{glLightModel manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLightModel.xml"]{glLightModel manpage}.
 }
 @defproc[(glLightf (light exact-integer?) (pname exact-integer?) (param flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLight.xml"]{glLight manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLight.xml"]{glLight manpage}.
 }
 @defproc[(glLightfv (light exact-integer?) (pname exact-integer?) (params f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLight.xml"]{glLight manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLight.xml"]{glLight manpage}.
 }
 @defproc[(glLighti (light exact-integer?) (pname exact-integer?) (param exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLight.xml"]{glLight manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLight.xml"]{glLight manpage}.
 }
 @defproc[(glLightiv (light exact-integer?) (pname exact-integer?) (params s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLight.xml"]{glLight manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLight.xml"]{glLight manpage}.
 }
 @defproc[(glLineStipple (factor exact-integer?) (pattern (integer-in 0 65535))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLineStipple.xml"]{glLineStipple manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLineStipple.xml"]{glLineStipple manpage}.
 }
 @defproc[(glLineWidth (width flonum?)) any]{
 
@@ -65,7 +65,7 @@ Alias of @racket[glLinkProgram].
 @defproc[(glListBase (base exact-nonnegative-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glListBase.xml"]{glListBase manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glListBase.xml"]{glListBase manpage}.
 }
 @defproc[(glListParameterfSGIX (list exact-nonnegative-integer?) (pname exact-integer?) (param flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/list_priority.txt"]{@racket[GL_SGIX_list_priority]}.
@@ -82,7 +82,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/list_priority.tx
 @defproc[(glLoadIdentity) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLoadIdentity.xml"]{glLoadIdentity manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLoadIdentity.xml"]{glLoadIdentity manpage}.
 }
 @defproc[(glLoadIdentityDeformationMapSGIX (mask exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/polynomial_ffd.txt"]{@racket[GL_SGIX_polynomial_ffd]}.
@@ -90,17 +90,17 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/polynomial_ffd.t
 @defproc[(glLoadMatrixd (m f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLoadMatrix.xml"]{glLoadMatrix manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLoadMatrix.xml"]{glLoadMatrix manpage}.
 }
 @defproc[(glLoadMatrixf (m f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLoadMatrix.xml"]{glLoadMatrix manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLoadMatrix.xml"]{glLoadMatrix manpage}.
 }
 @defproc[(glLoadName (name exact-nonnegative-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLoadName.xml"]{glLoadName manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLoadName.xml"]{glLoadName manpage}.
 }
 @defproc[(glLoadProgramNV (target exact-integer?) (id exact-nonnegative-integer?) (len exact-integer?) (program (or/c string? bytes?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt"]{@racket[GL_NV_vertex_program]}.
@@ -109,7 +109,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLoadTransposeMatrix.xml"]{glLoadTransposeMatrix manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLoadTransposeMatrix.xml"]{glLoadTransposeMatrix manpage}.
 }
 @defproc[(glLoadTransposeMatrixdARB (m f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/transpose_matrix.txt"]{@racket[GL_ARB_transpose_matrix]}.
@@ -120,7 +120,7 @@ Alias of @racket[glLoadTransposeMatrixd].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glLoadTransposeMatrix.xml"]{glLoadTransposeMatrix manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glLoadTransposeMatrix.xml"]{glLoadTransposeMatrix manpage}.
 }
 @defproc[(glLoadTransposeMatrixfARB (m f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/transpose_matrix.txt"]{@racket[GL_ARB_transpose_matrix]}.

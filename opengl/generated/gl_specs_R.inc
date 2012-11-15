@@ -3,122 +3,122 @@
 @defproc[(glRasterPos2d (x real?) (y real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos2dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos2f (x flonum?) (y flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos2fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos2i (x exact-integer?) (y exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos2iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos2s (x (integer-in -32768 32767)) (y (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos2sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos3d (x real?) (y real?) (z real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos3dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos3f (x flonum?) (y flonum?) (z flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos3fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos3i (x exact-integer?) (y exact-integer?) (z exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos3iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos3s (x (integer-in -32768 32767)) (y (integer-in -32768 32767)) (z (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos3sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos4d (x real?) (y real?) (z real?) (w real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos4dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos4f (x flonum?) (y flonum?) (z flonum?) (w flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos4fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos4i (x exact-integer?) (y exact-integer?) (z exact-integer?) (w exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos4iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos4s (x (integer-in -32768 32767)) (y (integer-in -32768 32767)) (z (integer-in -32768 32767)) (w (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glRasterPos4sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRasterPos.xml"]{glRasterPos manpage}.
 }
 @defproc[(glReadBuffer (mode exact-integer?)) any]{
 
@@ -137,42 +137,42 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/robustness.txt"]{
 @defproc[(glRectd (x1 real?) (y1 real?) (x2 real?) (y2 real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRect.xml"]{glRect manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRect.xml"]{glRect manpage}.
 }
 @defproc[(glRectdv (v1 f64vector?) (v2 f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRect.xml"]{glRect manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRect.xml"]{glRect manpage}.
 }
 @defproc[(glRectf (x1 flonum?) (y1 flonum?) (x2 flonum?) (y2 flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRect.xml"]{glRect manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRect.xml"]{glRect manpage}.
 }
 @defproc[(glRectfv (v1 f32vector?) (v2 f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRect.xml"]{glRect manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRect.xml"]{glRect manpage}.
 }
 @defproc[(glRecti (x1 exact-integer?) (y1 exact-integer?) (x2 exact-integer?) (y2 exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRect.xml"]{glRect manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRect.xml"]{glRect manpage}.
 }
 @defproc[(glRectiv (v1 s32vector?) (v2 s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRect.xml"]{glRect manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRect.xml"]{glRect manpage}.
 }
 @defproc[(glRects (x1 (integer-in -32768 32767)) (y1 (integer-in -32768 32767)) (x2 (integer-in -32768 32767)) (y2 (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRect.xml"]{glRect manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRect.xml"]{glRect manpage}.
 }
 @defproc[(glRectsv (v1 s16vector?) (v2 s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRect.xml"]{glRect manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRect.xml"]{glRect manpage}.
 }
 @defproc[(glReferencePlaneSGIX (equation f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/reference_plane.txt"]{@racket[GL_SGIX_reference_plane]}.
@@ -185,7 +185,7 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glReleaseShaderCom
 @defproc[(glRenderMode (mode exact-integer?)) exact-integer?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRenderMode.xml"]{glRenderMode manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRenderMode.xml"]{glRenderMode manpage}.
 }
 @defproc[(glRenderbufferStorage (target exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?)) any]{
 Version 3.0.
@@ -286,7 +286,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glResetHistogram.xml"]{glResetHistogram manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glResetHistogram.xml"]{glResetHistogram manpage}.
 }
 @defproc[(glResetHistogramEXT (target exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -297,7 +297,7 @@ Alias of @racket[glResetHistogram].
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glResetMinmax.xml"]{glResetMinmax manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glResetMinmax.xml"]{glResetMinmax manpage}.
 }
 @defproc[(glResetMinmaxEXT (target exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -318,10 +318,10 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback
 @defproc[(glRotated (angle real?) (x real?) (y real?) (z real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRotate.xml"]{glRotate manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRotate.xml"]{glRotate manpage}.
 }
 @defproc[(glRotatef (angle flonum?) (x flonum?) (y flonum?) (z flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man/xhtml/glRotate.xml"]{glRotate manpage}.
+See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glRotate.xml"]{glRotate manpage}.
 }
