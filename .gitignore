@@ -1,7 +1,5 @@
 # Generated Racket file
 gl_specs.rkt
-# Generated files
-generated/
 # Compiled filed
 compiled/
 doc/
@@ -13,3 +11,5 @@ doc/
 *.html
 *.css
 *.js
+#Patch files
+*.patch
