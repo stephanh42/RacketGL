@@ -1,8 +1,10 @@
 #lang scribble/manual
 
+@(require planet/scribble)
+
 @title{The RacketGL library}
 
-@defmodule[(planet "rgl.rkt" ("stephanh" "RacketGL.plt" 1 2))]
+@(defmodule/this-package rgl)
 
 @(require (for-label racket/gui/base))
 @(require (for-label ffi/vector))
