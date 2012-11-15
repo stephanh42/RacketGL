@@ -1,5 +1,7 @@
 #lang racket
 
+(require srfi/13)
+
 ; It would be really cool if we could do strict checking of
 ; the enums. And in fact the info appears to be available in enum.spec
 ; and I wrote the code to do it. But I quickly found out that enum.spec
@@ -15,6 +17,8 @@
                 (params #:mutable)
                 (return #:mutable)
                 (version #:mutable)
+                (category #:mutable)
+                (alias #:mutable)
                 (deprecated #:mutable)))
 
 (define-struct constant-spec
@@ -61,7 +65,7 @@
     (mode-dependent-type
       `(_ptr i ,type) `(_ptr o ,type))
     (case type
-      ((_void) '_pointer)
+      ((_void) '_pointer/intptr)
       ((_byte _uint8) (mode-dependent-type 
                         '_string*/utf-8 
                         (if (null? args)
@@ -88,12 +92,12 @@
       (cons "GLshort" '_int16)
       (cons "GLvoid" '_void)
       (cons "const GLubyte *" (pointer-to '_uint8))
-      (cons "GLsync" '_pointer)
-      ;    (cons "GLhandleARB" _GLhandleARB)
+      (cons "GLsync" '_GLsync)
+      (cons "GLhandleARB" '_uint32)
       (cons "GLboolean" '_bool)
       (cons "struct _cl_event *" '_pointer)
       (cons "GLint64EXT" '_int64)
-      (cons "GLsizeiptrARB" (pointer-to '_int32))
+      (cons "GLsizeiptrARB" '_intptr)
       ;    (cons "GLDEBUGPROCARB" _GLDEBUGPROCARB)
       (cons "GLenum" '_int32)
       (cons "GLint" '_int32)
@@ -113,7 +117,7 @@
       (cons "GLbitfield" '_uint32)
       (cons "GLuint64EXT" '_uint64)
       (cons "GLchar*" (pointer-to '_byte))
-      (cons "GLsizeiptr" (pointer-to '_int32))
+      (cons "GLsizeiptr" '_intptr)
       (cons "GLchar" '_byte)
       ;    (cons "GLUquadric*" _GLUquadric*)
       (cons "GLdouble" '_double*)
@@ -165,6 +169,40 @@
     (printf "(define-bitfield gl~a? ~s)~%"
             name
             vals)))
+
+(define (get-extension-url extension)
+  (let* ((mo (regexp-match  #rx"^([0-9A-Z]+)_(.*)$" extension))
+         (prefix (list-ref mo 1))
+         (base (list-ref mo 2)))
+    (format "http://www.opengl.org/registry/specs/~a/~a.txt"
+            prefix base)))
+
+(define (read-manpages input-port)
+  (for/set ((l (in-lines input-port)))
+           (string-trim l)))
+
+(define manpages (call-with-input-file "specfiles/manpages.txt" read-manpages))
+(define manpages4 (call-with-input-file "specfiles/manpages4.txt" read-manpages))
+
+(define (get-manpage-helper name)
+  (cond
+    ((set-member? manpages4 name)
+     (list
+       (format "http://www.opengl.org/sdk/docs/man4/xhtml/gl~a.xml" name)
+       name))
+    ((set-member? manpages name)
+     (list
+       (format "http://www.opengl.org/sdk/docs/man/xhtml/gl~a.xml" name)
+       name))
+    (else #f)))
+
+(define (get-manpage name)
+  (cond
+    ((get-manpage-helper name) => values)
+    ((regexp-match #rx"^(.*?[^0-9])[1-4]?(u?[bsi]|[fd])v?$" name)
+     =>
+     (λ (m) (get-manpage-helper (list-ref m 1))))
+    (else #f)))
 
 (define (read-enums input-port)
 
@@ -259,7 +297,7 @@
 
     (define (new-function m)
       (let* ((name (list-ref m 1))
-             (spec (function-spec name '() #f #f #f)))
+             (spec (function-spec name '() #f #f #f #f #f)))
         (set! result (cons spec result))
         (set! current-function-spec spec)))
 
@@ -277,6 +315,12 @@
     (define (handle-version m)
       (set-function-spec-version! current-function-spec (list-ref m 1)))
 
+    (define (handle-category m)
+      (set-function-spec-category! current-function-spec (list-ref m 1)))
+
+    (define (handle-alias m)
+      (set-function-spec-alias! current-function-spec (list-ref m 1)))
+
     (define (handle-deprecated m)
       (set-function-spec-deprecated! current-function-spec (list-ref m 1)))
 
@@ -285,10 +329,12 @@
            ((regexp-match #px"^([a-zA-Z0-9_]+)\\(.*\\)" l) => new-function)
            ((regexp-match #px"^\\s+return\\s+(\\S+)" l) => handle-return)
            ((regexp-match #px"^\\s+version\\s+([0-9.]+)" l) => handle-version)
+           ((regexp-match #px"^\\s+category\\s+(\\S+)" l) => handle-category)
+           ((regexp-match #px"^\\s+alias\\s+(\\S+)" l) => handle-alias)
            ((regexp-match #px"^\\s+deprecated\\s+([0-9.]+)" l) => handle-deprecated)
            ((regexp-match #px"^\\s+param\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)\\s+(\\S+)(?:\\s+\\[(.*)\\])?" l) => handle-param)))
 
-    (reverse result)))
+    (sort result string<? #:key function-spec-name)))
 
 (define enums
   (call-with-input-file "specfiles/enum.spec" read-enums))
@@ -423,10 +469,12 @@
        ((_uint16) '(integer-in 0 65535))
        ((_int32 _intptr _int64) 'exact-integer?)
        ((_uint32 _uint64) 'exact-nonnegative-integer?)
+       ((_GLsync) 'GLsync?)
        ((_float) 'flonum?)
        ((_double*) 'real?)
        ((_bool) 'boolean?)
        ((_pointer) 'cpointer?)
+       ((_pointer/intptr) 'gl-pointer?)
        ((_string*/utf-8) '(or/c string? bytes?))
        (else 
          (hash-ref vector-to-contract type type))))
@@ -478,29 +526,48 @@
 
 (define (print-doc port name fun-type spec)
   (let-values (((args-doc return-doc) (fun-type->doc fun-type)))
-    (fprintf port "@defproc[~s ~s]~%" 
+    (fprintf port "@defproc[~s ~s]{~%" 
              (cons (string->symbol (string-append "gl" name)) args-doc) 
              return-doc)
+    (let ((extension-proc? (regexp-match #px"[A-Z][A-Z]$" name))
+          (version (function-spec-version spec))
+          (cat (function-spec-category spec)))
+      (if extension-proc?
+        (fprintf port "Extension @hyperlink[\"~a\"]{@racket[GL_~a]}.~%" 
+                 (get-extension-url cat)
+                 cat)
+        (when (and version (not (string=? version "1.0")))
+          (fprintf port "Version ~a.~%" (function-spec-version spec)))))
     (when (function-spec-deprecated spec)
       (fprintf port "Deprecated in version ~a.~%" (function-spec-deprecated spec)))
-;   (fprintf port "See the @hyperlink[\"http://www.opengl.org/sdk/docs/man4/xhtml/gl~a.xml\"]{gl~a manpage}.~%"
-;            name name)
-    ))
+    (cond
+      ((get-manpage name)
+       =>
+       (λ (url)
+         (apply fprintf port "~%See the @hyperlink[\"~a\"]{gl~a manpage}.~%" url))))
+    (when (function-spec-alias spec)
+      (fprintf port "~%Alias of @racket[gl~a].~%" (function-spec-alias spec)))
+    (fprintf port "}~%")))
 
-(define (print-doc-header doc-port version)
+(define (print-doc-header doc-port first-letter)
   (fprintf doc-port "#lang scribble/manual~%")
-  (fprintf doc-port "@title{OpenGL version ~a}~%" version))
+  (fprintf doc-port "@title{gl~a...}~%" first-letter))
+
+(define doc-files '())
 
 (define get-doc-port
   (let ((doc-hash (make-hash)))
-    (lambda (version)
-      (hash-ref doc-hash version
-                (lambda ()
-                  (let ((port (open-output-file (format "generated/gl_specs~a.scrbl" version)
-                                                #:exists 'replace)))
-                    (print-doc-header port version)
-                    (hash-set! doc-hash version port)
-                    port))))))
+    (lambda (name)
+      (let ((first-letter (string-ref name 0)))
+        (hash-ref doc-hash first-letter
+                  (lambda ()
+                    (let* ((filename (format "generated/gl_specs_~a.inc" first-letter))
+                           (port (open-output-file filename
+                                                  #:exists 'replace)))
+                      (print-doc-header port first-letter)
+                      (hash-set! doc-hash first-letter port)
+                      (set! doc-files (cons filename doc-files))
+                      port)))))))
 
 (define (fun-type->contract fun-type)
   (let-values (((args-doc return-doc) (fun-type->doc fun-type)))
@@ -520,9 +587,14 @@
 
     (if (contains-string? fun-t-ffi) 
       (display "; ")
-      (when (not (regexp-match #px"[A-Z]$" name))
-        (let ((doc-port (get-doc-port (function-spec-version spec))))
+      (when #t ; (not (regexp-match #px"[A-Z]$" name))
+        (let ((doc-port (get-doc-port name)))
           (print-doc doc-port name fun-t spec))))
 
     (printf "(define-gl gl~a ~s ~s ~s ~s)~%" name arity fun-t-ffi (fun-type->contract fun-t)
             (hash-ref name->checker name 'check-gl-error))))
+
+(call-with-output-file "generated/gl_specs.txt" #:exists 'replace
+  (λ (out)                       
+    (for ((doc-file (in-list (sort doc-files string<?))))
+      (fprintf out "@include-section[\"~a\"]~%" doc-file))))

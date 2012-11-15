@@ -1,7 +1,7 @@
 #lang racket/base
 
 (require 
-  racket/promise racket/future racket/include racket/set 
+  racket/promise racket/future racket/include racket/set racket/class racket/draw
   (rename-in racket/contract (-> ->>))
   ffi/unsafe ffi/vector)
 
@@ -107,6 +107,41 @@
   (set! between-begin-end #f)
   (check-gl-error name))
 
+(provide/contract
+  (GLsync? (->> any/c boolean?)))
+
+(define-cpointer-type _GLsync)
+
+; A "gl-vector" is any homogenous vector of a type which is used with the OpenGL API.
+(provide/contract 
+  (gl-vector? (->> any/c boolean?))
+  (gl-pointer? (->> any/c boolean?))
+  (gl-type? (->> any/c boolean?)))
+
+(define (gl-vector? obj)
+  (or (bytes? obj) (s8vector? obj) (u16vector? obj) (s16vector? obj)
+      (u32vector? obj) (s32vector? obj) (f32vector? obj) (f64vector? obj)))
+
+(define (gl-pointer? obj)
+  (or (cpointer? obj) (exact-nonnegative-integer? obj) (gl-vector? obj)))
+
+(define (gl-type? obj)
+  (hash-has-key? gl-types obj))
+
+; Some functions take a pointer parameter, but when a VBO is bound the pointer
+; is really interpreted as an integer offset.
+; On the Racket side, we want the function to simply accept either a pointer or an integer in that case.
+; So here is a conversion function to be used as a pre:-code sequence.
+(define (convert-vbo-pointer v)
+  (cond
+    ((cpointer? v) v)
+    ((exact-integer? v) (ptr-add #f v))
+    (else (gl-vector->cpointer v))))
+
+(define-fun-syntax _pointer/intptr
+  (syntax-id-rules (_pointer/intptr)
+    [_pointer/intptr (type: _pointer pre: (x => (convert-vbo-pointer x)))]))
+
 (include "generated/gl_specs.inc")
 
 (define (split-spaces str)
@@ -152,23 +187,20 @@
 (define (gl-version-at-least? version)
   (version>= (gl-version) version))
 
-; A "gl-vector" is any homogenous vector of a type which is used with the OpenGL API.
-(provide/contract (gl-vector? (->> any/c boolean?)))
-
-(define (gl-vector? obj)
-  (or (bytes? obj) (s8vector? obj) (u16vector? obj) (s16vector? obj)
-      (u32vector? obj) (s32vector? obj) (f32vector? obj) (f64vector? obj)))
-
-
 ;; Get the appropriate type enum for a Racket vector.
 ;; Useful for glVertexPointer and friends.
 ;; Also get length and cpointer in one operation.
 (provide/contract 
-  (gl-vector->type (->> gl-vector? exact-integer?))
+  (gl-vector->type (->> gl-vector? gl-type?))
   (gl-vector->cpointer (->> gl-vector? cpointer?))
-  (gl-vector->length (->> gl-vector? exact-nonnegative-integer?))
-  (gl-vector->type/cpointer (->> gl-vector? (values exact-integer? cpointer?)))
-  (gl-vector->type/cpointer/length (->> gl-vector? (values exact-integer? cpointer? exact-nonnegative-integer?))))
+  (gl-vector->length (->> gl-vector? gl-type?))
+  (gl-vector->type/cpointer (->> gl-vector? (values gl-type? cpointer?)))
+  (gl-vector->type/cpointer/length (->> gl-vector? (values gl-type? cpointer? exact-nonnegative-integer?)))
+  (gl-vector-sizeof (->> gl-vector? exact-nonnegative-integer?))
+  (gl-vector-alignof (->> gl-vector? exact-nonnegative-integer?))
+  (gl-type->ctype (->> gl-type? ctype?))
+  (gl-type-sizeof (->> gl-type? exact-nonnegative-integer?))
+  (gl-type-alignof (->> gl-type? exact-nonnegative-integer?)))
 
 (define (gl-vector->info vec)
   (cond
@@ -202,6 +234,32 @@
   (let-values (((type ->cpointer length) (gl-vector->info vec)))
               (values type (->cpointer vec) (length vec))))
 
+(define gl-types (hasheqv 
+  GL_UNSIGNED_BYTE _uint8
+  GL_BYTE _sint8
+  GL_UNSIGNED_SHORT _uint16
+  GL_SHORT _sint16
+  GL_UNSIGNED_INT _uint32
+  GL_INT _sint32
+  GL_FLOAT _float
+  GL_DOUBLE _double))
+
+(define (gl-type->ctype type)
+  (hash-ref gl-types type))
+
+(define (gl-type-sizeof type)
+  (ctype-sizeof (gl-type->ctype type)))
+
+(define (gl-type-alignof type)
+  (ctype-alignof (gl-type->ctype type)))
+
+(define (gl-vector-sizeof vec)
+  (let-values (((type ->cpointer length) (gl-vector->info vec)))
+    (* (length vec) (gl-type-sizeof type))))
+
+(define (gl-vector-alignof vec)
+  (gl-type-alignof (gl-vector->type vec)))
+   
 (define error-messages (hasheqv
         GL_NO_ERROR "No error has been recorded."
         GL_INVALID_ENUM "An unacceptable value is specified for an enumerated argument."
@@ -212,3 +270,82 @@
         GL_OUT_OF_MEMORY "There is not enough memory left to execute the command."))
 
 (define between-begin-end #f)
+
+;;; Utility functions for dealing with textures
+(provide/contract 
+  (bitmap->texture 
+    (->* ((is-a?/c bitmap%))
+         (#:mipmap any/c
+          #:repeat (one-of/c 'none 'x 'y 'both))
+         exact-nonnegative-integer?))
+
+  (load-texture 
+    (->* ((or/c path-string? input-port?))
+         (#:mipmap any/c
+          #:repeat (one-of/c 'none 'x 'y 'both))
+         exact-nonnegative-integer?)))
+
+;; Convert argb -> rgba, and convert to pre-multiplied alpha.
+;; (Non-premultiplied alpha gives blending artifacts and is evil.)
+;; Modern wisdom is not to convert to rgba but rather use 
+;; GL_BGRA with GL_UNSIGNED_INT_8_8_8_8_REV. But that turns out not
+;; to work on some implementations, even ones which advertise
+;; OpenGL 1.2 support. Great.
+(define (argb->rgba! pixels)
+  (for ((i (in-range (/ (bytes-length pixels) 4))))
+       (let* ((offset (* 4 i))
+              (alpha (bytes-ref pixels offset))
+              (red (bytes-ref pixels (+ 1 offset)))
+              (green (bytes-ref pixels (+ 2 offset)))
+              (blue (bytes-ref pixels (+ 3 offset))))
+         (bytes-set! pixels offset (quotient (* alpha red) 255))
+         (bytes-set! pixels (+ 1 offset) (quotient (* alpha green) 255))
+         (bytes-set! pixels (+ 2 offset) (quotient (* alpha blue) 255))
+         (bytes-set! pixels (+ 3 offset) alpha))))
+
+
+;; Convert a Racket bitmap into an OpenGL texture.
+;; (with lots of default settings.)
+(define (bitmap->texture bm #:mipmap (mipmap #t) #:repeat (repeat-mode 'none))
+  (let* ((w (send bm get-width))
+         (h (send bm get-height))
+         (pixels (make-bytes (* w h 4)))
+         (texture (u32vector-ref (glGenTextures 1) 0)))
+
+    (define (load-texture-data)
+      (glTexImage2D GL_TEXTURE_2D 0 GL_RGBA8 w h 0 GL_RGBA GL_UNSIGNED_BYTE pixels))
+
+    (send bm get-argb-pixels 0 0 w h pixels)
+    ;; massage data.
+    (argb->rgba! pixels)
+    
+    (glBindTexture GL_TEXTURE_2D texture)
+    (glTexParameteri GL_TEXTURE_2D GL_TEXTURE_WRAP_S 
+                     (case repeat-mode ((x both) GL_REPEAT) (else GL_CLAMP)))
+    (glTexParameteri GL_TEXTURE_2D GL_TEXTURE_WRAP_T 
+                     (case repeat-mode ((y both) GL_REPEAT) (else GL_CLAMP)))
+    (glTexParameteri GL_TEXTURE_2D GL_TEXTURE_MAG_FILTER GL_LINEAR)
+    (cond 
+      ;; modern mipmap generation method
+      ((and mipmap (gl-version-at-least? '(3 0)))
+       (glTexParameteri GL_TEXTURE_2D GL_TEXTURE_MIN_FILTER GL_LINEAR_MIPMAP_LINEAR)
+       (load-texture-data)
+       (glGenerateMipmap GL_TEXTURE_2D))
+
+      ;; old mipmap generation method
+      ((and mipmap (gl-version-at-least? '(1 4)))
+       (glTexParameteri GL_TEXTURE_2D GL_TEXTURE_MIN_FILTER GL_LINEAR_MIPMAP_LINEAR)
+       (glTexParameteri GL_TEXTURE_2D GL_GENERATE_MIPMAP GL_TRUE)
+       (load-texture-data))
+
+      (else
+        ; fallback to not using mipmaps
+        ; this seems more useful than erroring
+        (glTexParameteri GL_TEXTURE_2D GL_TEXTURE_MIN_FILTER GL_LINEAR)
+        (load-texture-data)))
+
+    texture))
+
+;; Directly load a file from disk as texture.
+(define (load-texture filename #:mipmap (mipmap #t) #:repeat (repeat-mode 'none))
+  (bitmap->texture (read-bitmap filename) #:mipmap mipmap #:repeat repeat-mode))
