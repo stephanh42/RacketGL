@@ -52,5 +52,10 @@
   (glDisableClientState GL_VERTEX_ARRAY))
 
 
+;; Example how to instrument loading of functions
+(set-gl-procedure-loader!
+  (λ (name)
+    (printf "Loading ~a~%" name)
+    (default-gl-procedure-loader name)))
 
 (view draw setup)

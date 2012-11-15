@@ -7,17 +7,8 @@
 
 (define stype (system-type))
 
-(define gl-lib 
-  (delay 
-    (case stype
-      [(windows) (ffi-lib "opengl32")]
-      [(macosx) (ffi-lib "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL")]
-      [else (ffi-lib "libGL" '("1" ""))])))
-
-(define windows? (eq? 'windows stype))
-
 (define win32?
-  (and windows?
+  (and (eq? 'windows stype)
        (equal? "win32\\i386" (path->string (system-library-subpath #f)))))
 
 (define-syntax _fun*
@@ -25,34 +16,50 @@
     [(_fun* x ...)
      (if win32? (_fun #:abi 'stdcall x ...) (_fun x ...))]))
 
+(define (load-get-proc-address gl-lib names)
+  (if (null? names)
+    (λ (x) (ffi-obj-ref x gl-lib (λ () #f)))
+    (get-ffi-obj (car names) gl-lib (_fun* _string -> _pointer)
+                 (λ () (load-get-proc-address gl-lib (cdr names))))))
 
-;; The getProcAddress procedure dynamically loads a GL procedure.
-(define getProcAddress 
-  (delay 
-    (if windows?
-      (get-ffi-obj "wglGetProcAddress" (force gl-lib) (_fun* _string -> _pointer)
-                   (lambda () (lambda (x) #f)))
-      ; According to the Linux ABI, the correct entry point is glXGetProcAddressARB.
-      ; But let's try the non-ARB version too.
-      (get-ffi-obj "glXGetProcAddressARB" (force gl-lib) (_fun _string -> _pointer)
-                   (lambda ()
-                     (get-ffi-obj "glXGetProcAddress" (force gl-lib) (_fun _string -> _pointer)
-                                  (lambda () (lambda (x) #f))))))))
+
+;; The default-gl-procedure-loader procedure dynamically loads a GL procedure.
+(define default-gl-procedure-loader
+  (let ((get-proc-address 
+          (delay 
+            (case stype
+              [(windows)
+               (load-get-proc-address (ffi-lib "opengl32") 
+                                      '("wglGetProcAddress"))]
+              [(macosx)
+               (load-get-proc-address (ffi-lib "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL")
+                                      '())]
+              [else ;boldly assume everybody else uses X11
+                (load-get-proc-address (ffi-lib "libGL" '("1" ""))
+                                       '("glXGetProcAddressARB" "glXGetProcAddress"))]))))
+    (λ (name) ((force get-proc-address) name))))
+
+(define gl-procedure-loader default-gl-procedure-loader)
+(define (set-gl-procedure-loader! new-loader) (set! gl-procedure-loader new-loader))
+
+(provide/contract
+  (default-gl-procedure-loader (->> string? (or/c cpointer? procedure? #f))) 
+  (set-gl-procedure-loader! (->> (->> string? (or/c cpointer? procedure? #f)) any)))
+
 
 (define (make-undefined-procedure name)
 ;  (printf "OpenGL procedure not available: ~a~%" name)
   (lambda args
     (error "OpenGL procedure not available:" name)))
 
+
 (define (lookup-gl-procedure name type)
-  (get-ffi-obj name (force gl-lib) type
-               (lambda ()
-                 (let ((ptr ((force getProcAddress) (symbol->string name))))
-                   (if ptr
-                     (begin
-;                       (printf "Loaded dynamically: ~a~%" name)
-                       (function-ptr ptr type))
-                     (make-undefined-procedure name))))))
+  (let ((ptr (gl-procedure-loader (symbol->string name))))
+    (if ptr
+      (begin
+;        (printf "Loaded: ~a~%" name)
+        (function-ptr ptr type))
+      (make-undefined-procedure name))))
 
 ; Load everything lazily.
 ; This speeds things up in general and is essential on Windows

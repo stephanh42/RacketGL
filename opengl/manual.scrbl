@@ -200,6 +200,18 @@ For example, version 3.1.2 would return a list (3 1 2).
   @racket[#f] otherwise.
 }
 
+@defproc[(set-gl-procedure-loader! (loader (-> string? (or/c cpointer? procedure? #f)))) any]{
+  Registers a custom GL procedure loader.
+  This is useful for exotic platforms which the default procedure loader does not know about.
+  Note that the result of the loader is cached, so changing the loader halfway during your program
+  will not work and will probably result in impressive crashes.
+}
+
+@defproc[(default-gl-procedure-loader (name string?)) (or/c cpointer? procedure? #f)]{
+  This is the default loader. It knows how to load OpenGL procedures on Windows, MacOS X and Linux/Unix X11.
+}
+
+
 @(bibliography
  (bib-entry #:key "1"
   #:title "Composing Digital Images"
