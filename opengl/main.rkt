@@ -356,3 +356,56 @@
 ;; Directly load a file from disk as texture.
 (define (load-texture filename #:mipmap (mipmap #t) #:repeat (repeat-mode 'none))
   (bitmap->texture (read-bitmap filename) #:mipmap mipmap #:repeat repeat-mode))
+
+
+;;; Utility functions for dealing with shaders
+(provide/contract 
+  (load-shader
+    (->> (or/c path-string? input-port?) exact-nonnegative-integer? exact-nonnegative-integer?))
+
+  (create-program
+    (->* () () #:rest (listof exact-nonnegative-integer?) exact-nonnegative-integer?)))
+
+(define (get-shader-parameter shader pname)
+  (let ((return-buffer (make-s32vector 1)))
+    (glGetShaderiv shader pname return-buffer)
+    (s32vector-ref return-buffer 0)))
+
+(define (get-shader-info-log shader)
+  (let ((log-length (get-shader-parameter shader GL_INFO_LOG_LENGTH)))
+    (let-values (((actual-length info-log) (glGetShaderInfoLog shader log-length)))
+      (bytes->string/utf-8 info-log #\? 0 actual-length))))
+
+(define (get-program-parameter program pname)
+  (let ((return-buffer (make-s32vector 1)))
+    (glGetProgramiv program pname return-buffer)
+    (s32vector-ref return-buffer 0)))
+
+(define (get-program-info-log program)
+  (let ((log-length (get-program-parameter program GL_INFO_LOG_LENGTH)))
+    (let-values (((actual-length info-log) (glGetProgramInfoLog program log-length)))
+      (bytes->string/utf-8 info-log #\? 0 actual-length))))
+
+(define (load-shader-source shader port)
+  (let* ((lines (for/vector ((line (in-lines port))) line))
+         (sizes (for/list ((line (in-vector lines))) (string-length line)))
+         (sizes (list->s32vector sizes)))
+   (glShaderSource shader (vector-length lines) lines sizes)))
+
+(define (load-shader port-or-path shader-type)
+  (let ((shader (glCreateShader shader-type)))
+    (if (input-port? port-or-path) 
+      (load-shader-source shader port-or-path)
+      (call-with-input-file port-or-path (λ (p) (load-shader-source shader p)) #:mode 'text))
+    (glCompileShader shader)
+    (unless (= (get-shader-parameter shader GL_COMPILE_STATUS) GL_TRUE)
+      (error 'load-shader "Error compiling shader ~a: ~a" port-or-path (get-shader-info-log shader)))
+    shader))
+
+(define (create-program . shaders)
+  (let ((program (glCreateProgram)))
+    (for-each (λ (sh) (glAttachShader program sh)) shaders)
+    (glLinkProgram program)
+    (unless (= (get-program-parameter program GL_LINK_STATUS) GL_TRUE)
+      (error 'create-program "Error linking program: ~a" (get-program-info-log program)))
+    program))

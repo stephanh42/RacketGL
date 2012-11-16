@@ -8,28 +8,12 @@
 (require ffi/vector)
 (require "viewer.rkt")
 
-
-(define (load-program-source shader port)
-  (let* ((lines (for/vector ((line (in-lines port))) line))
-         (sizes (for/list ((line (in-vector lines))) (string-length line)))
-         (sizes (list->s32vector sizes)))
-   (glShaderSource shader (vector-length lines) lines sizes)))
-
-(define (load-program port)
-  (let ((program (glCreateProgram))
-        (shader (glCreateShader GL_FRAGMENT_SHADER)))
-    (load-program-source shader port)
-    (glCompileShader shader)
-    (glAttachShader program shader)
-    (glLinkProgram program)
-    program))
-
 (define program #f)
 
 (define (setup)
   (if (or (gl-version-at-least? '(2 0))
           (gl-has-extension? 'GL_ARB_shader_objects))
-    (set! program (call-with-input-file "test.glsl" load-program))
+    (set! program (create-program (load-shader "test.glsl" GL_FRAGMENT_SHADER)))
     (printf "This OpenGL does not support shaders, you'll get a plain white rectangle.~%")))
 
 (define (draw)

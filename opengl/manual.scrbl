@@ -172,6 +172,30 @@ Note that some (older) OpenGL implementations may restrict textures to sizes whi
   The parameters @racket[mipmap] and @racket[repeat-mode]
   have the same meaning as with @racket[bitmap->texture].
 }
+
+@section{Utility procedures for shaders}
+
+These procedures can be used to load shaders written in GLSL (the GL Shading Language).
+Note that these, too, should only be called when an OpenGL context is active!
+
+@defproc[(load-shader (file (or/c path-string? input-port?))
+                      (shader-type exact-nonnegative-integer?))
+                       exact-nonnegative->integer?]{
+  Load a shader written in GLSL from a named file or input port.
+
+  The parameter @racket[shader-type] is typically either @racket[GL_VERTEX_SHADER]
+  or @racket[GL_FRAGMENT_SHADER], although modern OpenGL versions define many
+  more shader types. The returned shader object is already compiled and can be
+  passed directly into @racket[create-program].
+}
+
+
+@defproc[(create-program (shader exact-nonnegative-integer?) ...) exact-nonnegative-integer?]{
+  Create a complete GLSL program from combining several shaders.
+
+  This procedure takes shaders as created by @racket[load-shader] and links them together
+  into a single program. The resulting program is already linked and can be passed directly into @racket[glUseProgram].
+}
  
 @section{Additional utility procedures}
 
