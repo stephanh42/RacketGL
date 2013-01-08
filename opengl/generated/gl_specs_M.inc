@@ -6,11 +6,23 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/shader_buffer_load
 @defproc[(glMakeBufferResidentNV (target exact-integer?) (access exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/shader_buffer_load.txt"]{@racket[GL_NV_shader_buffer_load]}.
 }
+@defproc[(glMakeImageHandleNonResidentNV (handle exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
+@defproc[(glMakeImageHandleResidentNV (handle exact-nonnegative-integer?) (access exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
 @defproc[(glMakeNamedBufferNonResidentNV (buffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/shader_buffer_load.txt"]{@racket[GL_NV_shader_buffer_load]}.
 }
 @defproc[(glMakeNamedBufferResidentNV (buffer exact-nonnegative-integer?) (access exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/shader_buffer_load.txt"]{@racket[GL_NV_shader_buffer_load]}.
+}
+@defproc[(glMakeTextureHandleNonResidentNV (handle exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
+@defproc[(glMakeTextureHandleResidentNV (handle exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
 }
 @defproc[(glMap1d (target exact-integer?) (u1 real?) (u2 real?) (stride exact-integer?) (order exact-integer?) (points f64vector?)) any]{
 Deprecated in version 3.1.
@@ -183,6 +195,11 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glMatrixTranslatefEXT (mode exact-integer?) (x flonum?) (y flonum?) (z flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
+@defproc[(glMemoryBarrier (barriers exact-nonnegative-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMemoryBarrier.xml"]{glMemoryBarrier manpage}.
+}
 @defproc[(glMemoryBarrierEXT (barriers exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/shader_image_load_store.txt"]{@racket[GL_EXT_shader_image_load_store]}.
 }
@@ -239,7 +256,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/transpose_matrix.
 
 Alias of @racket[glMultTransposeMatrixf].
 }
-@defproc[(glMultiDrawArrays (mode exact-integer?) (first s32vector?) (count s32vector?) (primcount exact-integer?)) any]{
+@defproc[(glMultiDrawArrays (mode exact-integer?) (first s32vector?) (count s32vector?) (drawcount exact-integer?)) any]{
 Version 1.4.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawArrays.xml"]{glMultiDrawArrays manpage}.
@@ -249,15 +266,21 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/multi_draw_arrays
 
 Alias of @racket[glMultiDrawArrays].
 }
+@defproc[(glMultiDrawArraysIndirect (mode exact-integer?) (indirect gl-pointer?) (drawcount exact-integer?) (stride exact-integer?)) any]{
+Version 4.3.
+}
+@defproc[(glMultiDrawArraysIndirectAMD (mode exact-integer?) (indirect gl-pointer?) (primcount exact-integer?) (stride exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/multi_draw_indirect.txt"]{@racket[GL_AMD_multi_draw_indirect]}.
+}
 @defproc[(glMultiDrawElementArrayAPPLE (mode exact-integer?) (first s32vector?) (count s32vector?) (primcount exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/element_array.txt"]{@racket[GL_APPLE_element_array]}.
 }
-@defproc[(glMultiDrawElements (mode exact-integer?) (count s32vector?) (type exact-integer?) (indices (vectorof gl-pointer?)) (primcount exact-integer?)) any]{
+@defproc[(glMultiDrawElements (mode exact-integer?) (count s32vector?) (type exact-integer?) (indices (vectorof gl-pointer?)) (drawcount exact-integer?)) any]{
 Version 1.4.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElements.xml"]{glMultiDrawElements manpage}.
 }
-@defproc[(glMultiDrawElementsBaseVertex (mode exact-integer?) (count s32vector?) (type exact-integer?) (indices (vectorof gl-pointer?)) (primcount exact-integer?) (basevertex s32vector?)) any]{
+@defproc[(glMultiDrawElementsBaseVertex (mode exact-integer?) (count s32vector?) (type exact-integer?) (indices (vectorof gl-pointer?)) (drawcount exact-integer?) (basevertex s32vector?)) any]{
 Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElementsBaseVertex.xml"]{glMultiDrawElementsBaseVertex manpage}.
@@ -266,6 +289,12 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElement
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/multi_draw_arrays.txt"]{@racket[GL_EXT_multi_draw_arrays]}.
 
 Alias of @racket[glMultiDrawElements].
+}
+@defproc[(glMultiDrawElementsIndirect (mode exact-integer?) (type exact-integer?) (indirect gl-pointer?) (drawcount exact-integer?) (stride exact-integer?)) any]{
+Version 4.3.
+}
+@defproc[(glMultiDrawElementsIndirectAMD (mode exact-integer?) (type exact-integer?) (indirect gl-pointer?) (primcount exact-integer?) (stride exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/multi_draw_indirect.txt"]{@racket[GL_AMD_multi_draw_indirect]}.
 }
 @defproc[(glMultiDrawRangeElementArrayAPPLE (mode exact-integer?) (start exact-nonnegative-integer?) (end exact-nonnegative-integer?) (first s32vector?) (count s32vector?) (primcount exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/element_array.txt"]{@racket[GL_APPLE_element_array]}.

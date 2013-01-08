@@ -43,6 +43,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/name_gen_delete.t
 @defproc[(glGenOcclusionQueriesNV (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/occlusion_query.txt"]{@racket[GL_NV_occlusion_query]}.
 }
+@defproc[(glGenPathsNV (range exact-integer?)) exact-nonnegative-integer?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
 @defproc[(glGenPerfMonitorsAMD (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monitor.txt"]{@racket[GL_AMD_performance_monitor]}.
 }
@@ -132,12 +135,17 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glGenerateTextureMipmapEXT (texture exact-nonnegative-integer?) (target exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
-@defproc[(glGetActiveAttrib (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?) (name bytes?)) (values exact-integer? exact-integer? exact-integer?)]{
+@defproc[(glGetActiveAtomicCounterBufferiv (program exact-nonnegative-integer?) (bufferIndex exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveAtomicCounterBufferiv.xml"]{glGetActiveAtomicCounterBufferiv manpage}.
+}
+@defproc[(glGetActiveAttrib (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Version 2.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveAttrib.xml"]{glGetActiveAttrib manpage}.
 }
-@defproc[(glGetActiveAttribARB (programObj exact-nonnegative-integer?) (index exact-nonnegative-integer?) (maxLength exact-integer?) (name bytes?)) (values exact-integer? exact-integer? exact-integer?)]{
+@defproc[(glGetActiveAttribARB (programObj exact-nonnegative-integer?) (index exact-nonnegative-integer?) (maxLength exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_shader.txt"]{@racket[GL_ARB_vertex_shader]}.
 
 Alias of @racket[glGetActiveAttrib].
@@ -157,12 +165,12 @@ Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineUniform.xml"]{glGetActiveSubroutineUniform manpage}.
 }
-@defproc[(glGetActiveUniform (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?) (name bytes?)) (values exact-integer? exact-integer? exact-integer?)]{
+@defproc[(glGetActiveUniform (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Version 2.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniform.xml"]{glGetActiveUniform manpage}.
 }
-@defproc[(glGetActiveUniformARB (programObj exact-nonnegative-integer?) (index exact-nonnegative-integer?) (maxLength exact-integer?) (name bytes?)) (values exact-integer? exact-integer? exact-integer?)]{
+@defproc[(glGetActiveUniformARB (programObj exact-nonnegative-integer?) (index exact-nonnegative-integer?) (maxLength exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.txt"]{@racket[GL_ARB_shader_objects]}.
 
 Alias of @racket[glGetActiveUniform].
@@ -187,7 +195,7 @@ Version 2.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformsiv.xml"]{glGetActiveUniformsiv manpage}.
 }
-@defproc[(glGetActiveVaryingNV (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?) (name bytes?)) (values exact-integer? exact-integer? exact-integer?)]{
+@defproc[(glGetActiveVaryingNV (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback.txt"]{@racket[GL_NV_transform_feedback]}.
 }
 @defproc[(glGetArrayObjectfvATI (array exact-integer?) (pname exact-integer?)) flonum?]{
@@ -361,10 +369,13 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetConvolutionPa
 @defproc[(glGetConvolutionParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
 }
+@defproc[(glGetDebugMessageLog (count exact-nonnegative-integer?) (bufsize exact-integer?) (sources s32vector?) (types s32vector?) (ids u32vector?) (severities s32vector?) (lengths s32vector?) (messageLog bytes?)) exact-nonnegative-integer?]{
+Version 4.3.
+}
 @defproc[(glGetDebugMessageLogAMD (count exact-nonnegative-integer?) (bufsize exact-integer?)) (values exact-nonnegative-integer? s32vector? u32vector? u32vector? s32vector? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/debug_output.txt"]{@racket[GL_AMD_debug_output]}.
 }
-@defproc[(glGetDebugMessageLogARB (count exact-nonnegative-integer?) (bufsize exact-integer?) (messageLog bytes?)) (values exact-nonnegative-integer? s32vector? s32vector? u32vector? s32vector? s32vector?)]{
+@defproc[(glGetDebugMessageLogARB (count exact-nonnegative-integer?) (bufsize exact-integer?)) (values exact-nonnegative-integer? s32vector? s32vector? u32vector? s32vector? s32vector? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/debug_output.txt"]{@racket[GL_ARB_debug_output]}.
 }
 @defproc[(glGetDetailTexFuncSGIS (target exact-integer?) (points f32vector?)) any]{
@@ -439,6 +450,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_objec
 
 Alias of @racket[glGetFramebufferAttachmentParameteriv].
 }
+@defproc[(glGetFramebufferParameteriv (target exact-integer?) (pname exact-integer?)) s32vector?]{
+Version 4.3.
+}
 @defproc[(glGetFramebufferParameterivEXT (framebuffer exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
@@ -475,6 +489,9 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetHistogramPara
 @defproc[(glGetHistogramParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
 }
+@defproc[(glGetImageHandleNV (texture exact-nonnegative-integer?) (level exact-integer?) (layered boolean?) (layer exact-integer?) (format exact-integer?)) exact-nonnegative-integer?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
 @defproc[(glGetImageTransformParameterfvHP (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/HP/image_transform.txt"]{@racket[GL_HP_image_transform]}.
 }
@@ -508,6 +525,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unif
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/shader_buffer_load.txt"]{@racket[GL_NV_shader_buffer_load]}.
 }
 @defproc[(glGetIntegerv (pname exact-integer?)) s32vector?]{
+}
+@defproc[(glGetInternalformati64v (target exact-integer?) (internalformat exact-integer?) (pname exact-integer?) (bufSize exact-integer?)) s64vector?]{
+Version 4.3.
+}
+@defproc[(glGetInternalformativ (target exact-integer?) (internalformat exact-integer?) (pname exact-integer?) (bufSize exact-integer?)) s32vector?]{
+Version 4.2.
 }
 @defproc[(glGetInvariantBooleanvEXT (id exact-nonnegative-integer?) (value exact-integer?) (data cpointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt"]{@racket[GL_EXT_vertex_shader]}.
@@ -660,7 +683,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glGetNamedBufferParameterui64vNV (buffer exact-nonnegative-integer?) (pname exact-integer?)) u64vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/shader_buffer_load.txt"]{@racket[GL_NV_shader_buffer_load]}.
 }
-@defproc[(glGetNamedBufferPointervEXT (buffer exact-nonnegative-integer?) (pname exact-integer?)) (vectorof gl-pointer?)]{
+@defproc[(glGetNamedBufferPointervEXT (buffer exact-nonnegative-integer?) (pname exact-integer?)) gl-pointer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
 @defproc[(glGetNamedBufferSubDataEXT (buffer exact-nonnegative-integer?) (offset exact-integer?) (size exact-integer?) (data gl-pointer?)) any]{
@@ -668,6 +691,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 }
 @defproc[(glGetNamedFramebufferAttachmentParameterivEXT (framebuffer exact-nonnegative-integer?) (attachment exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
+}
+@defproc[(glGetNamedFramebufferParameterivEXT (framebuffer exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/framebuffer_no_attachments.txt"]{@racket[GL_ARB_framebuffer_no_attachments]}.
 }
 @defproc[(glGetNamedProgramLocalParameterIivEXT (program exact-nonnegative-integer?) (target exact-integer?) (index exact-nonnegative-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -702,20 +728,65 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_array_obje
 @defproc[(glGetObjectBufferivATI (buffer exact-nonnegative-integer?) (pname exact-integer?)) exact-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_array_object.txt"]{@racket[GL_ATI_vertex_array_object]}.
 }
-@defproc[(glGetObjectParameterfvARB (obj exact-nonnegative-integer?) (pname exact-integer?) (params f32vector?)) any]{
+@defproc[(glGetObjectLabel (identifier exact-integer?) (name exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
+Version 4.3.
+}
+@defproc[(glGetObjectParameterfvARB (obj exact-nonnegative-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.txt"]{@racket[GL_ARB_shader_objects]}.
 }
 @defproc[(glGetObjectParameterivAPPLE (objectType exact-integer?) (name exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/object_purgeable.txt"]{@racket[GL_APPLE_object_purgeable]}.
 }
-@defproc[(glGetObjectParameterivARB (obj exact-nonnegative-integer?) (pname exact-integer?) (params s32vector?)) any]{
+@defproc[(glGetObjectParameterivARB (obj exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.txt"]{@racket[GL_ARB_shader_objects]}.
+}
+@defproc[(glGetObjectPtrLabel (ptr gl-pointer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
+Version 4.3.
 }
 @defproc[(glGetOcclusionQueryivNV (id exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/occlusion_query.txt"]{@racket[GL_NV_occlusion_query]}.
 }
 @defproc[(glGetOcclusionQueryuivNV (id exact-nonnegative-integer?) (pname exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/occlusion_query.txt"]{@racket[GL_NV_occlusion_query]}.
+}
+@defproc[(glGetPathColorGenfvNV (color exact-integer?) (pname exact-integer?)) f32vector?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathColorGenivNV (color exact-integer?) (pname exact-integer?)) s32vector?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathCommandsNV (path exact-nonnegative-integer?) (commands bytes?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathCoordsNV (path exact-nonnegative-integer?) (coords f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathDashArrayNV (path exact-nonnegative-integer?) (dashArray f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathLengthNV (path exact-nonnegative-integer?) (startSegment exact-integer?) (numSegments exact-integer?)) flonum?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathMetricRangeNV (metricQueryMask exact-nonnegative-integer?) (firstPathName exact-nonnegative-integer?) (numPaths exact-integer?) (stride exact-integer?) (metrics f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathMetricsNV (metricQueryMask exact-nonnegative-integer?) (numPaths exact-integer?) (pathNameType exact-integer?) (paths gl-pointer?) (pathBase exact-nonnegative-integer?) (stride exact-integer?) (metrics f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathParameterfvNV (path exact-nonnegative-integer?) (pname exact-integer?)) f32vector?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathParameterivNV (path exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathSpacingNV (pathListMode exact-integer?) (numPaths exact-integer?) (pathNameType exact-integer?) (paths gl-pointer?) (pathBase exact-nonnegative-integer?) (advanceScale flonum?) (kerningScale flonum?) (transformType exact-integer?) (returnedSpacing f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathTexGenfvNV (texCoordSet exact-integer?) (pname exact-integer?)) f32vector?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glGetPathTexGenivNV (texCoordSet exact-integer?) (pname exact-integer?)) s32vector?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
 }
 @defproc[(glGetPerfMonitorCounterDataAMD (monitor exact-nonnegative-integer?) (pname exact-integer?) (dataSize exact-integer?)) (values u32vector? exact-integer?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monitor.txt"]{@racket[GL_AMD_performance_monitor]}.
@@ -755,6 +826,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/pixel_texture.tx
 }
 @defproc[(glGetPixelTexGenParameterivSGIS (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/pixel_texture.txt"]{@racket[GL_SGIS_pixel_texture]}.
+}
+@defproc[(glGetPixelTransformParameterfvEXT (target exact-integer?) (pname exact-integer?)) f32vector?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/pixel_transform.txt"]{@racket[GL_EXT_pixel_transform]}.
+}
+@defproc[(glGetPixelTransformParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/pixel_transform.txt"]{@racket[GL_EXT_pixel_transform]}.
 }
 @defproc[(glGetPointerIndexedvEXT (target exact-integer?) (index exact-nonnegative-integer?) (data cpointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -796,6 +873,9 @@ Version 2.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramInfoLog.xml"]{glGetProgramInfoLog manpage}.
 }
+@defproc[(glGetProgramInterfaceiv (program exact-nonnegative-integer?) (programInterface exact-integer?) (pname exact-integer?)) s32vector?]{
+Version 4.3.
+}
 @defproc[(glGetProgramLocalParameterIivNV (target exact-integer?) (index exact-nonnegative-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_program4.txt"]{@racket[GL_NV_gpu_program4]}.
 }
@@ -808,10 +888,10 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.tx
 @defproc[(glGetProgramLocalParameterfvARB (target exact-integer?) (index exact-nonnegative-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
 }
-@defproc[(glGetProgramNamedParameterdvNV (id exact-nonnegative-integer?) (len exact-integer?) (name (integer-in 0 255))) f64vector?]{
+@defproc[(glGetProgramNamedParameterdvNV (id exact-nonnegative-integer?) (len exact-integer?) (name (or/c string? bytes?))) f64vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/fragment_program.txt"]{@racket[GL_NV_fragment_program]}.
 }
-@defproc[(glGetProgramNamedParameterfvNV (id exact-nonnegative-integer?) (len exact-integer?) (name (integer-in 0 255))) f32vector?]{
+@defproc[(glGetProgramNamedParameterfvNV (id exact-nonnegative-integer?) (len exact-integer?) (name (or/c string? bytes?))) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/fragment_program.txt"]{@racket[GL_NV_fragment_program]}.
 }
 @defproc[(glGetProgramParameterdvNV (target exact-integer?) (index exact-nonnegative-integer?) (pname exact-integer?)) f64vector?]{
@@ -820,7 +900,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 @defproc[(glGetProgramParameterfvNV (target exact-integer?) (index exact-nonnegative-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt"]{@racket[GL_NV_vertex_program]}.
 }
-@defproc[(glGetProgramPipelineInfoLog (pipeline exact-nonnegative-integer?) (bufSize exact-integer?) (infoLog bytes?)) exact-integer?]{
+@defproc[(glGetProgramPipelineInfoLog (pipeline exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
 Version 4.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramPipelineInfoLog.xml"]{glGetProgramPipelineInfoLog manpage}.
@@ -829,6 +909,21 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramPipeli
 Version 4.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramPipeline.xml"]{glGetProgramPipeline manpage}.
+}
+@defproc[(glGetProgramResourceIndex (program exact-nonnegative-integer?) (programInterface exact-integer?) (name (or/c string? bytes?))) exact-nonnegative-integer?]{
+Version 4.3.
+}
+@defproc[(glGetProgramResourceLocation (program exact-nonnegative-integer?) (programInterface exact-integer?) (name (or/c string? bytes?))) exact-integer?]{
+Version 4.3.
+}
+@defproc[(glGetProgramResourceLocationIndex (program exact-nonnegative-integer?) (programInterface exact-integer?) (name (or/c string? bytes?))) exact-integer?]{
+Version 4.3.
+}
+@defproc[(glGetProgramResourceName (program exact-nonnegative-integer?) (programInterface exact-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
+Version 4.3.
+}
+@defproc[(glGetProgramResourceiv (program exact-nonnegative-integer?) (programInterface exact-integer?) (index exact-nonnegative-integer?) (propCount exact-integer?) (props s32vector?) (bufSize exact-integer?)) (values exact-integer? s32vector?)]{
+Version 4.3.
 }
 @defproc[(glGetProgramStageiv (program exact-nonnegative-integer?) (shadertype exact-integer?) (pname exact-integer?)) exact-integer?]{
 Version 1.2.
@@ -844,7 +939,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 @defproc[(glGetProgramSubroutineParameteruivNV (target exact-integer?) (index exact-nonnegative-integer?) (param u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_program5.txt"]{@racket[GL_NV_gpu_program5]}.
 }
-@defproc[(glGetProgramiv (program exact-nonnegative-integer?) (pname exact-integer?) (params s32vector?)) any]{
+@defproc[(glGetProgramiv (program exact-nonnegative-integer?) (pname exact-integer?)) exact-integer?]{
 Version 2.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgram.xml"]{glGetProgram manpage}.
@@ -863,15 +958,15 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryIndexed.
 @defproc[(glGetQueryObjecti64v (id exact-nonnegative-integer?) (pname exact-integer?)) s64vector?]{
 Version 1.2.
 }
-@defproc[(glGetQueryObjecti64vEXT (id exact-nonnegative-integer?) (pname exact-integer?) (params s64vector?)) any]{
+@defproc[(glGetQueryObjecti64vEXT (id exact-nonnegative-integer?) (pname exact-integer?)) s64vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/timer_query.txt"]{@racket[GL_EXT_timer_query]}.
 }
-@defproc[(glGetQueryObjectiv (id exact-nonnegative-integer?) (pname exact-integer?) (params s32vector?)) any]{
+@defproc[(glGetQueryObjectiv (id exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 1.5.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObject.xml"]{glGetQueryObject manpage}.
 }
-@defproc[(glGetQueryObjectivARB (id exact-nonnegative-integer?) (pname exact-integer?) (params s32vector?)) any]{
+@defproc[(glGetQueryObjectivARB (id exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
 
 Alias of @racket[glGetQueryObjectiv].
@@ -879,25 +974,25 @@ Alias of @racket[glGetQueryObjectiv].
 @defproc[(glGetQueryObjectui64v (id exact-nonnegative-integer?) (pname exact-integer?)) u64vector?]{
 Version 1.2.
 }
-@defproc[(glGetQueryObjectui64vEXT (id exact-nonnegative-integer?) (pname exact-integer?) (params u64vector?)) any]{
+@defproc[(glGetQueryObjectui64vEXT (id exact-nonnegative-integer?) (pname exact-integer?)) u64vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/timer_query.txt"]{@racket[GL_EXT_timer_query]}.
 }
-@defproc[(glGetQueryObjectuiv (id exact-nonnegative-integer?) (pname exact-integer?) (params u32vector?)) any]{
+@defproc[(glGetQueryObjectuiv (id exact-nonnegative-integer?) (pname exact-integer?)) u32vector?]{
 Version 1.5.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObject.xml"]{glGetQueryObject manpage}.
 }
-@defproc[(glGetQueryObjectuivARB (id exact-nonnegative-integer?) (pname exact-integer?) (params u32vector?)) any]{
+@defproc[(glGetQueryObjectuivARB (id exact-nonnegative-integer?) (pname exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
 
 Alias of @racket[glGetQueryObjectuiv].
 }
-@defproc[(glGetQueryiv (target exact-integer?) (pname exact-integer?) (params s32vector?)) any]{
+@defproc[(glGetQueryiv (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Version 1.5.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryiv.xml"]{glGetQueryiv manpage}.
 }
-@defproc[(glGetQueryivARB (target exact-integer?) (pname exact-integer?) (params s32vector?)) any]{
+@defproc[(glGetQueryivARB (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
 
 Alias of @racket[glGetQueryiv].
@@ -942,7 +1037,7 @@ Version 2.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderInfoLog.xml"]{glGetShaderInfoLog manpage}.
 }
-@defproc[(glGetShaderPrecisionFormat (shadertype exact-integer?) (precisiontype exact-integer?)) (values s32vector? s32vector?)]{
+@defproc[(glGetShaderPrecisionFormat (shadertype exact-integer?) (precisiontype exact-integer?)) (values s32vector? exact-integer?)]{
 Version 4.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderPrecisionFormat.xml"]{glGetShaderPrecisionFormat manpage}.
@@ -957,7 +1052,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.tx
 
 Alias of @racket[glGetShaderSource].
 }
-@defproc[(glGetShaderiv (shader exact-nonnegative-integer?) (pname exact-integer?) (params s32vector?)) any]{
+@defproc[(glGetShaderiv (shader exact-nonnegative-integer?) (pname exact-integer?)) exact-integer?]{
 Version 2.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetShader.xml"]{glGetShader manpage}.
@@ -985,7 +1080,7 @@ Version 1.2.
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetSubroutineUniformLocation.xml"]{glGetSubroutineUniformLocation manpage}.
 }
 @defproc[(glGetSynciv (sync GLsync?) (pname exact-integer?) (bufSize exact-integer?)) (values exact-integer? s32vector?)]{
-Version 3.2.
+Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetSync.xml"]{glGetSync manpage}.
 }
@@ -1062,6 +1157,9 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameter.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameter.xml"]{glGetTexParameter manpage}.
 }
+@defproc[(glGetTextureHandleNV (texture exact-nonnegative-integer?)) exact-nonnegative-integer?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
 @defproc[(glGetTextureImageEXT (texture exact-nonnegative-integer?) (target exact-integer?) (level exact-integer?) (format exact-integer?) (type exact-integer?) (pixels gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
@@ -1083,15 +1181,18 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glGetTextureParameterivEXT (texture exact-nonnegative-integer?) (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
+@defproc[(glGetTextureSamplerHandleNV (texture exact-nonnegative-integer?) (sampler exact-nonnegative-integer?)) exact-nonnegative-integer?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
 @defproc[(glGetTrackMatrixivNV (target exact-integer?) (address exact-nonnegative-integer?) (pname exact-integer?)) exact-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt"]{@racket[GL_NV_vertex_program]}.
 }
-@defproc[(glGetTransformFeedbackVarying (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?) (name bytes?)) (values exact-integer? exact-integer? exact-integer?)]{
+@defproc[(glGetTransformFeedbackVarying (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Version 3.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetTransformFeedbackVarying.xml"]{glGetTransformFeedbackVarying manpage}.
 }
-@defproc[(glGetTransformFeedbackVaryingEXT (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?) (name bytes?)) (values exact-integer? exact-integer? exact-integer?)]{
+@defproc[(glGetTransformFeedbackVaryingEXT (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/transform_feedback.txt"]{@racket[GL_EXT_transform_feedback]}.
 
 Alias of @racket[glGetTransformFeedbackVarying].
@@ -1109,7 +1210,7 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformBlockI
 @defproc[(glGetUniformBufferSizeEXT (program exact-nonnegative-integer?) (location exact-integer?)) exact-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/bindable_uniform.txt"]{@racket[GL_EXT_bindable_uniform]}.
 }
-@defproc[(glGetUniformIndices (program exact-nonnegative-integer?) (uniformCount exact-integer?) (uniformNames (vectorof (or/c string? bytes?))) (uniformIndices u32vector?)) any]{
+@defproc[(glGetUniformIndices (program exact-nonnegative-integer?) (uniformCount exact-integer?) (uniformNames (vectorof (or/c string? bytes?)))) u32vector?]{
 Version 2.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformIndices.xml"]{glGetUniformIndices manpage}.
@@ -1194,24 +1295,24 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glGetVaryingLocationNV (program exact-nonnegative-integer?) (name (or/c string? bytes?))) exact-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback.txt"]{@racket[GL_NV_transform_feedback]}.
 }
-@defproc[(glGetVertexAttribArrayObjectfvATI (index exact-nonnegative-integer?) (pname exact-integer?) (params f32vector?)) any]{
+@defproc[(glGetVertexAttribArrayObjectfvATI (index exact-nonnegative-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_attrib_array_object.txt"]{@racket[GL_ATI_vertex_attrib_array_object]}.
 }
-@defproc[(glGetVertexAttribArrayObjectivATI (index exact-nonnegative-integer?) (pname exact-integer?) (params s32vector?)) any]{
+@defproc[(glGetVertexAttribArrayObjectivATI (index exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_attrib_array_object.txt"]{@racket[GL_ATI_vertex_attrib_array_object]}.
 }
-@defproc[(glGetVertexAttribIiv (index exact-nonnegative-integer?) (pname exact-integer?)) exact-integer?]{
+@defproc[(glGetVertexAttribIiv (index exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 3.0.
 }
-@defproc[(glGetVertexAttribIivEXT (index exact-nonnegative-integer?) (pname exact-integer?)) exact-integer?]{
+@defproc[(glGetVertexAttribIivEXT (index exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program4.txt"]{@racket[GL_NV_vertex_program4]}.
 
 Alias of @racket[glGetVertexAttribIiv].
 }
-@defproc[(glGetVertexAttribIuiv (index exact-nonnegative-integer?) (pname exact-integer?)) exact-nonnegative-integer?]{
+@defproc[(glGetVertexAttribIuiv (index exact-nonnegative-integer?) (pname exact-integer?)) u32vector?]{
 Version 3.0.
 }
-@defproc[(glGetVertexAttribIuivEXT (index exact-nonnegative-integer?) (pname exact-integer?)) exact-nonnegative-integer?]{
+@defproc[(glGetVertexAttribIuivEXT (index exact-nonnegative-integer?) (pname exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program4.txt"]{@racket[GL_NV_vertex_program4]}.
 
 Alias of @racket[glGetVertexAttribIuiv].

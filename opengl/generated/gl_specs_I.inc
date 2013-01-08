@@ -15,6 +15,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/HP/image_transform.tx
 @defproc[(glImageTransformParameterivHP (target exact-integer?) (pname exact-integer?) (params s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/HP/image_transform.txt"]{@racket[GL_HP_image_transform]}.
 }
+@defproc[(glImportSyncEXT (external_sync_type exact-integer?) (external_sync exact-integer?) (flags exact-nonnegative-integer?)) GLsync?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/x11_sync_object.txt"]{@racket[GL_EXT_x11_sync_object]}.
+}
 @defproc[(glIndexFormatNV (type exact-integer?) (stride exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt"]{@racket[GL_NV_vertex_buffer_unified_memory]}.
 }
@@ -108,6 +111,27 @@ Deprecated in version 3.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glInterleavedArrays.xml"]{glInterleavedArrays manpage}.
 }
+@defproc[(glInterpolatePathsNV (resultPath exact-nonnegative-integer?) (pathA exact-nonnegative-integer?) (pathB exact-nonnegative-integer?) (weight flonum?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glInvalidateBufferData (buffer exact-nonnegative-integer?)) any]{
+Version 4.3.
+}
+@defproc[(glInvalidateBufferSubData (buffer exact-nonnegative-integer?) (offset exact-integer?) (length exact-integer?)) any]{
+Version 4.3.
+}
+@defproc[(glInvalidateFramebuffer (target exact-integer?) (numAttachments exact-integer?) (attachments s32vector?)) any]{
+Version 4.3.
+}
+@defproc[(glInvalidateSubFramebuffer (target exact-integer?) (numAttachments exact-integer?) (attachments s32vector?) (x exact-integer?) (y exact-integer?) (width exact-integer?) (height exact-integer?)) any]{
+Version 4.3.
+}
+@defproc[(glInvalidateTexImage (texture exact-nonnegative-integer?) (level exact-integer?)) any]{
+Version 4.3.
+}
+@defproc[(glInvalidateTexSubImage (texture exact-nonnegative-integer?) (level exact-integer?) (xoffset exact-integer?) (yoffset exact-integer?) (zoffset exact-integer?) (width exact-integer?) (height exact-integer?) (depth exact-integer?)) any]{
+Version 4.3.
+}
 @defproc[(glIsAsyncMarkerSGIX (marker exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/async.txt"]{@racket[GL_SGIX_async]}.
 }
@@ -154,6 +178,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_objec
 
 Alias of @racket[glIsFramebuffer].
 }
+@defproc[(glIsImageHandleResidentNV (handle exact-nonnegative-integer?)) boolean?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
 @defproc[(glIsList (list exact-nonnegative-integer?)) boolean?]{
 Deprecated in version 3.1.
 
@@ -173,6 +200,15 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_array_obje
 }
 @defproc[(glIsOcclusionQueryNV (id exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/occlusion_query.txt"]{@racket[GL_NV_occlusion_query]}.
+}
+@defproc[(glIsPathNV (path exact-nonnegative-integer?)) boolean?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glIsPointInFillPathNV (path exact-nonnegative-integer?) (mask exact-nonnegative-integer?) (x flonum?) (y flonum?)) boolean?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glIsPointInStrokePathNV (path exact-nonnegative-integer?) (x flonum?) (y flonum?)) boolean?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
 }
 @defproc[(glIsProgram (program exact-nonnegative-integer?)) boolean?]{
 Version 2.0.
@@ -225,7 +261,7 @@ Version 2.0.
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsShader.xml"]{glIsShader manpage}.
 }
 @defproc[(glIsSync (sync GLsync?)) boolean?]{
-Version 3.2.
+Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsSync.xml"]{glIsSync manpage}.
 }
@@ -236,6 +272,9 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsTexture.xml"]{
 }
 @defproc[(glIsTextureEXT (texture exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.txt"]{@racket[GL_EXT_texture_object]}.
+}
+@defproc[(glIsTextureHandleResidentNV (handle exact-nonnegative-integer?)) boolean?]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
 }
 @defproc[(glIsTransformFeedback (id exact-nonnegative-integer?)) boolean?]{
 Version 1.2.

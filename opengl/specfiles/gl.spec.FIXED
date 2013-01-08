@@ -14794,7 +14794,7 @@ GetDebugMessageLogARB(count, bufsize, sources, types, ids, severities, lengths, 
 	param		ids		UInt32 out array [count]
 	param		severities	GLenum out array [count]
 	param		lengths		SizeI out array [count]
-	param		messageLog	Char out array [bufSize]
+	param		messageLog	Char out array [bufsize]
 	category	ARB_debug_output
 	dlflags		notlistable
 	version		4.1

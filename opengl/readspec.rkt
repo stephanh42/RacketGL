@@ -117,6 +117,7 @@
       (cons "GLbitfield" '_uint32)
       (cons "GLuint64EXT" '_uint64)
       (cons "GLchar*" (pointer-to '_byte))
+      (cons "GLchar* const" (pointer-to '_byte))
       (cons "GLsizeiptr" '_intptr)
       (cons "GLchar" '_byte)
       ;    (cons "GLUquadric*" _GLUquadric*)

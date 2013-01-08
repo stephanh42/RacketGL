@@ -1,9 +1,12 @@
 #lang scribble/manual
 @title{glW...}
 @defproc[(glWaitSync (sync GLsync?) (flags exact-nonnegative-integer?) (timeout exact-nonnegative-integer?)) any]{
-Version 3.2.
+Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glWaitSync.xml"]{glWaitSync manpage}.
+}
+@defproc[(glWeightPathsNV (resultPath exact-nonnegative-integer?) (numPaths exact-integer?) (paths u32vector?) (weights f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
 }
 @defproc[(glWeightPointerARB (size exact-integer?) (type exact-integer?) (stride exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_blend.txt"]{@racket[GL_ARB_vertex_blend]}.

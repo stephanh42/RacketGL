@@ -298,7 +298,7 @@ Deprecated in version 3.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glSelectBuffer.xml"]{glSelectBuffer manpage}.
 }
-@defproc[(glSelectPerfMonitorCountersAMD (monitor exact-nonnegative-integer?) (enable boolean?) (group exact-nonnegative-integer?) (numCounters exact-integer?)) u32vector?]{
+@defproc[(glSelectPerfMonitorCountersAMD (monitor exact-nonnegative-integer?) (enable boolean?) (group exact-nonnegative-integer?) (numCounters exact-integer?) (counterList u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monitor.txt"]{@racket[GL_AMD_performance_monitor]}.
 }
 @defproc[(glSeparableFilter2D (target exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?) (format exact-integer?) (type exact-integer?) (row gl-pointer?) (column gl-pointer?)) any]{
@@ -326,6 +326,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 }
 @defproc[(glSetLocalConstantEXT (id exact-nonnegative-integer?) (type exact-integer?) (addr gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt"]{@racket[GL_EXT_vertex_shader]}.
+}
+@defproc[(glSetMultisamplefvAMD (pname exact-integer?) (index exact-nonnegative-integer?) (val f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/sample_positions.txt"]{@racket[GL_AMD_sample_positions]}.
 }
 @defproc[(glShadeModel (mode exact-integer?)) any]{
 Deprecated in version 3.1.
@@ -356,6 +359,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.tx
 
 Alias of @racket[glShaderSource].
 }
+@defproc[(glShaderStorageBlockBinding (program exact-nonnegative-integer?) (storageBlockIndex exact-nonnegative-integer?) (storageBlockBinding exact-nonnegative-integer?)) any]{
+Version 4.3.
+}
 @defproc[(glSharpenTexFuncSGIS (target exact-integer?) (n exact-integer?) (points f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/sharpen_texture.txt"]{@racket[GL_SGIS_sharpen_texture]}.
 }
@@ -376,6 +382,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/instruments.txt"
 }
 @defproc[(glStencilClearTagEXT (stencilTagBits exact-integer?) (stencilClearTag exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/stencil_clear_tag.txt"]{@racket[GL_EXT_stencil_clear_tag]}.
+}
+@defproc[(glStencilFillPathInstancedNV (numPaths exact-integer?) (pathNameType exact-integer?) (paths gl-pointer?) (pathBase exact-nonnegative-integer?) (fillMode exact-integer?) (mask exact-nonnegative-integer?) (transformType exact-integer?) (transformValues f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glStencilFillPathNV (path exact-nonnegative-integer?) (fillMode exact-integer?) (mask exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
 }
 @defproc[(glStencilFunc (func exact-integer?) (ref exact-integer?) (mask exact-nonnegative-integer?)) any]{
 
@@ -413,6 +425,15 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glStencilOpSeparat
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/separate_stencil.txt"]{@racket[GL_ATI_separate_stencil]}.
 
 Alias of @racket[glStencilOpSeparate].
+}
+@defproc[(glStencilOpValueAMD (face exact-integer?) (value exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/stencil_operation_extended.txt"]{@racket[GL_AMD_stencil_operation_extended]}.
+}
+@defproc[(glStencilStrokePathInstancedNV (numPaths exact-integer?) (pathNameType exact-integer?) (paths gl-pointer?) (pathBase exact-nonnegative-integer?) (reference exact-integer?) (mask exact-nonnegative-integer?) (transformType exact-integer?) (transformValues f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glStencilStrokePathNV (path exact-nonnegative-integer?) (reference exact-integer?) (mask exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
 }
 @defproc[(glStopInstrumentsSGIX (marker exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/instruments.txt"]{@racket[GL_SGIX_instruments]}.

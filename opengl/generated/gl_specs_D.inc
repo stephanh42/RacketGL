@@ -1,10 +1,16 @@
 #lang scribble/manual
 @title{glD...}
+@defproc[(glDebugMessageControl (source exact-integer?) (type exact-integer?) (severity exact-integer?) (count exact-integer?) (ids u32vector?) (enabled boolean?)) any]{
+Version 4.3.
+}
 @defproc[(glDebugMessageControlARB (source exact-integer?) (type exact-integer?) (severity exact-integer?) (count exact-integer?) (ids u32vector?) (enabled boolean?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/debug_output.txt"]{@racket[GL_ARB_debug_output]}.
 }
 @defproc[(glDebugMessageEnableAMD (category exact-integer?) (severity exact-integer?) (count exact-integer?) (ids u32vector?) (enabled boolean?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/debug_output.txt"]{@racket[GL_AMD_debug_output]}.
+}
+@defproc[(glDebugMessageInsert (source exact-integer?) (type exact-integer?) (id exact-nonnegative-integer?) (severity exact-integer?) (length exact-integer?) (buf (or/c string? bytes?))) any]{
+Version 4.3.
 }
 @defproc[(glDebugMessageInsertAMD (category exact-integer?) (severity exact-integer?) (id exact-nonnegative-integer?) (length exact-integer?) (buf (or/c string? bytes?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/debug_output.txt"]{@racket[GL_AMD_debug_output]}.
@@ -70,7 +76,10 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.tx
 @defproc[(glDeleteOcclusionQueriesNV (n exact-integer?) (ids u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/occlusion_query.txt"]{@racket[GL_NV_occlusion_query]}.
 }
-@defproc[(glDeletePerfMonitorsAMD (n exact-integer?)) u32vector?]{
+@defproc[(glDeletePathsNV (path exact-nonnegative-integer?) (range exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glDeletePerfMonitorsAMD (n exact-integer?) (monitors u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monitor.txt"]{@racket[GL_AMD_performance_monitor]}.
 }
 @defproc[(glDeleteProgram (program exact-nonnegative-integer?)) any]{
@@ -122,7 +131,7 @@ Version 2.0.
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteShader.xml"]{glDeleteShader manpage}.
 }
 @defproc[(glDeleteSync (sync GLsync?)) any]{
-Version 3.2.
+Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDeleteSync.xml"]{glDeleteSync manpage}.
 }
@@ -241,6 +250,12 @@ Version 3.0.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDisable.xml"]{glDisable manpage}.
 }
+@defproc[(glDispatchCompute (num_groups_x exact-nonnegative-integer?) (num_groups_y exact-nonnegative-integer?) (num_groups_z exact-nonnegative-integer?)) any]{
+Version 4.3.
+}
+@defproc[(glDispatchComputeIndirect (indirect exact-integer?)) any]{
+Version 4.3.
+}
 @defproc[(glDrawArrays (mode exact-integer?) (first exact-integer?) (count exact-integer?)) any]{
 Version 1.1.
 
@@ -256,7 +271,7 @@ Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysIndirect.xml"]{glDrawArraysIndirect manpage}.
 }
-@defproc[(glDrawArraysInstanced (mode exact-integer?) (first exact-integer?) (count exact-integer?) (primcount exact-integer?)) any]{
+@defproc[(glDrawArraysInstanced (mode exact-integer?) (first exact-integer?) (count exact-integer?) (instancecount exact-integer?)) any]{
 Version 3.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysInstanced.xml"]{glDrawArraysInstanced manpage}.
@@ -265,6 +280,11 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysInstan
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/draw_instanced.txt"]{@racket[GL_ARB_draw_instanced]}.
 
 Alias of @racket[glDrawArraysInstanced].
+}
+@defproc[(glDrawArraysInstancedBaseInstance (mode exact-integer?) (first exact-integer?) (count exact-integer?) (instancecount exact-integer?) (baseinstance exact-nonnegative-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawArraysInstancedBaseInstance.xml"]{glDrawArraysInstancedBaseInstance manpage}.
 }
 @defproc[(glDrawArraysInstancedEXT (mode exact-integer?) (start exact-integer?) (count exact-integer?) (primcount exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/draw_instanced.txt"]{@racket[GL_EXT_draw_instanced]}.
@@ -311,7 +331,7 @@ Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsIndirect.xml"]{glDrawElementsIndirect manpage}.
 }
-@defproc[(glDrawElementsInstanced (mode exact-integer?) (count exact-integer?) (type exact-integer?) (indices gl-pointer?) (primcount exact-integer?)) any]{
+@defproc[(glDrawElementsInstanced (mode exact-integer?) (count exact-integer?) (type exact-integer?) (indices gl-pointer?) (instancecount exact-integer?)) any]{
 Version 3.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstanced.xml"]{glDrawElementsInstanced manpage}.
@@ -321,10 +341,20 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/draw_instanced.tx
 
 Alias of @racket[glDrawElementsInstanced].
 }
-@defproc[(glDrawElementsInstancedBaseVertex (mode exact-integer?) (count exact-integer?) (type exact-integer?) (indices gl-pointer?) (primcount exact-integer?) (basevertex exact-integer?)) any]{
+@defproc[(glDrawElementsInstancedBaseInstance (mode exact-integer?) (count exact-integer?) (type exact-integer?) (indices gl-pointer?) (instancecount exact-integer?) (baseinstance exact-nonnegative-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstancedBaseInstance.xml"]{glDrawElementsInstancedBaseInstance manpage}.
+}
+@defproc[(glDrawElementsInstancedBaseVertex (mode exact-integer?) (count exact-integer?) (type exact-integer?) (indices gl-pointer?) (instancecount exact-integer?) (basevertex exact-integer?)) any]{
 Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstancedBaseVertex.xml"]{glDrawElementsInstancedBaseVertex manpage}.
+}
+@defproc[(glDrawElementsInstancedBaseVertexBaseInstance (mode exact-integer?) (count exact-integer?) (type exact-integer?) (indices gl-pointer?) (instancecount exact-integer?) (basevertex exact-integer?) (baseinstance exact-nonnegative-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawElementsInstancedBaseVertexBaseInstance.xml"]{glDrawElementsInstancedBaseVertexBaseInstance manpage}.
 }
 @defproc[(glDrawElementsInstancedEXT (mode exact-integer?) (count exact-integer?) (type exact-integer?) (indices gl-pointer?) (primcount exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/draw_instanced.txt"]{@racket[GL_EXT_draw_instanced]}.
@@ -365,6 +395,11 @@ Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedback.xml"]{glDrawTransformFeedback manpage}.
 }
+@defproc[(glDrawTransformFeedbackInstanced (mode exact-integer?) (id exact-nonnegative-integer?) (instancecount exact-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedbackInstanced.xml"]{glDrawTransformFeedbackInstanced manpage}.
+}
 @defproc[(glDrawTransformFeedbackNV (mode exact-integer?) (id exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback2.txt"]{@racket[GL_NV_transform_feedback2]}.
 }
@@ -372,4 +407,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback
 Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedbackStream.xml"]{glDrawTransformFeedbackStream manpage}.
+}
+@defproc[(glDrawTransformFeedbackStreamInstanced (mode exact-integer?) (id exact-nonnegative-integer?) (stream exact-nonnegative-integer?) (instancecount exact-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glDrawTransformFeedbackStreamInstanced.xml"]{glDrawTransformFeedbackStreamInstanced manpage}.
 }

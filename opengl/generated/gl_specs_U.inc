@@ -336,6 +336,12 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glUniformBlockBind
 @defproc[(glUniformBufferEXT (program exact-nonnegative-integer?) (location exact-integer?) (buffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/bindable_uniform.txt"]{@racket[GL_EXT_bindable_uniform]}.
 }
+@defproc[(glUniformHandleui64NV (location exact-integer?) (value exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
+@defproc[(glUniformHandleui64vNV (location exact-integer?) (count exact-integer?) (value u64vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
 @defproc[(glUniformMatrix2dv (location exact-integer?) (count exact-integer?) (transpose boolean?) (value f64vector?)) any]{
 Version 1.2.
 }

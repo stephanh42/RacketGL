@@ -6,7 +6,7 @@ Deprecated in version 3.1.
 See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFeedbackBuffer.xml"]{glFeedbackBuffer manpage}.
 }
 @defproc[(glFenceSync (condition exact-integer?) (flags exact-nonnegative-integer?)) GLsync?]{
-Version 3.2.
+Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFenceSync.xml"]{glFenceSync manpage}.
 }
@@ -201,6 +201,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 }
 @defproc[(glFramebufferDrawBuffersEXT (framebuffer exact-nonnegative-integer?) (n exact-integer?) (bufs (vectorof exact-integer?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
+}
+@defproc[(glFramebufferParameteri (target exact-integer?) (pname exact-integer?) (param exact-integer?)) any]{
+Version 4.3.
 }
 @defproc[(glFramebufferReadBufferEXT (framebuffer exact-nonnegative-integer?) (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.

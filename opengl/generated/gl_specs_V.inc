@@ -189,6 +189,9 @@ Deprecated in version 3.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
 }
+@defproc[(glVertexArrayBindVertexBufferEXT (vaobj exact-nonnegative-integer?) (bindingindex exact-nonnegative-integer?) (buffer exact-nonnegative-integer?) (offset exact-integer?) (stride exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt"]{@racket[GL_ARB_vertex_attrib_binding]}.
+}
 @defproc[(glVertexArrayParameteriAPPLE (pname exact-integer?) (param exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/vertex_array_range.txt"]{@racket[GL_APPLE_vertex_array_range]}.
 }
@@ -198,8 +201,23 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/vertex_array_ra
 @defproc[(glVertexArrayRangeNV (length exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_array_range.txt"]{@racket[GL_NV_vertex_array_range]}.
 }
+@defproc[(glVertexArrayVertexAttribBindingEXT (vaobj exact-nonnegative-integer?) (attribindex exact-nonnegative-integer?) (bindingindex exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt"]{@racket[GL_ARB_vertex_attrib_binding]}.
+}
+@defproc[(glVertexArrayVertexAttribFormatEXT (vaobj exact-nonnegative-integer?) (attribindex exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (normalized boolean?) (relativeoffset exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt"]{@racket[GL_ARB_vertex_attrib_binding]}.
+}
+@defproc[(glVertexArrayVertexAttribIFormatEXT (vaobj exact-nonnegative-integer?) (attribindex exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (relativeoffset exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt"]{@racket[GL_ARB_vertex_attrib_binding]}.
+}
+@defproc[(glVertexArrayVertexAttribLFormatEXT (vaobj exact-nonnegative-integer?) (attribindex exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (relativeoffset exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt"]{@racket[GL_ARB_vertex_attrib_binding]}.
+}
 @defproc[(glVertexArrayVertexAttribLOffsetEXT (vaobj exact-nonnegative-integer?) (buffer exact-nonnegative-integer?) (index exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (stride exact-integer?) (offset exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_attrib_64bit.txt"]{@racket[GL_EXT_vertex_attrib_64bit]}.
+}
+@defproc[(glVertexArrayVertexBindingDivisorEXT (vaobj exact-nonnegative-integer?) (bindingindex exact-nonnegative-integer?) (divisor exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt"]{@racket[GL_ARB_vertex_attrib_binding]}.
 }
 @defproc[(glVertexAttrib1d (index exact-nonnegative-integer?) (x real?)) any]{
 Version 2.0.
@@ -740,6 +758,9 @@ Alias of @racket[glVertexAttrib4usv].
 @defproc[(glVertexAttribArrayObjectATI (index exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (normalized boolean?) (stride exact-integer?) (buffer exact-nonnegative-integer?) (offset exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_attrib_array_object.txt"]{@racket[GL_ATI_vertex_attrib_array_object]}.
 }
+@defproc[(glVertexAttribBinding (attribindex exact-nonnegative-integer?) (bindingindex exact-nonnegative-integer?)) any]{
+Version 4.3.
+}
 @defproc[(glVertexAttribDivisor (index exact-nonnegative-integer?) (divisor exact-nonnegative-integer?)) any]{
 Version 1.1.
 
@@ -747,6 +768,9 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribDivi
 }
 @defproc[(glVertexAttribDivisorARB (index exact-nonnegative-integer?) (divisor exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/instanced_arrays.txt"]{@racket[GL_ARB_instanced_arrays]}.
+}
+@defproc[(glVertexAttribFormat (attribindex exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (normalized boolean?) (relativeoffset exact-nonnegative-integer?)) any]{
+Version 4.3.
 }
 @defproc[(glVertexAttribFormatNV (index exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (normalized boolean?) (stride exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt"]{@racket[GL_NV_vertex_buffer_unified_memory]}.
@@ -931,6 +955,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program4.tx
 
 Alias of @racket[glVertexAttribI4usv].
 }
+@defproc[(glVertexAttribIFormat (attribindex exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (relativeoffset exact-nonnegative-integer?)) any]{
+Version 4.3.
+}
 @defproc[(glVertexAttribIFormatNV (index exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (stride exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt"]{@racket[GL_NV_vertex_buffer_unified_memory]}.
 }
@@ -1038,6 +1065,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_attrib_inte
 @defproc[(glVertexAttribL4ui64vNV (index exact-nonnegative-integer?) (v u64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_attrib_integer_64bit.txt"]{@racket[GL_NV_vertex_attrib_integer_64bit]}.
 }
+@defproc[(glVertexAttribLFormat (attribindex exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (relativeoffset exact-nonnegative-integer?)) any]{
+Version 4.3.
+}
 @defproc[(glVertexAttribLFormatNV (index exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (stride exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_attrib_integer_64bit.txt"]{@racket[GL_NV_vertex_attrib_integer_64bit]}.
 }
@@ -1134,6 +1164,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 }
 @defproc[(glVertexAttribs4ubvNV (index exact-nonnegative-integer?) (count exact-integer?) (v (or/c string? bytes?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt"]{@racket[GL_NV_vertex_program]}.
+}
+@defproc[(glVertexBindingDivisor (bindingindex exact-nonnegative-integer?) (divisor exact-nonnegative-integer?)) any]{
+Version 4.3.
 }
 @defproc[(glVertexBlendARB (count exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_blend.txt"]{@racket[GL_ARB_vertex_blend]}.

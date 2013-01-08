@@ -69,6 +69,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_buffer_ob
 
 Alias of @racket[glTexBufferARB].
 }
+@defproc[(glTexBufferRange (target exact-integer?) (internalformat exact-integer?) (buffer exact-nonnegative-integer?) (offset exact-integer?) (size exact-integer?)) any]{
+Version 4.3.
+}
 @defproc[(glTexBumpParameterfvATI (pname exact-integer?) (param f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/envmap_bumpmap.txt"]{@racket[GL_ATI_envmap_bumpmap]}.
 }
@@ -469,6 +472,30 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glTexParameter.xml
 @defproc[(glTexRenderbufferNV (target exact-integer?) (renderbuffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/explicit_multisample.txt"]{@racket[GL_NV_explicit_multisample]}.
 }
+@defproc[(glTexStorage1D (target exact-integer?) (levels exact-integer?) (internalformat exact-integer?) (width exact-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage1D.xml"]{glTexStorage1D manpage}.
+}
+@defproc[(glTexStorage2D (target exact-integer?) (levels exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage2D.xml"]{glTexStorage2D manpage}.
+}
+@defproc[(glTexStorage2DMultisample (target exact-integer?) (samples exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?) (fixedsamplelocations boolean?)) any]{
+Version 4.3.
+}
+@defproc[(glTexStorage3D (target exact-integer?) (levels exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?) (depth exact-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glTexStorage3D.xml"]{glTexStorage3D manpage}.
+}
+@defproc[(glTexStorage3DMultisample (target exact-integer?) (samples exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?) (depth exact-integer?) (fixedsamplelocations boolean?)) any]{
+Version 4.3.
+}
+@defproc[(glTexStorageSparseAMD (target exact-integer?) (internalFormat exact-integer?) (width exact-integer?) (height exact-integer?) (depth exact-integer?) (layers exact-integer?) (flags exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/sparse_texture.txt"]{@racket[GL_AMD_sparse_texture]}.
+}
 @defproc[(glTexSubImage1D (target exact-integer?) (level exact-integer?) (xoffset exact-integer?) (width exact-integer?) (format exact-integer?) (type exact-integer?) (pixels gl-pointer?)) any]{
 Version 1.1.
 
@@ -507,6 +534,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/texture_barrier.tx
 }
 @defproc[(glTextureBufferEXT (texture exact-nonnegative-integer?) (target exact-integer?) (internalformat exact-integer?) (buffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
+}
+@defproc[(glTextureBufferRangeEXT (texture exact-nonnegative-integer?) (target exact-integer?) (internalformat exact-integer?) (buffer exact-nonnegative-integer?) (offset exact-integer?) (size exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/texture_buffer_range.txt"]{@racket[GL_ARB_texture_buffer_range]}.
 }
 @defproc[(glTextureColorMaskSGIS (red boolean?) (green boolean?) (blue boolean?) (alpha boolean?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/texture_color_mask.txt"]{@racket[GL_SGIS_texture_color_mask]}.
@@ -565,6 +595,24 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/texture_range.t
 @defproc[(glTextureRenderbufferEXT (texture exact-nonnegative-integer?) (target exact-integer?) (renderbuffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
+@defproc[(glTextureStorage1DEXT (texture exact-nonnegative-integer?) (target exact-integer?) (levels exact-integer?) (internalformat exact-integer?) (width exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/texture_storage.txt"]{@racket[GL_ARB_texture_storage]}.
+}
+@defproc[(glTextureStorage2DEXT (texture exact-nonnegative-integer?) (target exact-integer?) (levels exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/texture_storage.txt"]{@racket[GL_ARB_texture_storage]}.
+}
+@defproc[(glTextureStorage2DMultisampleEXT (texture exact-nonnegative-integer?) (target exact-integer?) (samples exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?) (fixedsamplelocations boolean?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/texture_storage_multisample.txt"]{@racket[GL_ARB_texture_storage_multisample]}.
+}
+@defproc[(glTextureStorage3DEXT (texture exact-nonnegative-integer?) (target exact-integer?) (levels exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?) (depth exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/texture_storage.txt"]{@racket[GL_ARB_texture_storage]}.
+}
+@defproc[(glTextureStorage3DMultisampleEXT (texture exact-nonnegative-integer?) (target exact-integer?) (samples exact-integer?) (internalformat exact-integer?) (width exact-integer?) (height exact-integer?) (depth exact-integer?) (fixedsamplelocations boolean?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/texture_storage_multisample.txt"]{@racket[GL_ARB_texture_storage_multisample]}.
+}
+@defproc[(glTextureStorageSparseAMD (texture exact-nonnegative-integer?) (target exact-integer?) (internalFormat exact-integer?) (width exact-integer?) (height exact-integer?) (depth exact-integer?) (layers exact-integer?) (flags exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/sparse_texture.txt"]{@racket[GL_AMD_sparse_texture]}.
+}
 @defproc[(glTextureSubImage1DEXT (texture exact-nonnegative-integer?) (target exact-integer?) (level exact-integer?) (xoffset exact-integer?) (width exact-integer?) (format exact-integer?) (type exact-integer?) (pixels gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
@@ -573,6 +621,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 }
 @defproc[(glTextureSubImage3DEXT (texture exact-nonnegative-integer?) (target exact-integer?) (level exact-integer?) (xoffset exact-integer?) (yoffset exact-integer?) (zoffset exact-integer?) (width exact-integer?) (height exact-integer?) (depth exact-integer?) (format exact-integer?) (type exact-integer?) (pixels gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
+}
+@defproc[(glTextureView (texture exact-nonnegative-integer?) (target exact-integer?) (origtexture exact-nonnegative-integer?) (internalformat exact-integer?) (minlevel exact-nonnegative-integer?) (numlevels exact-nonnegative-integer?) (minlayer exact-nonnegative-integer?) (numlayers exact-nonnegative-integer?)) any]{
+Version 4.3.
 }
 @defproc[(glTrackMatrixNV (target exact-integer?) (address exact-nonnegative-integer?) (matrix exact-integer?) (transform exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt"]{@racket[GL_NV_vertex_program]}.
@@ -597,6 +648,9 @@ Alias of @racket[glTransformFeedbackVaryings].
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback.txt"]{@racket[GL_NV_transform_feedback]}.
 
 Alias of @racket[glTransformFeedbackVaryings].
+}
+@defproc[(glTransformPathNV (resultPath exact-nonnegative-integer?) (srcPath exact-nonnegative-integer?) (transformType exact-integer?) (transformValues f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
 }
 @defproc[(glTranslated (x real?) (y real?) (z real?)) any]{
 Deprecated in version 3.1.

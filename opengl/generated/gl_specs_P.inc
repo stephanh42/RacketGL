@@ -24,6 +24,60 @@ Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPatchParameter.xml"]{glPatchParameter manpage}.
 }
+@defproc[(glPathColorGenNV (color exact-integer?) (genMode exact-integer?) (colorFormat exact-integer?) (coeffs f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathCommandsNV (path exact-nonnegative-integer?) (numCommands exact-integer?) (commands (or/c string? bytes?)) (numCoords exact-integer?) (coordType exact-integer?) (coords gl-pointer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathCoordsNV (path exact-nonnegative-integer?) (numCoords exact-integer?) (coordType exact-integer?) (coords gl-pointer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathCoverDepthFuncNV (func exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathDashArrayNV (path exact-nonnegative-integer?) (dashCount exact-integer?) (dashArray f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathFogGenNV (genMode exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathGlyphRangeNV (firstPathName exact-nonnegative-integer?) (fontTarget exact-integer?) (fontName gl-pointer?) (fontStyle exact-nonnegative-integer?) (firstGlyph exact-nonnegative-integer?) (numGlyphs exact-integer?) (handleMissingGlyphs exact-integer?) (pathParameterTemplate exact-nonnegative-integer?) (emScale flonum?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathGlyphsNV (firstPathName exact-nonnegative-integer?) (fontTarget exact-integer?) (fontName gl-pointer?) (fontStyle exact-nonnegative-integer?) (numGlyphs exact-integer?) (type exact-integer?) (charcodes gl-pointer?) (handleMissingGlyphs exact-integer?) (pathParameterTemplate exact-nonnegative-integer?) (emScale flonum?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathParameterfNV (path exact-nonnegative-integer?) (pname exact-integer?) (value flonum?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathParameterfvNV (path exact-nonnegative-integer?) (pname exact-integer?) (value f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathParameteriNV (path exact-nonnegative-integer?) (pname exact-integer?) (value exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathParameterivNV (path exact-nonnegative-integer?) (pname exact-integer?) (value s32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathStencilDepthOffsetNV (factor flonum?) (units flonum?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathStencilFuncNV (func exact-integer?) (ref exact-integer?) (mask exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathStringNV (path exact-nonnegative-integer?) (format exact-integer?) (length exact-integer?) (pathString gl-pointer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathSubCommandsNV (path exact-nonnegative-integer?) (commandStart exact-integer?) (commandsToDelete exact-integer?) (numCommands exact-integer?) (commands (or/c string? bytes?)) (numCoords exact-integer?) (coordType exact-integer?) (coords gl-pointer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathSubCoordsNV (path exact-nonnegative-integer?) (coordStart exact-integer?) (numCoords exact-integer?) (coordType exact-integer?) (coords gl-pointer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glPathTexGenNV (texCoordSet exact-integer?) (genMode exact-integer?) (components exact-integer?) (coeffs f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
 @defproc[(glPauseTransformFeedback) any]{
 Version 1.2.
 
@@ -100,6 +154,9 @@ Deprecated in version 3.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelZoom.xml"]{glPixelZoom manpage}.
 }
+@defproc[(glPointAlongPathNV (path exact-nonnegative-integer?) (startSegment exact-integer?) (numSegments exact-integer?) (distance flonum?)) (values boolean? flonum? flonum? flonum? flonum?)]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
 @defproc[(glPointParameterf (pname exact-integer?) (param flonum?)) any]{
 Version 1.4.
 
@@ -125,7 +182,7 @@ Version 1.4.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPointParameter.xml"]{glPointParameter manpage}.
 }
-@defproc[(glPointParameterfvARB (pname exact-integer?) (params f32vector?)) any]{
+@defproc[(glPointParameterfvARB (pname exact-integer?) (params flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/point_parameters.txt"]{@racket[GL_ARB_point_parameters]}.
 
 Alias of @racket[glPointParameterfv].
@@ -197,6 +254,9 @@ Version 1.1.
 Deprecated in version 3.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPopClientAttrib.xml"]{glPopClientAttrib manpage}.
+}
+@defproc[(glPopDebugGroup) any]{
+Version 4.3.
 }
 @defproc[(glPopMatrix) any]{
 Deprecated in version 3.1.
@@ -316,16 +376,16 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_program4.txt"]
 @defproc[(glProgramLocalParametersI4uivNV (target exact-integer?) (index exact-nonnegative-integer?) (count exact-integer?) (params u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_program4.txt"]{@racket[GL_NV_gpu_program4]}.
 }
-@defproc[(glProgramNamedParameter4dNV (id exact-nonnegative-integer?) (len exact-integer?) (name (integer-in 0 255)) (x real?) (y real?) (z real?) (w real?)) any]{
+@defproc[(glProgramNamedParameter4dNV (id exact-nonnegative-integer?) (len exact-integer?) (name (or/c string? bytes?)) (x real?) (y real?) (z real?) (w real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/fragment_program.txt"]{@racket[GL_NV_fragment_program]}.
 }
-@defproc[(glProgramNamedParameter4dvNV (id exact-nonnegative-integer?) (len exact-integer?) (name (integer-in 0 255)) (v f64vector?)) any]{
+@defproc[(glProgramNamedParameter4dvNV (id exact-nonnegative-integer?) (len exact-integer?) (name (or/c string? bytes?)) (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/fragment_program.txt"]{@racket[GL_NV_fragment_program]}.
 }
-@defproc[(glProgramNamedParameter4fNV (id exact-nonnegative-integer?) (len exact-integer?) (name (integer-in 0 255)) (x flonum?) (y flonum?) (z flonum?) (w flonum?)) any]{
+@defproc[(glProgramNamedParameter4fNV (id exact-nonnegative-integer?) (len exact-integer?) (name (or/c string? bytes?)) (x flonum?) (y flonum?) (z flonum?) (w flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/fragment_program.txt"]{@racket[GL_NV_fragment_program]}.
 }
-@defproc[(glProgramNamedParameter4fvNV (id exact-nonnegative-integer?) (len exact-integer?) (name (integer-in 0 255)) (v f32vector?)) any]{
+@defproc[(glProgramNamedParameter4fvNV (id exact-nonnegative-integer?) (len exact-integer?) (name (or/c string? bytes?)) (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/fragment_program.txt"]{@racket[GL_NV_fragment_program]}.
 }
 @defproc[(glProgramParameter4dNV (target exact-integer?) (index exact-nonnegative-integer?) (x real?) (y real?) (z real?) (w real?)) any]{
@@ -375,7 +435,7 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.x
 @defproc[(glProgramUniform1dEXT (program exact-nonnegative-integer?) (location exact-integer?) (x real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
-@defproc[(glProgramUniform1dv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value real?)) any]{
+@defproc[(glProgramUniform1dv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f64vector?)) any]{
 Version 4.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
@@ -391,7 +451,7 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.x
 @defproc[(glProgramUniform1fEXT (program exact-nonnegative-integer?) (location exact-integer?) (v0 flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
-@defproc[(glProgramUniform1fv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value flonum?)) any]{
+@defproc[(glProgramUniform1fv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f32vector?)) any]{
 Version 4.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
@@ -413,7 +473,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{
 @defproc[(glProgramUniform1iEXT (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
-@defproc[(glProgramUniform1iv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value exact-integer?)) any]{
+@defproc[(glProgramUniform1iv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value s32vector?)) any]{
 Version 4.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
@@ -435,7 +495,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{
 @defproc[(glProgramUniform1uiEXT (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
-@defproc[(glProgramUniform1uiv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value exact-nonnegative-integer?)) any]{
+@defproc[(glProgramUniform1uiv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Version 4.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
@@ -671,6 +731,12 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.x
 @defproc[(glProgramUniform4uivEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
+@defproc[(glProgramUniformHandleui64NV (program exact-nonnegative-integer?) (location exact-integer?) (value exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
+@defproc[(glProgramUniformHandleui64vNV (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (the-values u64vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
+}
 @defproc[(glProgramUniformMatrix2dv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (transpose boolean?) (value f64vector?)) any]{
 Version 4.1.
 }
@@ -809,6 +875,9 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPushClientAttrib
 }
 @defproc[(glPushClientAttribDefaultEXT (mask exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
+}
+@defproc[(glPushDebugGroup (source exact-integer?) (id exact-nonnegative-integer?) (length exact-integer?) (message (or/c string? bytes?))) any]{
+Version 4.3.
 }
 @defproc[(glPushMatrix) any]{
 Deprecated in version 3.1.

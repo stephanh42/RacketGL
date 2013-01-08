@@ -9,6 +9,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glNamedCopyBufferSubDataEXT (readBuffer exact-nonnegative-integer?) (writeBuffer exact-nonnegative-integer?) (readOffset exact-integer?) (writeOffset exact-integer?) (size exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
+@defproc[(glNamedFramebufferParameteriEXT (framebuffer exact-nonnegative-integer?) (pname exact-integer?) (param exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/framebuffer_no_attachments.txt"]{@racket[GL_ARB_framebuffer_no_attachments]}.
+}
 @defproc[(glNamedFramebufferRenderbufferEXT (framebuffer exact-nonnegative-integer?) (attachment exact-integer?) (renderbuffertarget exact-integer?) (renderbuffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }

@@ -216,7 +216,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/triangle_list.txt
 @defproc[(glReplacementCodeubSUN (code (integer-in 0 255))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/triangle_list.txt"]{@racket[GL_SUN_triangle_list]}.
 }
-@defproc[(glReplacementCodeubvSUN (code (or/c string? bytes?))) any]{
+@defproc[(glReplacementCodeubvSUN (code (integer-in 0 255))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/triangle_list.txt"]{@racket[GL_SUN_triangle_list]}.
 }
 @defproc[(glReplacementCodeuiColor3fVertex3fSUN (rc exact-nonnegative-integer?) (r flonum?) (g flonum?) (b flonum?) (x flonum?) (y flonum?) (z flonum?)) any]{
@@ -270,13 +270,13 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/vertex.txt"]{@rac
 @defproc[(glReplacementCodeuiVertex3fvSUN (rc exact-nonnegative-integer?) (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/vertex.txt"]{@racket[GL_SUN_vertex]}.
 }
-@defproc[(glReplacementCodeuivSUN (code u32vector?)) any]{
+@defproc[(glReplacementCodeuivSUN (code exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/triangle_list.txt"]{@racket[GL_SUN_triangle_list]}.
 }
 @defproc[(glReplacementCodeusSUN (code (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/triangle_list.txt"]{@racket[GL_SUN_triangle_list]}.
 }
-@defproc[(glReplacementCodeusvSUN (code u16vector?)) any]{
+@defproc[(glReplacementCodeusvSUN (code (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SUN/triangle_list.txt"]{@racket[GL_SUN_triangle_list]}.
 }
 @defproc[(glRequestResidentProgramsNV (n exact-integer?) (programs u32vector?)) any]{

@@ -367,9 +367,7 @@
     (->* () () #:rest (listof exact-nonnegative-integer?) exact-nonnegative-integer?)))
 
 (define (get-shader-parameter shader pname)
-  (let ((return-buffer (make-s32vector 1)))
-    (glGetShaderiv shader pname return-buffer)
-    (s32vector-ref return-buffer 0)))
+  (glGetShaderiv shader pname))
 
 (define (get-shader-info-log shader)
   (let ((log-length (get-shader-parameter shader GL_INFO_LOG_LENGTH)))
@@ -377,9 +375,7 @@
       (bytes->string/utf-8 info-log #\? 0 actual-length))))
 
 (define (get-program-parameter program pname)
-  (let ((return-buffer (make-s32vector 1)))
-    (glGetProgramiv program pname return-buffer)
-    (s32vector-ref return-buffer 0)))
+  (glGetProgramiv program pname))
 
 (define (get-program-info-log program)
   (let ((log-length (get-program-parameter program GL_INFO_LOG_LENGTH)))

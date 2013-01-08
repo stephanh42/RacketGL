@@ -144,6 +144,11 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindFramebuffer.
 @defproc[(glBindFramebufferEXT (target exact-integer?) (framebuffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
 }
+@defproc[(glBindImageTexture (unit exact-nonnegative-integer?) (texture exact-nonnegative-integer?) (level exact-integer?) (layered boolean?) (layer exact-integer?) (access exact-integer?) (format exact-integer?)) any]{
+Version 4.2.
+
+See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindImageTexture.xml"]{glBindImageTexture manpage}.
+}
 @defproc[(glBindImageTextureEXT (index exact-nonnegative-integer?) (texture exact-nonnegative-integer?) (level exact-integer?) (layered boolean?) (layer exact-integer?) (access exact-integer?) (format exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/shader_image_load_store.txt"]{@racket[GL_EXT_shader_image_load_store]}.
 }
@@ -218,6 +223,9 @@ See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindVertexArray.
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/vertex_array_object.txt"]{@racket[GL_APPLE_vertex_array_object]}.
 
 Alias of @racket[glBindVertexArray].
+}
+@defproc[(glBindVertexBuffer (bindingindex exact-nonnegative-integer?) (buffer exact-nonnegative-integer?) (offset exact-integer?) (stride exact-integer?)) any]{
+Version 4.3.
 }
 @defproc[(glBindVertexShaderEXT (id exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt"]{@racket[GL_EXT_vertex_shader]}.

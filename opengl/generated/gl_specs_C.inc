@@ -42,6 +42,12 @@ Deprecated in version 3.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glClearAccum.xml"]{glClearAccum manpage}.
 }
+@defproc[(glClearBufferData (target exact-integer?) (internalformat exact-integer?) (format exact-integer?) (type exact-integer?) (data gl-pointer?)) any]{
+Version 4.3.
+}
+@defproc[(glClearBufferSubData (target exact-integer?) (internalformat exact-integer?) (offset exact-integer?) (size exact-integer?) (format exact-integer?) (type exact-integer?) (data gl-pointer?)) any]{
+Version 4.3.
+}
 @defproc[(glClearBufferfi (buffer exact-integer?) (drawbuffer exact-integer?) (depth flonum?) (stencil exact-integer?)) any]{
 Version 3.0.
 }
@@ -87,6 +93,12 @@ Deprecated in version 3.1.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glClearIndex.xml"]{glClearIndex manpage}.
 }
+@defproc[(glClearNamedBufferDataEXT (buffer exact-nonnegative-integer?) (internalformat exact-integer?) (format exact-integer?) (type exact-integer?) (data gl-pointer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/clear_buffer_object.txt"]{@racket[GL_ARB_clear_buffer_object]}.
+}
+@defproc[(glClearNamedBufferSubDataEXT (buffer exact-nonnegative-integer?) (internalformat exact-integer?) (offset exact-integer?) (size exact-integer?) (format exact-integer?) (type exact-integer?) (data gl-pointer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/clear_buffer_object.txt"]{@racket[GL_ARB_clear_buffer_object]}.
+}
 @defproc[(glClearStencil (s exact-integer?)) any]{
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glClearStencil.xml"]{glClearStencil manpage}.
@@ -109,7 +121,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_streams.tx
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
 }
 @defproc[(glClientWaitSync (sync GLsync?) (flags exact-nonnegative-integer?) (timeout exact-nonnegative-integer?)) exact-integer?]{
-Version 3.2.
+Version 1.2.
 
 See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glClientWaitSync.xml"]{glClientWaitSync manpage}.
 }
@@ -666,6 +678,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]
 
 Alias of @racket[glCopyConvolutionFilter2D].
 }
+@defproc[(glCopyImageSubData (srcName exact-nonnegative-integer?) (srcTarget exact-integer?) (srcLevel exact-integer?) (srcX exact-integer?) (srcY exact-integer?) (srcZ exact-integer?) (dstName exact-nonnegative-integer?) (dstTarget exact-integer?) (dstLevel exact-integer?) (dstX exact-integer?) (dstY exact-integer?) (dstZ exact-integer?) (srcWidth exact-integer?) (srcHeight exact-integer?) (srcDepth exact-integer?)) any]{
+Version 4.3.
+}
 @defproc[(glCopyImageSubDataNV (srcName exact-nonnegative-integer?) (srcTarget exact-integer?) (srcLevel exact-integer?) (srcX exact-integer?) (srcY exact-integer?) (srcZ exact-integer?) (dstName exact-nonnegative-integer?) (dstTarget exact-integer?) (dstLevel exact-integer?) (dstX exact-integer?) (dstY exact-integer?) (dstZ exact-integer?) (width exact-integer?) (height exact-integer?) (depth exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/copy_image.txt"]{@racket[GL_NV_copy_image]}.
 }
@@ -683,6 +698,9 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 }
 @defproc[(glCopyMultiTexSubImage3DEXT (texunit exact-integer?) (target exact-integer?) (level exact-integer?) (xoffset exact-integer?) (yoffset exact-integer?) (zoffset exact-integer?) (x exact-integer?) (y exact-integer?) (width exact-integer?) (height exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
+}
+@defproc[(glCopyPathNV (resultPath exact-nonnegative-integer?) (srcPath exact-nonnegative-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
 }
 @defproc[(glCopyPixels (x exact-integer?) (y exact-integer?) (width exact-integer?) (height exact-integer?) (type exact-integer?)) any]{
 Deprecated in version 3.1.
@@ -753,6 +771,18 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 }
 @defproc[(glCopyTextureSubImage3DEXT (texture exact-nonnegative-integer?) (target exact-integer?) (level exact-integer?) (xoffset exact-integer?) (yoffset exact-integer?) (zoffset exact-integer?) (x exact-integer?) (y exact-integer?) (width exact-integer?) (height exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
+}
+@defproc[(glCoverFillPathInstancedNV (numPaths exact-integer?) (pathNameType exact-integer?) (paths gl-pointer?) (pathBase exact-nonnegative-integer?) (coverMode exact-integer?) (transformType exact-integer?) (transformValues f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glCoverFillPathNV (path exact-nonnegative-integer?) (coverMode exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glCoverStrokePathInstancedNV (numPaths exact-integer?) (pathNameType exact-integer?) (paths gl-pointer?) (pathBase exact-nonnegative-integer?) (coverMode exact-integer?) (transformType exact-integer?) (transformValues f32vector?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
+}
+@defproc[(glCoverStrokePathNV (path exact-nonnegative-integer?) (coverMode exact-integer?)) any]{
+Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
 }
 @defproc[(glCreateProgram) exact-nonnegative-integer?]{
 Version 2.0.
