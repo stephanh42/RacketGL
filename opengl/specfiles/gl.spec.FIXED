@@ -5413,8 +5413,8 @@ BlendFuncSeparate(sfactorRGB, dfactorRGB, sfactorAlpha, dfactorAlpha)
 MultiDrawArrays(mode, first, count, drawcount)
 	return		void
 	param		mode		BeginMode in value
-	param		first		Int32 in array [COMPSIZE(count)]
-	param		count		SizeI in array [COMPSIZE(drawcount)]
+	param		first		Int32 in array [drawcount]
+	param		count		SizeI in array [drawcount]
 	param		drawcount	SizeI in value
 	category	VERSION_1_4
 	version		1.4
@@ -5424,9 +5424,9 @@ MultiDrawArrays(mode, first, count, drawcount)
 MultiDrawElements(mode, count, type, indices, drawcount)
 	return		void
 	param		mode		BeginMode in value
-	param		count		SizeI in array [COMPSIZE(drawcount)]
+	param		count		SizeI in array [drawcount]
 	param		type		DrawElementsType in value
-	param		indices		ConstVoidPointer in array [COMPSIZE(drawcount)]
+	param		indices		ConstVoidPointer in array [drawcount]
 	param		drawcount	SizeI in value
 	category	VERSION_1_4
 	version		1.4
@@ -5981,7 +5981,7 @@ GetQueryiv(target, pname, params)
 	return		void
 	param		target		GLenum in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [COMPSIZE(pname)]
 	category	VERSION_1_5
 	dlflags		notlistable
 	version		1.5
@@ -5994,7 +5994,7 @@ GetQueryObjectiv(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [COMPSIZE(pname)]
 	category	VERSION_1_5
 	dlflags		notlistable
 	version		1.5
@@ -6007,7 +6007,7 @@ GetQueryObjectuiv(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		UInt32 out array [pname]
+	param		params		UInt32 out array [COMPSIZE(pname)]
 	category	VERSION_1_5
 	dlflags		notlistable
 	version		1.5
@@ -6333,7 +6333,7 @@ GetActiveAttrib(program, index, bufSize, length, size, type, name)
 	param		length		SizeI out array [1]
 	param		size		Int32 out array [1]
 	param		type		GLenum out array [1]
-	param		name		Char out array []
+	param		name		Char out array [bufSize]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6350,7 +6350,7 @@ GetActiveUniform(program, index, bufSize, length, size, type, name)
 	param		length		SizeI out array [1]
 	param		size		Int32 out array [1]
 	param		type		GLenum out array [1]
-	param		name		Char out array []
+	param		name		Char out array [bufSize]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6364,7 +6364,7 @@ GetAttachedShaders(program, maxCount, count, obj)
 	param		program		UInt32 in value
 	param		maxCount	SizeI in value
 	param		count		SizeI out array [1]
-	param		obj		UInt32 out array [count]
+	param		obj		UInt32 out array [maxCount]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6389,7 +6389,7 @@ GetProgramiv(program, pname, params)
 	return		void
 	param		program		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [1]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6402,7 +6402,7 @@ GetProgramInfoLog(program, bufSize, length, infoLog)
 	param		program		UInt32 in value
 	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
-	param		infoLog		Char out array [length]
+	param		infoLog		Char out array [bufSize]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6414,7 +6414,7 @@ GetShaderiv(shader, pname, params)
 	return		void
 	param		shader		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [1]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6427,7 +6427,7 @@ GetShaderInfoLog(shader, bufSize, length, infoLog)
 	param		shader		UInt32 in value
 	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
-	param		infoLog		Char out array [length]
+	param		infoLog		Char out array [bufSize]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6440,7 +6440,7 @@ GetShaderSource(shader, bufSize, length, source)
 	param		shader		UInt32 in value
 	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
-	param		source		Char out array [length]
+	param		source		Char out array [bufSize]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6465,7 +6465,7 @@ GetUniformfv(program, location, params)
 	return		void
 	param		program		UInt32 in value
 	param		location	Int32 in value
-	param		params		Float32 out array [COMPSIZE(location)]
+	param		params		Float32 out array [COMPSIZE(program/location)]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6478,7 +6478,7 @@ GetUniformiv(program, location, params)
 	return		void
 	param		program		UInt32 in value
 	param		location	Int32 in value
-	param		params		Int32 out array [COMPSIZE(location)]
+	param		params		Int32 out array [COMPSIZE(program/location)]
 	category	VERSION_2_0
 	dlflags		notlistable
 	version		2.0
@@ -6491,7 +6491,7 @@ GetVertexAttribdv(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		VertexAttribPropertyARB in value
-	param		params		Float64 out array [4]
+	param		params		Float64 out array [COMPSIZE(pname)]
 	dlflags		notlistable
 	category	VERSION_2_0
 	version		2.0
@@ -6503,7 +6503,7 @@ GetVertexAttribfv(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		VertexAttribPropertyARB in value
-	param		params		Float32 out array [4]
+	param		params		Float32 out array [COMPSIZE(pname)]
 	dlflags		notlistable
 	category	VERSION_2_0
 	version		2.0
@@ -6515,7 +6515,7 @@ GetVertexAttribiv(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		VertexAttribPropertyARB in value
-	param		params		Int32 out array [4]
+	param		params		Int32 out array [COMPSIZE(pname)]
 	dlflags		notlistable
 	category	VERSION_2_0
 	version		2.0
@@ -6570,7 +6570,7 @@ ShaderSource(shader, count, string, length)
 	param		shader		UInt32 in value
 	param		count		SizeI in value
 	param		string		ConstCharPointer in array [count]
-	param		length		Int32 in array [1]
+	param		length		Int32 in array [count]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -6704,7 +6704,7 @@ Uniform2fv(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*2]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -6716,7 +6716,7 @@ Uniform3fv(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*3]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -6728,7 +6728,7 @@ Uniform4fv(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*4]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -6752,7 +6752,7 @@ Uniform2iv(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [count]
+	param		value		Int32 in array [count*2]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -6764,7 +6764,7 @@ Uniform3iv(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [count]
+	param		value		Int32 in array [count*3]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -6776,7 +6776,7 @@ Uniform4iv(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [count]
+	param		value		Int32 in array [count*4]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -6789,7 +6789,7 @@ UniformMatrix2fv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*4]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -6802,7 +6802,7 @@ UniformMatrix3fv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*9]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -6815,7 +6815,7 @@ UniformMatrix4fv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*16]
 	category	VERSION_2_0
 	version		2.0
 	extension
@@ -7299,7 +7299,7 @@ UniformMatrix2x3fv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [6]
+	param		value		Float32 in array [count*6]
 	category	VERSION_2_1
 	version		2.1
 	extension
@@ -7312,7 +7312,7 @@ UniformMatrix3x2fv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [6]
+	param		value		Float32 in array [count*6]
 	category	VERSION_2_1
 	version		2.1
 	extension
@@ -7324,7 +7324,7 @@ UniformMatrix2x4fv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [8]
+	param		value		Float32 in array [count*8]
 	category	VERSION_2_1
 	version		2.1
 	extension
@@ -7336,7 +7336,7 @@ UniformMatrix4x2fv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [8]
+	param		value		Float32 in array [count*8]
 	category	VERSION_2_1
 	version		2.1
 	extension
@@ -7348,7 +7348,7 @@ UniformMatrix3x4fv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [12]
+	param		value		Float32 in array [count*12]
 	category	VERSION_2_1
 	version		2.1
 	extension
@@ -7360,7 +7360,7 @@ UniformMatrix4x3fv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [12]
+	param		value		Float32 in array [count*12]
 	category	VERSION_2_1
 	version		2.1
 	extension
@@ -7513,7 +7513,7 @@ GetTransformFeedbackVarying(program, index, bufSize, length, size, type, name)
 	param		length		SizeI out array [1]
 	param		size		SizeI out array [1]
 	param		type		GLenum out array [1]
-	param		name		Char out array [COMPSIZE(length)]
+	param		name		Char out array [bufSize]
 	category	VERSION_3_0
 	dlflags		notlistable
 	version		3.0
@@ -7566,7 +7566,7 @@ GetVertexAttribIiv(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		VertexAttribEnum in value
-	param		params		Int32 out array [1]
+	param		params		Int32 out array [COMPSIZE(pname)]
 	category	VERSION_3_0
 	version		3.0
 	dlflags		notlistable
@@ -7578,7 +7578,7 @@ GetVertexAttribIuiv(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		VertexAttribEnum in value
-	param		params		UInt32 out array [1]
+	param		params		UInt32 out array [COMPSIZE(pname)]
 	category	VERSION_3_0
 	version		3.0
 	dlflags		notlistable
@@ -7874,7 +7874,7 @@ BindFragDataLocation(program, color, name)
 	return		void
 	param		program		UInt32 in value
 	param		color		UInt32 in value
-	param		name		Char in array [COMPSIZE(name)]
+	param		name		Char in array []
 	category	VERSION_3_0
 	dlflags		notlistable
 	version		3.0
@@ -7885,7 +7885,7 @@ BindFragDataLocation(program, color, name)
 GetFragDataLocation(program, name)
 	return		Int32
 	param		program		UInt32 in value
-	param		name		Char in array [COMPSIZE(name)]
+	param		name		Char in array []
 	category	VERSION_3_0
 	dlflags		notlistable
 	version		3.0
@@ -9077,7 +9077,7 @@ PointParameterfARB(pname, param)
 PointParameterfvARB(pname, params)
 	return		void
 	param		pname		PointParameterNameARB in value
-	param		params		CheckedFloat32 in array [COMPSIZE(pname)]
+	param		params		CheckedFloat32 in array [1]
 	category	ARB_point_parameters
 	version		1.0
 	glxflags	ARB
@@ -9185,7 +9185,7 @@ WeightPointerARB(size, type, stride, pointer)
 	param		size		Int32 in value
 	param		type		WeightPointerTypeARB in value
 	param		stride		SizeI in value
-	param		pointer		Void in array [COMPSIZE(type/stride)] retained
+	param		pointer		Void in array [COMPSIZE(size/type/stride)] retained
 	category	ARB_vertex_blend
 	version		1.1
 	extension
@@ -9258,7 +9258,7 @@ MatrixIndexPointerARB(size, type, stride, pointer)
 	param		size		Int32 in value
 	param		type		MatrixIndexPointerTypeARB in value
 	param		stride		SizeI in value
-	param		pointer		Void in array [COMPSIZE(type/stride)] retained
+	param		pointer		Void in array [COMPSIZE(size/type/stride)] retained
 	category	ARB_matrix_palette
 	version		1.1
 	extension
@@ -10367,7 +10367,7 @@ GetQueryivARB(target, pname, params)
 	return		void
 	param		target		GLenum in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [COMPSIZE(pname)]
 	category	ARB_occlusion_query
 	dlflags		notlistable
 	version		1.5
@@ -10378,7 +10378,7 @@ GetQueryObjectivARB(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [COMPSIZE(pname)]
 	category	ARB_occlusion_query
 	dlflags		notlistable
 	version		1.5
@@ -10389,7 +10389,7 @@ GetQueryObjectuivARB(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		UInt32 out array [pname]
+	param		params		UInt32 out array [COMPSIZE(pname)]
 	category	ARB_occlusion_query
 	dlflags		notlistable
 	version		1.5
@@ -10450,7 +10450,7 @@ ShaderSourceARB(shaderObj, count, string, length)
 	param		shaderObj	handleARB in value
 	param		count		SizeI in value
 	param		string		charPointerARB in array [count]
-	param		length		Int32 in array [1]
+	param		length		Int32 in array [count]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10634,7 +10634,7 @@ Uniform2fvARB(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*2]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10646,7 +10646,7 @@ Uniform3fvARB(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*3]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10658,7 +10658,7 @@ Uniform4fvARB(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*4]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10682,7 +10682,7 @@ Uniform2ivARB(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [count]
+	param		value		Int32 in array [count*2]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10694,7 +10694,7 @@ Uniform3ivARB(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [count]
+	param		value		Int32 in array [count*3]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10706,7 +10706,7 @@ Uniform4ivARB(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [count]
+	param		value		Int32 in array [count*4]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10719,7 +10719,7 @@ UniformMatrix2fvARB(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*4]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10732,7 +10732,7 @@ UniformMatrix3fvARB(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*9]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10745,7 +10745,7 @@ UniformMatrix4fvARB(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*16]
 	category	ARB_shader_objects
 	version		1.2
 	extension
@@ -10757,7 +10757,7 @@ GetObjectParameterfvARB(obj, pname, params)
 	return		void
 	param		obj		handleARB in value
 	param		pname		GLenum in value
-	param		params		Float32 out array [pname]
+	param		params		Float32 out array [COMPSIZE(pname)]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -10770,7 +10770,7 @@ GetObjectParameterivARB(obj, pname, params)
 	return		void
 	param		obj		handleARB in value
 	param		pname		GLenum in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [COMPSIZE(pname)]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -10784,7 +10784,7 @@ GetInfoLogARB(obj, maxLength, length, infoLog)
 	param		obj		handleARB in value
 	param		maxLength	SizeI in value
 	param		length		SizeI out array [1]
-	param		infoLog		charARB out array [length]
+	param		infoLog		charARB out array [maxLength]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -10798,7 +10798,7 @@ GetAttachedObjectsARB(containerObj, maxCount, count, obj)
 	param		containerObj	handleARB in value
 	param		maxCount	SizeI in value
 	param		count		SizeI out array [1]
-	param		obj		handleARB out array [count]
+	param		obj		handleARB out array [maxCount]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -10827,7 +10827,7 @@ GetActiveUniformARB(programObj, index, maxLength, length, size, type, name)
 	param		length		SizeI out array [1]
 	param		size		Int32 out array [1]
 	param		type		GLenum out array [1]
-	param		name		charARB out array []
+	param		name		charARB out array [maxLength]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -10840,7 +10840,7 @@ GetUniformfvARB(programObj, location, params)
 	return		void
 	param		programObj	handleARB in value
 	param		location	Int32 in value
-	param		params		Float32 out array [COMPSIZE(location)]
+	param		params		Float32 out array [COMPSIZE(programObj/location)]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -10853,7 +10853,7 @@ GetUniformivARB(programObj, location, params)
 	return		void
 	param		programObj	handleARB in value
 	param		location	Int32 in value
-	param		params		Int32 out array [COMPSIZE(location)]
+	param		params		Int32 out array [COMPSIZE(programObj/location)]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -10867,7 +10867,7 @@ GetShaderSourceARB(obj, maxLength, length, source)
 	param		obj		handleARB in value
 	param		maxLength	SizeI in value
 	param		length		SizeI out array [1]
-	param		source		charARB out array [length]
+	param		source		charARB out array [maxLength]
 	category	ARB_shader_objects
 	dlflags		notlistable
 	version		1.2
@@ -10904,7 +10904,7 @@ GetActiveAttribARB(programObj, index, maxLength, length, size, type, name)
 	param		length		SizeI out array [1]
 	param		size		Int32 out array [1]
 	param		type		GLenum out array [1]
-	param		name		charARB out array []
+	param		name		charARB out array [maxLength]
 	category	ARB_vertex_shader
 	dlflags		notlistable
 	version		1.2
@@ -11596,8 +11596,8 @@ GetUniformIndices(program, uniformCount, uniformNames, uniformIndices)
 	return		void
 	param		program		UInt32 in value
 	param		uniformCount	SizeI in value
-	param		uniformNames	ConstCharPointer in array [COMPSIZE(uniformCount)]
-	param		uniformIndices	UInt32 out array [COMPSIZE(uniformCount)]
+	param		uniformNames	ConstCharPointer in array [uniformCount]
+	param		uniformIndices	UInt32 out array [uniformCount]
 	category	ARB_uniform_buffer_object
 	dlflags		notlistable
 	version		2.0
@@ -11610,9 +11610,9 @@ GetActiveUniformsiv(program, uniformCount, uniformIndices, pname, params)
 	return		void
 	param		program		UInt32 in value
 	param		uniformCount	SizeI in value
-	param		uniformIndices	UInt32 in array [COMPSIZE(uniformCount)]
+	param		uniformIndices	UInt32 in array [uniformCount]
 	param		pname		GLenum in value
-	param		params		Int32 out array [COMPSIZE(pname)]
+	param		params		Int32 out array [uniformCount]
 	category	ARB_uniform_buffer_object
 	dlflags		notlistable
 	version		2.0
@@ -11639,7 +11639,7 @@ GetActiveUniformName(program, uniformIndex, bufSize, length, uniformName)
 GetUniformBlockIndex(program, uniformBlockName)
 	return		UInt32
 	param		program		UInt32 in value
-	param		uniformBlockName	Char in array [COMPSIZE()]
+	param		uniformBlockName	Char in array []
 	category	ARB_uniform_buffer_object
 	dlflags		notlistable
 	version		2.0
@@ -11796,11 +11796,11 @@ DrawElementsInstancedBaseVertex(mode, count, type, indices, instancecount, basev
 MultiDrawElementsBaseVertex(mode, count, type, indices, drawcount, basevertex)
 	return		void
 	param		mode		GLenum in value
-	param		count		SizeI in array [COMPSIZE(drawcount)]
+	param		count		SizeI in array [drawcount]
 	param		type		DrawElementsType in value
-	param		indices		ConstVoidPointer in array [COMPSIZE(drawcount)]
+	param		indices		ConstVoidPointer in array [drawcount]
 	param		drawcount	SizeI in value
-	param		basevertex	Int32 in array [COMPSIZE(drawcount)]
+	param		basevertex	Int32 in array [drawcount]
 	category	ARB_draw_elements_base_vertex
 	version		1.2
 	extension
@@ -11925,7 +11925,7 @@ GetSynciv(sync, pname, bufSize, length, values)
 	param		pname		GLenum in value
 	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
-	param		values		Int32 out array [length]
+	param		values		Int32 out array [bufSize]
 	category	ARB_sync
 	dlflags		notlistable
 	version		1.2
@@ -11976,7 +11976,7 @@ GetMultisamplefv(pname, index, val)
 	return		void
 	param		pname		GLenum in value
 	param		index		UInt32 in value
-	param		val		Float32 out array [COMPSIZE(pname)]
+	param		val		Float32 out array [2]
 	category	ARB_texture_multisample
 	dlflags		notlistable
 	version		1.2
@@ -13078,7 +13078,7 @@ Uniform2dv(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*2]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13090,7 +13090,7 @@ Uniform3dv(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*3]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13102,7 +13102,7 @@ Uniform4dv(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*4]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13115,7 +13115,7 @@ UniformMatrix2dv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*4]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13128,7 +13128,7 @@ UniformMatrix3dv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*9]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13141,7 +13141,7 @@ UniformMatrix4dv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*16]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13154,7 +13154,7 @@ UniformMatrix2x3dv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*6]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13167,7 +13167,7 @@ UniformMatrix2x4dv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*8]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13180,7 +13180,7 @@ UniformMatrix3x2dv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*6]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13193,7 +13193,7 @@ UniformMatrix3x4dv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*12]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13206,7 +13206,7 @@ UniformMatrix4x2dv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*8]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13219,7 +13219,7 @@ UniformMatrix4x3dv(location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*12]
 	category	ARB_gpu_shader_fp64
 	version		1.2
 	extension
@@ -13231,7 +13231,7 @@ GetUniformdv(program, location, params)
 	return		void
 	param		program		UInt32 in value
 	param		location	Int32 in value
-	param		params		Float64 out array [COMPSIZE(location)]
+	param		params		Float64 out array [COMPSIZE(program/location)]
 	category	ARB_gpu_shader_fp64
 	dlflags		notlistable
 	version		1.2
@@ -13568,7 +13568,7 @@ GetShaderPrecisionFormat(shadertype, precisiontype, range, precision)
 	param		shadertype	GLenum in value
 	param		precisiontype	GLenum in value
 	param		range		Int32 out array [2]
-	param		precision	Int32 out array [2]
+	param		precision	Int32 out array [1]
 	category	ARB_ES2_compatibility
 	dlflags		notlistable
 	version		4.1
@@ -13611,7 +13611,7 @@ GetProgramBinary(program, bufSize, length, binaryFormat, binary)
 	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
 	param		binaryFormat	GLenum out array [1]
-	param		binary		Void out array [COMPSIZE(length)]
+	param		binary		Void out array [bufSize]
 	category	ARB_get_program_binary
 	dlflags		notlistable
 	version		4.1
@@ -13760,7 +13760,7 @@ ProgramUniform1iv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [1]
+	param		value		Int32 in array [count]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -13785,7 +13785,7 @@ ProgramUniform1fv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [1]
+	param		value		Float32 in array [count]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -13810,7 +13810,7 @@ ProgramUniform1dv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [1]
+	param		value		Float64 in array [count]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -13835,7 +13835,7 @@ ProgramUniform1uiv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt32 in array [1]
+	param		value		UInt32 in array [count]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -13861,7 +13861,7 @@ ProgramUniform2iv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [2]
+	param		value		Int32 in array [count*2]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -13887,7 +13887,7 @@ ProgramUniform2fv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [2]
+	param		value		Float32 in array [count*2]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -13913,7 +13913,7 @@ ProgramUniform2dv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [2]
+	param		value		Float64 in array [count*2]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -13939,7 +13939,7 @@ ProgramUniform2uiv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt32 in array [2]
+	param		value		UInt32 in array [count*2]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -13966,7 +13966,7 @@ ProgramUniform3iv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [3]
+	param		value		Int32 in array [count*3]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -13993,7 +13993,7 @@ ProgramUniform3fv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [3]
+	param		value		Float32 in array [count*3]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14020,7 +14020,7 @@ ProgramUniform3dv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [3]
+	param		value		Float64 in array [count*3]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14047,7 +14047,7 @@ ProgramUniform3uiv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt32 in array [3]
+	param		value		UInt32 in array [count*3]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14075,7 +14075,7 @@ ProgramUniform4iv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int32 in array [4]
+	param		value		Int32 in array [count*4]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14103,7 +14103,7 @@ ProgramUniform4fv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float32 in array [4]
+	param		value		Float32 in array [count*4]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14131,7 +14131,7 @@ ProgramUniform4dv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [4]
+	param		value		Float64 in array [count*4]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14159,7 +14159,7 @@ ProgramUniform4uiv(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt32 in array [4]
+	param		value		UInt32 in array [count*4]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14173,7 +14173,7 @@ ProgramUniformMatrix2fv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [2]
+	param		value		Float32 in array [count*4]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14187,7 +14187,7 @@ ProgramUniformMatrix3fv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [3]
+	param		value		Float32 in array [count*9]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14201,7 +14201,7 @@ ProgramUniformMatrix4fv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [4]
+	param		value		Float32 in array [count*16]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14215,7 +14215,7 @@ ProgramUniformMatrix2dv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [2]
+	param		value		Float64 in array [count*4]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14229,7 +14229,7 @@ ProgramUniformMatrix3dv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [3]
+	param		value		Float64 in array [count*9]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14243,7 +14243,7 @@ ProgramUniformMatrix4dv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [4]
+	param		value		Float64 in array [count*16]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14257,7 +14257,7 @@ ProgramUniformMatrix2x3fv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*6]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14271,7 +14271,7 @@ ProgramUniformMatrix3x2fv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*6]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14285,7 +14285,7 @@ ProgramUniformMatrix2x4fv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*8]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14299,7 +14299,7 @@ ProgramUniformMatrix4x2fv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*8]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14313,7 +14313,7 @@ ProgramUniformMatrix3x4fv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*12]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14327,7 +14327,7 @@ ProgramUniformMatrix4x3fv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float32 in array [count]
+	param		value		Float32 in array [count*12]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14341,7 +14341,7 @@ ProgramUniformMatrix2x3dv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*6]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14355,7 +14355,7 @@ ProgramUniformMatrix3x2dv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*6]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14369,7 +14369,7 @@ ProgramUniformMatrix2x4dv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*8]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14383,7 +14383,7 @@ ProgramUniformMatrix4x2dv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*8]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14397,7 +14397,7 @@ ProgramUniformMatrix3x4dv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*12]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14411,7 +14411,7 @@ ProgramUniformMatrix4x3dv(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*12]
 	category	ARB_separate_shader_objects
 	version		4.1
 	extension
@@ -14434,7 +14434,7 @@ GetProgramPipelineInfoLog(pipeline, bufSize, length, infoLog)
 	param		pipeline	UInt32 in value
 	param		bufSize		SizeI in value
 	param		length		SizeI out array [1]
-	param		infoLog		Char out array [COMPSIZE(length)]
+	param		infoLog		Char out array [bufSize]
 	category	ARB_separate_shader_objects
 	dlflags		notlistable
 	version		4.1
@@ -14557,7 +14557,7 @@ VertexAttribLPointer(index, size, type, stride, pointer)
 	param		size		Int32 in value
 	param		type		GLenum in value
 	param		stride		SizeI in value
-	param		pointer		Void in array [size]
+	param		pointer		Void in array [COMPSIZE(size/type/stride)]
 	category	ARB_vertex_attrib_64bit
 	version		4.1
 	extension
@@ -14591,7 +14591,7 @@ ViewportArrayv(first, count, v)
 	return		void
 	param		first		UInt32 in value
 	param		count		SizeI in value
-	param		v		Float32 in array [COMPSIZE(count)]
+	param		v		Float32 in array [count*4]
 	category	ARB_viewport_array
 	version		4.1
 	extension
@@ -14628,7 +14628,7 @@ ScissorArrayv(first, count, v)
 	return		void
 	param		first		UInt32 in value
 	param		count		SizeI in value
-	param		v		Int32 in array [COMPSIZE(count)]
+	param		v		Int32 in array [count*4]
 	category	ARB_viewport_array
 	version		4.1
 	extension
@@ -14665,7 +14665,7 @@ DepthRangeArrayv(first, count, v)
 	return		void
 	param		first		UInt32 in value
 	param		count		SizeI in value
-	param		v		Float64 in array [COMPSIZE(count)]
+	param		v		Float64 in array [count*2]
 	category	ARB_viewport_array
 	version		4.1
 	extension
@@ -14777,7 +14777,7 @@ DebugMessageInsertARB(source, type, id, severity, length, buf)
 DebugMessageCallbackARB(callback, userParam)
 	return		void
 	param		callback	GLDEBUGPROCARB in value
-	param		userParam	Void in array [COMPSIZE(callback)]
+	param		userParam	Void in array []
 	category	ARB_debug_output
 	version		4.1
 	extension
@@ -14794,7 +14794,7 @@ GetDebugMessageLogARB(count, bufsize, sources, types, ids, severities, lengths, 
 	param		ids		UInt32 out array [count]
 	param		severities	GLenum out array [count]
 	param		lengths		SizeI out array [count]
-	param		messageLog	Char out array [COMPSIZE(lengths)]
+	param		messageLog	Char out array [bufSize]
 	category	ARB_debug_output
 	dlflags		notlistable
 	version		4.1
@@ -15146,7 +15146,7 @@ DrawElementsInstancedBaseInstance(mode, count, type, indices, instancecount, bas
 	param		mode		GLenum in value
 	param		count		SizeI in value
 	param		type		GLenum in value
-	param		indices		void in array [count]
+	param		indices		void in array [COMPSIZE(count/type)]
 	param		instancecount	SizeI in value
 	param		baseinstance	UInt32 in value
 	category	ARB_base_instance
@@ -15161,7 +15161,7 @@ DrawElementsInstancedBaseVertexBaseInstance(mode, count, type, indices, instance
 	param		mode		GLenum in value
 	param		count		SizeI in value
 	param		type		GLenum in value
-	param		indices		void in array [count]
+	param		indices		void in array [COMPSIZE(count/type)]
 	param		instancecount	SizeI in value
 	param		basevertex	Int32 in value
 	param		baseinstance	UInt32 in value
@@ -15464,7 +15464,7 @@ DebugMessageInsert(source, type, id, severity, length, buf)
 	param		id		UInt32 in value
 	param		severity	GLenum in value
 	param		length		SizeI in value
-	param		buf		Char in array [COMPSIZE(buf/length)]
+	param		buf		Char in array [length]
 	category	KHR_debug
 	version		4.3
 	extension
@@ -15507,7 +15507,7 @@ PushDebugGroup(source, id, length, message)
 	param		source		GLenum in value
 	param		id		UInt32 in value
 	param		length		SizeI in value
-	param		message		Char in array [COMPSIZE(message/length)]
+	param		message		Char in array [length]
 	category	KHR_debug
 	version		4.3
 	extension
@@ -15529,7 +15529,7 @@ ObjectLabel(identifier, name, length, label)
 	param		identifier	GLenum in value
 	param		name		UInt32 in value
 	param		length		SizeI in value
-	param		label		Char in array [COMPSIZE(label/length)]
+	param		label		Char in array [length]
 	category	KHR_debug
 	version		4.3
 	extension
@@ -15556,7 +15556,7 @@ ObjectPtrLabel(ptr, length, label)
 	return		void
 	param		ptr		void in reference
 	param		length		SizeI in value
-	param		label		Char in array [COMPSIZE(label/length)]
+	param		label		Char in array [length]
 	category	KHR_debug
 	version		4.3
 	extension
@@ -16169,7 +16169,7 @@ GetProgramResourceIndex(program, programInterface, name)
 	return		UInt32
 	param		program		UInt32 in value
 	param		programInterface	GLenum in value
-	param		name		Char in array [COMPSIZE(name)]
+	param		name		Char in array []
 	category	ARB_program_interface_query
 	dlflags		notlistable
 	version		4.3
@@ -16216,7 +16216,7 @@ GetProgramResourceLocation(program, programInterface, name)
 	return		Int32
 	param		program		UInt32 in value
 	param		programInterface	GLenum in value
-	param		name		Char in array [COMPSIZE(name)]
+	param		name		Char in array []
 	category	ARB_program_interface_query
 	dlflags		notlistable
 	version		4.3
@@ -16229,7 +16229,7 @@ GetProgramResourceLocationIndex(program, programInterface, name)
 	return		Int32
 	param		program		UInt32 in value
 	param		programInterface	GLenum in value
-	param		name		Char in array [COMPSIZE(name)]
+	param		name		Char in array []
 	category	ARB_program_interface_query
 	dlflags		notlistable
 	version		4.3
@@ -19977,7 +19977,7 @@ ReplacementCodeubSUN(code)
 
 ReplacementCodeuivSUN(code)
 	return		void
-	param		code		UInt32 in array [COMPSIZE()]
+	param		code		UInt32 in array [1]
 	category	SUN_triangle_list
 	version		1.1
 	glxropcode	?
@@ -19985,7 +19985,7 @@ ReplacementCodeuivSUN(code)
 
 ReplacementCodeusvSUN(code)
 	return		void
-	param		code		UInt16 in array [COMPSIZE()]
+	param		code		UInt16 in array [1]
 	category	SUN_triangle_list
 	version		1.1
 	glxropcode	?
@@ -19993,7 +19993,7 @@ ReplacementCodeusvSUN(code)
 
 ReplacementCodeubvSUN(code)
 	return		void
-	param		code		UInt8 in array [COMPSIZE()]
+	param		code		UInt8 in array [1]
 	category	SUN_triangle_list
 	version		1.1
 	glxropcode	?
@@ -21249,9 +21249,9 @@ newcategory: IBM_cull_vertex
 
 MultiModeDrawArraysIBM(mode, first, count, primcount, modestride)
 	return		void
-	param		mode		BeginMode in array [COMPSIZE(primcount)]
-	param		first		Int32 in array [COMPSIZE(primcount)]
-	param		count		SizeI in array [COMPSIZE(primcount)]
+	param		mode		BeginMode in array [COMPSIZE(primcount/modestride)]
+	param		first		Int32 in array [primcount]
+	param		count		SizeI in array [primcount]
 	param		primcount	SizeI in value
 	param		modestride	Int32 in value
 	category	IBM_multimode_draw_arrays
@@ -21262,10 +21262,10 @@ MultiModeDrawArraysIBM(mode, first, count, primcount, modestride)
 
 MultiModeDrawElementsIBM(mode, count, type, indices, primcount, modestride)
 	return		void
-	param		mode		BeginMode in array [COMPSIZE(primcount)]
-	param		count		SizeI in array [COMPSIZE(primcount)]
+	param		mode		BeginMode in array [COMPSIZE(primcount/modestride)]
+	param		count		SizeI in array [primcount]
 	param		type		DrawElementsType in value
-	param		indices		ConstVoidPointer in array [COMPSIZE(primcount)]
+	param		indices		ConstVoidPointer in array [primcount]
 	param		primcount	SizeI in value
 	param		modestride	Int32 in value
 	category	IBM_multimode_draw_arrays
@@ -21285,7 +21285,7 @@ ColorPointerListIBM(size, type, stride, pointer, ptrstride)
 	param		size		Int32 in value
 	param		type		ColorPointerType in value
 	param		stride		Int32 in value
-	param		pointer		VoidPointer in array [COMPSIZE(size/type/stride)] retained
+	param		pointer		VoidPointer in array [COMPSIZE(ptrstride)] retained
 	param		ptrstride	Int32 in value
 	category	IBM_vertex_array_lists
 	version		1.1
@@ -21297,7 +21297,7 @@ SecondaryColorPointerListIBM(size, type, stride, pointer, ptrstride)
 	param		size		Int32 in value
 	param		type		SecondaryColorPointerTypeIBM in value
 	param		stride		Int32 in value
-	param		pointer		VoidPointer in array [COMPSIZE(size/type/stride)] retained
+	param		pointer		VoidPointer in array [COMPSIZE(ptrstride)] retained
 	param		ptrstride	Int32 in value
 	category	IBM_vertex_array_lists
 	version		1.1
@@ -21307,7 +21307,7 @@ SecondaryColorPointerListIBM(size, type, stride, pointer, ptrstride)
 EdgeFlagPointerListIBM(stride, pointer, ptrstride)
 	return		void
 	param		stride		Int32 in value
-	param		pointer		BooleanPointer in array [COMPSIZE(stride)] retained
+	param		pointer		BooleanPointer in array [COMPSIZE(ptrstride)] retained
 	param		ptrstride	Int32 in value
 	category	IBM_vertex_array_lists
 	version		1.1
@@ -21318,7 +21318,7 @@ FogCoordPointerListIBM(type, stride, pointer, ptrstride)
 	return		void
 	param		type		FogPointerTypeIBM in value
 	param		stride		Int32 in value
-	param		pointer		VoidPointer in array [COMPSIZE(type/stride)] retained
+	param		pointer		VoidPointer in array [COMPSIZE(ptrstride)] retained
 	param		ptrstride	Int32 in value
 	category	IBM_vertex_array_lists
 	version		1.1
@@ -21329,7 +21329,7 @@ IndexPointerListIBM(type, stride, pointer, ptrstride)
 	return		void
 	param		type		IndexPointerType in value
 	param		stride		Int32 in value
-	param		pointer		VoidPointer in array [COMPSIZE(type/stride)] retained
+	param		pointer		VoidPointer in array [COMPSIZE(ptrstride)] retained
 	param		ptrstride	Int32 in value
 	category	IBM_vertex_array_lists
 	version		1.1
@@ -21340,7 +21340,7 @@ NormalPointerListIBM(type, stride, pointer, ptrstride)
 	return		void
 	param		type		NormalPointerType in value
 	param		stride		Int32 in value
-	param		pointer		VoidPointer in array [COMPSIZE(type/stride)] retained
+	param		pointer		VoidPointer in array [COMPSIZE(ptrstride)] retained
 	param		ptrstride	Int32 in value
 	category	IBM_vertex_array_lists
 	version		1.1
@@ -21364,7 +21364,7 @@ VertexPointerListIBM(size, type, stride, pointer, ptrstride)
 	param		size		Int32 in value
 	param		type		VertexPointerType in value
 	param		stride		Int32 in value
-	param		pointer		VoidPointer in array [COMPSIZE(size/type/stride)] retained
+	param		pointer		VoidPointer in array [COMPSIZE(ptrstride)] retained
 	param		ptrstride	Int32 in value
 	category	IBM_vertex_array_lists
 	version		1.1
@@ -24573,7 +24573,7 @@ newcategory: APPLE_client_storage
 ElementPointerAPPLE(type, pointer)
 	return		void
 	param		type		ElementPointerTypeATI in value
-	param		pointer		Void in array [type]
+	param		pointer		Void in array [COMPSIZE(type)]
 	category	APPLE_element_array
 	version		1.2
 	extension
@@ -24916,7 +24916,7 @@ ProgramNamedParameter4fNV(id, len, name, x, y, z, w)
 	return		void
 	param		id		UInt32 in value
 	param		len		SizeI in value
-	param		name		UInt8 in array [1]
+	param		name		UInt8 in array [len]
 	param		x		Float32 in value
 	param		y		Float32 in value
 	param		z		Float32 in value
@@ -24932,7 +24932,7 @@ ProgramNamedParameter4dNV(id, len, name, x, y, z, w)
 	return		void
 	param		id		UInt32 in value
 	param		len		SizeI in value
-	param		name		UInt8 in array [1]
+	param		name		UInt8 in array [len]
 	param		x		Float64 in value
 	param		y		Float64 in value
 	param		z		Float64 in value
@@ -24948,7 +24948,7 @@ ProgramNamedParameter4fvNV(id, len, name, v)
 	return		void
 	param		id		UInt32 in value
 	param		len		SizeI in value
-	param		name		UInt8 in array [1]
+	param		name		UInt8 in array [len]
 	param		v		Float32 in array [4]
 	category	NV_fragment_program
 	version		1.2
@@ -24961,7 +24961,7 @@ ProgramNamedParameter4dvNV(id, len, name, v)
 	return		void
 	param		id		UInt32 in value
 	param		len		SizeI in value
-	param		name		UInt8 in array [1]
+	param		name		UInt8 in array [len]
 	param		v		Float64 in array [4]
 	category	NV_fragment_program
 	version		1.2
@@ -24974,7 +24974,7 @@ GetProgramNamedParameterfvNV(id, len, name, params)
 	return		void
 	param		id		UInt32 in value
 	param		len		SizeI in value
-	param		name		UInt8 in array [1]
+	param		name		UInt8 in array [len]
 	param		params		Float32 out array [4]
 	category	NV_fragment_program
 	dlflags		notlistable
@@ -24988,7 +24988,7 @@ GetProgramNamedParameterdvNV(id, len, name, params)
 	return		void
 	param		id		UInt32 in value
 	param		len		SizeI in value
-	param		name		UInt8 in array [1]
+	param		name		UInt8 in array [len]
 	param		params		Float64 out array [4]
 	category	NV_fragment_program
 	dlflags		notlistable
@@ -25492,7 +25492,7 @@ VertexAttribs2hvNV(index, n, v)
 	return		void
 	param		index		UInt32 in value
 	param		n		SizeI in value
-	param		v		Half16NV in array [n]
+	param		v		Half16NV in array [n*2]
 	category	NV_half_float
 	version		1.2
 	extension
@@ -25504,7 +25504,7 @@ VertexAttribs3hvNV(index, n, v)
 	return		void
 	param		index		UInt32 in value
 	param		n		SizeI in value
-	param		v		Half16NV in array [n]
+	param		v		Half16NV in array [n*3]
 	category	NV_half_float
 	version		1.2
 	extension
@@ -25516,7 +25516,7 @@ VertexAttribs4hvNV(index, n, v)
 	return		void
 	param		index		UInt32 in value
 	param		n		SizeI in value
-	param		v		Half16NV in array [n]
+	param		v		Half16NV in array [n*4]
 	category	NV_half_float
 	version		1.2
 	extension
@@ -25697,7 +25697,7 @@ GetVertexAttribArrayObjectfvATI(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		ArrayObjectPNameATI in value
-	param		params		Float32 out array [pname]
+	param		params		Float32 out array [COMPSIZE(pname)]
 	category	ATI_vertex_attrib_array_object
 	dlflags		notlistable
 	version		1.2
@@ -25710,7 +25710,7 @@ GetVertexAttribArrayObjectivATI(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		ArrayObjectPNameATI in value
-	param		params		Int32 out array [pname]
+	param		params		Int32 out array [COMPSIZE(pname)]
 	category	ATI_vertex_attrib_array_object
 	dlflags		notlistable
 	version		1.2
@@ -26268,7 +26268,7 @@ GetQueryObjecti64vEXT(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		Int64EXT out array [pname]
+	param		params		Int64EXT out array [COMPSIZE(pname)]
 	category	EXT_timer_query
 	dlflags		notlistable
 	version		1.5
@@ -26280,7 +26280,7 @@ GetQueryObjectui64vEXT(id, pname, params)
 	return		void
 	param		id		UInt32 in value
 	param		pname		GLenum in value
-	param		params		UInt64EXT out array [pname]
+	param		params		UInt64EXT out array [COMPSIZE(pname)]
 	category	EXT_timer_query
 	dlflags		notlistable
 	version		1.5
@@ -26912,7 +26912,7 @@ GetVertexAttribIivEXT(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		VertexAttribEnum in value
-	param		params		Int32 out array [1]
+	param		params		Int32 out array [COMPSIZE(pname)]
 	category	NV_vertex_program4
 	dlflags		notlistable
 	extension	soft WINSOFT NV10
@@ -26924,7 +26924,7 @@ GetVertexAttribIuivEXT(index, pname, params)
 	return		void
 	param		index		UInt32 in value
 	param		pname		VertexAttribEnum in value
-	param		params		UInt32 out array [1]
+	param		params		UInt32 out array [COMPSIZE(pname)]
 	category	NV_vertex_program4
 	dlflags		notlistable
 	extension	soft WINSOFT NV10
@@ -27428,7 +27428,7 @@ EndTransformFeedbackNV()
 TransformFeedbackAttribsNV(count, attribs, bufferMode)
 	return		void
 	param		count		UInt32 in value
-	param		attribs		Int32 in array [COMPSIZE(count)]
+	param		attribs		Int32 in array [count*3]
 	param		bufferMode	GLenum in value
 	category	NV_transform_feedback
 	version		1.5
@@ -27523,7 +27523,7 @@ GetActiveVaryingNV(program, index, bufSize, length, size, type, name)
 	param		length		SizeI out array [1]
 	param		size		SizeI out array [1]
 	param		type		GLenum out array [1]
-	param		name		Char out array [COMPSIZE(program/index/bufSize)]
+	param		name		Char out array [bufSize]
 	category	NV_transform_feedback
 	dlflags		notlistable
 	version		1.5
@@ -27549,7 +27549,7 @@ GetTransformFeedbackVaryingNV(program, index, location)
 TransformFeedbackStreamAttribsNV(count, attribs, nbuffers, bufstreams, bufferMode)
 	return		void
 	param		count		SizeI in value
-	param		attribs		Int32 in array [count]
+	param		attribs		Int32 in array [count*3]
 	param		nbuffers	SizeI in value
 	param		bufstreams	Int32 in array [nbuffers]
 	param		bufferMode	GLenum in value
@@ -27952,7 +27952,7 @@ GetTransformFeedbackVaryingEXT(program, index, bufSize, length, size, type, name
 	param		length		SizeI out array [1]
 	param		size		SizeI out array [1]
 	param		type		GLenum out array [1]
-	param		name		Char out array [COMPSIZE(length)]
+	param		name		Char out array [bufSize]
 	category	EXT_transform_feedback
 	dlflags		notlistable
 	version		2.0
@@ -29403,7 +29403,7 @@ GetNamedProgramStringEXT(program, target, pname, string)
 	param		program		UInt32 in value
 	param		target		ProgramTarget in value
 	param		pname		ProgramStringProperty in value
-	param		string		Void out array [COMPSIZE(program,pname)]
+	param		string		Void out array [COMPSIZE(program,target,pname)]
 	dlflags		notlistable
 	category	EXT_direct_state_access
 	subcategory	ARB_vertex_program
@@ -30212,7 +30212,7 @@ GetNamedBufferPointervEXT(buffer, pname, params)
 	return		void
 	param		buffer		UInt32 in value
 	param		pname		VertexBufferObjectParameter in value
-	param		params		VoidPointer out array [COMPSIZE(pname)]
+	param		params		VoidPointer out array [1]
 	category	EXT_direct_state_access
 	extension	soft WINSOFT
 	dlflags		notlistable
@@ -30224,7 +30224,7 @@ GetNamedBufferSubDataEXT(buffer, offset, size, data)
 	param		buffer		UInt32 in value
 	param		offset		Intptr in value
 	param		size		Sizeiptr in value
-	param		data		Void out array [COMPSIZE(size)]
+	param		data		Void out array [size]
 	category	EXT_direct_state_access
 	extension	soft WINSOFT
 	dlflags		notlistable
@@ -30636,7 +30636,7 @@ ProgramUniform2dvEXT(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*2]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30650,7 +30650,7 @@ ProgramUniform3dvEXT(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*3]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30664,7 +30664,7 @@ ProgramUniform4dvEXT(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*4]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30679,7 +30679,7 @@ ProgramUniformMatrix2dvEXT(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*4]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30694,7 +30694,7 @@ ProgramUniformMatrix3dvEXT(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*9]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30709,7 +30709,7 @@ ProgramUniformMatrix4dvEXT(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*16]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30724,7 +30724,7 @@ ProgramUniformMatrix2x3dvEXT(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*6]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30739,7 +30739,7 @@ ProgramUniformMatrix2x4dvEXT(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*8]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30754,7 +30754,7 @@ ProgramUniformMatrix3x2dvEXT(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*6]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30769,7 +30769,7 @@ ProgramUniformMatrix3x4dvEXT(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*12]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30784,7 +30784,7 @@ ProgramUniformMatrix4x2dvEXT(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*8]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -30799,7 +30799,7 @@ ProgramUniformMatrix4x3dvEXT(program, location, count, transpose, value)
 	param		location	Int32 in value
 	param		count		SizeI in value
 	param		transpose	Boolean in value
-	param		value		Float64 in array [count]
+	param		value		Float64 in array [count*12]
 	category	EXT_direct_state_access
 	subcategory	ARB_gpu_shader_fp64
 	version		1.2
@@ -31034,7 +31034,7 @@ GenPerfMonitorsAMD(n, monitors)
 DeletePerfMonitorsAMD(n, monitors)
 	return		void
 	param		n		SizeI in value
-	param		monitors	UInt32 out array [n]
+	param		monitors	UInt32 in array [n]
 	category	AMD_performance_monitor
 	version		1.2
 	extension
@@ -31049,7 +31049,7 @@ SelectPerfMonitorCountersAMD(monitor, enable, group, numCounters, counterList)
 	param		enable		Boolean in value
 	param		group		UInt32 in value
 	param		numCounters	Int32 in value
-	param		counterList	UInt32 out array [numCounters]
+	param		counterList	UInt32 in array [numCounters]
 	category	AMD_performance_monitor
 	version		1.2
 	extension
@@ -32201,7 +32201,7 @@ VertexAttribLPointerEXT(index, size, type, stride, pointer)
 	param		size		Int32 in value
 	param		type		GLenum in value
 	param		stride		SizeI in value
-	param		pointer		Void in array [size]
+	param		pointer		Void in array [COMPSIZE(size/type/stride)]
 	category	EXT_vertex_attrib_64bit
 	version		4.1
 	extension
@@ -32348,7 +32348,7 @@ Uniform2i64vNV(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int64EXT in array [COMPSIZE(count*2)]
+	param		value		Int64EXT in array [count*2]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32360,7 +32360,7 @@ Uniform3i64vNV(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int64EXT in array [COMPSIZE(count*3)]
+	param		value		Int64EXT in array [count*3]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32372,7 +32372,7 @@ Uniform4i64vNV(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int64EXT in array [COMPSIZE(count*4)]
+	param		value		Int64EXT in array [count*4]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32446,7 +32446,7 @@ Uniform2ui64vNV(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt64EXT in array [COMPSIZE(count*2)]
+	param		value		UInt64EXT in array [count*2]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32458,7 +32458,7 @@ Uniform3ui64vNV(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt64EXT in array [COMPSIZE(count*3)]
+	param		value		UInt64EXT in array [count*3]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32470,7 +32470,7 @@ Uniform4ui64vNV(location, count, value)
 	return		void
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt64EXT in array [COMPSIZE(count*4)]
+	param		value		UInt64EXT in array [count*4]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32482,7 +32482,7 @@ GetUniformi64vNV(program, location, params)
 	return		void
 	param		program		UInt32 in value
 	param		location	Int32 in value
-	param		params		Int64EXT out array [COMPSIZE(location)]
+	param		params		Int64EXT out array [COMPSIZE(program/location)]
 	category	NV_gpu_shader5
 	dlflags		notlistable
 	version		4.1
@@ -32563,7 +32563,7 @@ ProgramUniform2i64vNV(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int64EXT in array [COMPSIZE(count*2)]
+	param		value		Int64EXT in array [count*2]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32576,7 +32576,7 @@ ProgramUniform3i64vNV(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int64EXT in array [COMPSIZE(count*3)]
+	param		value		Int64EXT in array [count*3]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32589,7 +32589,7 @@ ProgramUniform4i64vNV(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		Int64EXT in array [COMPSIZE(count*4)]
+	param		value		Int64EXT in array [count*4]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32669,7 +32669,7 @@ ProgramUniform2ui64vNV(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt64EXT in array [COMPSIZE(count*2)]
+	param		value		UInt64EXT in array [count*2]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32682,7 +32682,7 @@ ProgramUniform3ui64vNV(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt64EXT in array [COMPSIZE(count*3)]
+	param		value		UInt64EXT in array [count*3]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -32695,7 +32695,7 @@ ProgramUniform4ui64vNV(program, location, count, value)
 	param		program		UInt32 in value
 	param		location	Int32 in value
 	param		count		SizeI in value
-	param		value		UInt64EXT in array [COMPSIZE(count*4)]
+	param		value		UInt64EXT in array [count*4]
 	category	NV_gpu_shader5
 	version		4.1
 	extension
@@ -33155,7 +33155,7 @@ VDPAUGetSurfaceivNV(surface, pname, bufSize, length, values)
 	param		pname		GLenum in value
 	param		bufSize		SizeI in value
 	param		length		SizeI out reference
-	param		values		Int32 out array [length]
+	param		values		Int32 out array [bufSize]
 	category	NV_vdpau_interop
 	version		4.1
 	extension
@@ -33409,7 +33409,7 @@ ImportSyncEXT(external_sync_type, external_sync, flags)
 MultiDrawArraysIndirectAMD(mode, indirect, primcount, stride)
 	return		void
 	param		mode		GLenum in value
-	param		indirect	Void in array []
+	param		indirect	Void in array [COMPSIZE(primcount/stride)]
 	param		primcount	SizeI in value
 	param		stride		SizeI in value
 	category	AMD_multi_draw_indirect
@@ -33423,7 +33423,7 @@ MultiDrawElementsIndirectAMD(mode, type, indirect, primcount, stride)
 	return		void
 	param		mode		GLenum in value
 	param		type		GLenum in value
-	param		indirect	Void in array []
+	param		indirect	Void in array [COMPSIZE(primcount/stride)]
 	param		primcount	SizeI in value
 	param		stride		SizeI in value
 	category	AMD_multi_draw_indirect
