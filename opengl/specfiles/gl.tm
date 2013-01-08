@@ -12,6 +12,7 @@ Boolean,*,*,			    GLboolean,*,*
 BooleanPointer,*,*,		    GLboolean*,*,*
 Char,*,*,			    GLchar,*,*
 CharPointer,*,*,		    GLchar*,*,*
+ConstCharPointer,*,*,		    GLchar* const,*,*
 CheckedFloat32,*,*,		    GLfloat,*,*
 CheckedInt32,*,*,		    GLint,*,*
 ClampColorTargetARB,*,*,	    GLenum,*,*
@@ -318,6 +319,8 @@ BufferAccessMask,*,*,		    GLbitfield,*,*
 GetMultisamplePNameNV,*,*,	    GLenum,*,*
 SampleMaskNV,*,*,		    GLbitfield,*,*
 # ARB_debug_output
+GLDEBUGPROC,*,*,		    GLDEBUGPROC,*,*
+# ARB_debug_output
 GLDEBUGPROCARB,*,*,		    GLDEBUGPROCARB,*,*
 # AMD_debug_output
 GLDEBUGPROCAMD,*,*,		    GLDEBUGPROCAMD,*,*
@@ -326,3 +329,21 @@ vdpauSurfaceNV,*,*,		    GLvdpauSurfaceNV,*,*,
 # External API types
 cl_context,*,*,			    struct _cl_context *,*,*
 cl_event,*,*,			    struct _cl_event *,*,*
+Path,*,*,			    GLuint,*,*
+PathColor,*,*,			    GLenum,*,*
+PathColorFormat,*,*,		    GLenum,*,*
+PathCommand,*,*,		    GLubyte,*,*
+PathCoordType,*,*,		    GLenum,*,*
+PathCoverMode,*,*,		    GLenum,*,*
+PathElementType,*,*,		    GLenum,*,*
+PathElement,*,*,		    GLvoid,*,*
+PathFillMode,*,*,		    GLenum,*,*
+PathFontStyle,*,*,		    GLbitfield,*,*
+PathFontTarget,*,*,		    GLenum,*,*
+PathGenMode,*,*,		    GLenum,*,*
+PathListMode,*,*,		    GLenum,*,*
+PathMetricMask,*,*,		    GLbitfield,*,*
+PathParameter,*,*,		    GLenum,*,*
+PathStringFormat,*,*,		    GLenum,*,*
+PathTransformType,*,*,		    GLenum,*,*
+PathHandleMissingGlyphs,*,*,	    GLenum,*,*
