@@ -383,7 +383,7 @@
       (bytes->string/utf-8 info-log #\? 0 actual-length))))
 
 (define (load-shader-source shader port)
-  (let* ((lines (for/vector ((line (in-lines port))) line))
+  (let* ((lines (for/vector ((line (in-lines port))) (string-append line "\n")))
          (sizes (for/list ((line (in-vector lines))) (string-length line)))
          (sizes (list->s32vector sizes)))
    (glShaderSource shader (vector-length lines) lines sizes)))
