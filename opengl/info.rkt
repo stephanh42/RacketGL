@@ -1,3 +1,3 @@
 #lang setup/infotab
 (define name "OpenGL")
-(define scribblings '(("manual.scrbl" (multi-page))))
+(define scribblings '(("opengl.scrbl" (multi-page))))
