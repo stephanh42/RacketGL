@@ -2,7 +2,7 @@
 
 @title{OpenGL}
 
-@(defmodule opengl)
+@(defmodule #:multi (opengl opengl/util))
 
 @(require (for-label racket/gui/base))
 @(require (for-label ffi/vector))
@@ -133,6 +133,8 @@ working with @racket[glVertexPointer] and similar procedures easier.
 
 @section{Utility procedures for textures}
 
+These bindings are in @racketmodname[opengl/util] and not in @racketmodname[opengl].
+
 These procedures can be used to load 2D texture data.
 Note that these, too, should only be called when an OpenGL context is active!
 
@@ -174,6 +176,8 @@ Note that some (older) OpenGL implementations may restrict textures to sizes whi
 }
 
 @section{Utility procedures for shaders}
+
+These bindings are in @racketmodname[opengl/util] and not in @racketmodname[opengl].
 
 These procedures can be used to load shaders written in GLSL (the GL Shading Language).
 Note that these, too, should only be called when an OpenGL context is active!
