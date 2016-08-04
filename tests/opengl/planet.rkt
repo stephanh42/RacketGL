@@ -3,7 +3,8 @@
 
 #lang racket/gui
 
-(require opengl)
+(require opengl
+         opengl/util)
 (require ffi/vector)
 (require "viewer.rkt")
 
