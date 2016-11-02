@@ -48,8 +48,9 @@
           (glRotated y-rotation 1 0 0)
           (glRotated x-rotation 0 1 0)
           (draw)
-          (glPopMatrix)))
-      (swap-gl-buffers))
+          (glPopMatrix)
+          (swap-gl-buffers)))
+      )
 
     (define handle-motion void)
 
