@@ -29,8 +29,12 @@
           (delay 
             (case stype
               [(windows)
-               (load-get-proc-address (ffi-lib "opengl32") 
-                                      '("wglGetProcAddress"))]
+               (define lib (ffi-lib "opengl32"))
+               (define GetProcAddr (load-get-proc-address lib '("GetProcAddress")))
+               (define wglGetProcAddr (load-get-proc-address lib '("wglGetProcAddress")))
+               (λ (name)
+                 (or (GetProcAddr name)
+                     (wglGetProcAddr name)))]
               [(macosx)
                (load-get-proc-address (ffi-lib "/System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL")
                                       '())]
