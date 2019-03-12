@@ -39,7 +39,7 @@ Deprecated in version 3.1.
 @defproc[(glMapBuffer (target exact-integer?) (access exact-integer?)) gl-pointer?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMapBuffer.xml"]{glMapBuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glMapBuffer.xhtml"]{glMapBuffer manpage}.
 }
 @defproc[(glMapBufferARB (target exact-integer?) (access exact-integer?)) gl-pointer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.
@@ -49,7 +49,7 @@ Alias of @racket[glMapBuffer].
 @defproc[(glMapBufferRange (target exact-integer?) (offset exact-integer?) (length exact-integer?) (access exact-nonnegative-integer?)) gl-pointer?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMapBufferRange.xml"]{glMapBufferRange manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glMapBufferRange.xhtml"]{glMapBufferRange manpage}.
 }
 @defproc[(glMapControlPointsNV (target exact-integer?) (index exact-nonnegative-integer?) (type exact-integer?) (ustride exact-integer?) (vstride exact-integer?) (uorder exact-integer?) (vorder exact-integer?) (packed boolean?) (points gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/evaluators.txt"]{@racket[GL_NV_evaluators]}.
@@ -57,22 +57,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/evaluators.txt"]{@
 @defproc[(glMapGrid1d (un exact-integer?) (u1 real?) (u2 real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMapGrid.xml"]{glMapGrid manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMapGrid.xml"]{glMapGrid manpage}.
 }
 @defproc[(glMapGrid1f (un exact-integer?) (u1 flonum?) (u2 flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMapGrid.xml"]{glMapGrid manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMapGrid.xml"]{glMapGrid manpage}.
 }
 @defproc[(glMapGrid2d (un exact-integer?) (u1 real?) (u2 real?) (vn exact-integer?) (v1 real?) (v2 real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMapGrid.xml"]{glMapGrid manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMapGrid.xml"]{glMapGrid manpage}.
 }
 @defproc[(glMapGrid2f (un exact-integer?) (u1 flonum?) (u2 flonum?) (vn exact-integer?) (v1 flonum?) (v2 flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMapGrid.xml"]{glMapGrid manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMapGrid.xml"]{glMapGrid manpage}.
 }
 @defproc[(glMapNamedBufferEXT (buffer exact-nonnegative-integer?) (access exact-integer?)) gl-pointer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -104,22 +104,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/vertex_program_
 @defproc[(glMaterialf (face exact-integer?) (pname exact-integer?) (param flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMaterial.xml"]{glMaterial manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMaterial.xml"]{glMaterial manpage}.
 }
 @defproc[(glMaterialfv (face exact-integer?) (pname exact-integer?) (params f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMaterial.xml"]{glMaterial manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMaterial.xml"]{glMaterial manpage}.
 }
 @defproc[(glMateriali (face exact-integer?) (pname exact-integer?) (param exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMaterial.xml"]{glMaterial manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMaterial.xml"]{glMaterial manpage}.
 }
 @defproc[(glMaterialiv (face exact-integer?) (pname exact-integer?) (params s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMaterial.xml"]{glMaterial manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMaterial.xml"]{glMaterial manpage}.
 }
 @defproc[(glMatrixFrustumEXT (mode exact-integer?) (left real?) (right real?) (bottom real?) (top real?) (zNear real?) (zFar real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -154,7 +154,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glMatrixMode (mode exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMatrixMode.xml"]{glMatrixMode manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMatrixMode.xml"]{glMatrixMode manpage}.
 }
 @defproc[(glMatrixMultTransposedEXT (mode exact-integer?) (m f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -198,7 +198,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glMemoryBarrier (barriers exact-nonnegative-integer?)) any]{
 Version 4.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMemoryBarrier.xml"]{glMemoryBarrier manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glMemoryBarrier.xhtml"]{glMemoryBarrier manpage}.
 }
 @defproc[(glMemoryBarrierEXT (barriers exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/shader_image_load_store.txt"]{@racket[GL_EXT_shader_image_load_store]}.
@@ -206,7 +206,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/shader_image_load
 @defproc[(glMinSampleShading (value flonum?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMinSampleShading.xml"]{glMinSampleShading manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glMinSampleShading.xhtml"]{glMinSampleShading manpage}.
 }
 @defproc[(glMinSampleShadingARB (value flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/sample_shading.txt"]{@racket[GL_ARB_sample_shading]}.
@@ -217,7 +217,7 @@ Alias of @racket[glMinSampleShading].
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMinmax.xml"]{glMinmax manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMinmax.xml"]{glMinmax manpage}.
 }
 @defproc[(glMinmaxEXT (target exact-integer?) (internalformat exact-integer?) (sink boolean?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -227,18 +227,18 @@ Alias of @racket[glMinmax].
 @defproc[(glMultMatrixd (m f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultMatrix.xml"]{glMultMatrix manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultMatrix.xml"]{glMultMatrix manpage}.
 }
 @defproc[(glMultMatrixf (m f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultMatrix.xml"]{glMultMatrix manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultMatrix.xml"]{glMultMatrix manpage}.
 }
 @defproc[(glMultTransposeMatrixd (m f64vector?)) any]{
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultTransposeMatrix.xml"]{glMultTransposeMatrix manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultTransposeMatrix.xml"]{glMultTransposeMatrix manpage}.
 }
 @defproc[(glMultTransposeMatrixdARB (m f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/transpose_matrix.txt"]{@racket[GL_ARB_transpose_matrix]}.
@@ -249,7 +249,7 @@ Alias of @racket[glMultTransposeMatrixd].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultTransposeMatrix.xml"]{glMultTransposeMatrix manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultTransposeMatrix.xml"]{glMultTransposeMatrix manpage}.
 }
 @defproc[(glMultTransposeMatrixfARB (m f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/transpose_matrix.txt"]{@racket[GL_ARB_transpose_matrix]}.
@@ -259,7 +259,7 @@ Alias of @racket[glMultTransposeMatrixf].
 @defproc[(glMultiDrawArrays (mode exact-integer?) (first s32vector?) (count s32vector?) (drawcount exact-integer?)) any]{
 Version 1.4.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawArrays.xml"]{glMultiDrawArrays manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glMultiDrawArrays.xhtml"]{glMultiDrawArrays manpage}.
 }
 @defproc[(glMultiDrawArraysEXT (mode exact-integer?) (first s32vector?) (count s32vector?) (primcount exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/multi_draw_arrays.txt"]{@racket[GL_EXT_multi_draw_arrays]}.
@@ -278,12 +278,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/element_array.t
 @defproc[(glMultiDrawElements (mode exact-integer?) (count s32vector?) (type exact-integer?) (indices (vectorof gl-pointer?)) (drawcount exact-integer?)) any]{
 Version 1.4.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElements.xml"]{glMultiDrawElements manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glMultiDrawElements.xhtml"]{glMultiDrawElements manpage}.
 }
 @defproc[(glMultiDrawElementsBaseVertex (mode exact-integer?) (count s32vector?) (type exact-integer?) (indices (vectorof gl-pointer?)) (drawcount exact-integer?) (basevertex s32vector?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glMultiDrawElementsBaseVertex.xml"]{glMultiDrawElementsBaseVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glMultiDrawElementsBaseVertex.xhtml"]{glMultiDrawElementsBaseVertex manpage}.
 }
 @defproc[(glMultiDrawElementsEXT (mode exact-integer?) (count s32vector?) (type exact-integer?) (indices (vectorof gl-pointer?)) (primcount exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/multi_draw_arrays.txt"]{@racket[GL_EXT_multi_draw_arrays]}.
@@ -312,7 +312,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord1dARB (target exact-integer?) (s real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -321,7 +321,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord1dvARB (target exact-integer?) (v real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -332,7 +332,7 @@ Alias of @racket[glMultiTexCoord1dv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord1fARB (target exact-integer?) (s flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -341,7 +341,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord1fvARB (target exact-integer?) (v flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -358,7 +358,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord1iARB (target exact-integer?) (s exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -367,7 +367,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord1ivARB (target exact-integer?) (v exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -378,7 +378,7 @@ Alias of @racket[glMultiTexCoord1iv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord1sARB (target exact-integer?) (s (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -387,7 +387,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord1svARB (target exact-integer?) (v (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -398,7 +398,7 @@ Alias of @racket[glMultiTexCoord1sv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord2dARB (target exact-integer?) (s real?) (t real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -407,7 +407,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord2dvARB (target exact-integer?) (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -418,7 +418,7 @@ Alias of @racket[glMultiTexCoord2dv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord2fARB (target exact-integer?) (s flonum?) (t flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -427,7 +427,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord2fvARB (target exact-integer?) (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -444,7 +444,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord2iARB (target exact-integer?) (s exact-integer?) (t exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -453,7 +453,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord2ivARB (target exact-integer?) (v s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -464,7 +464,7 @@ Alias of @racket[glMultiTexCoord2iv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord2sARB (target exact-integer?) (s (integer-in -32768 32767)) (t (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -473,7 +473,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord2svARB (target exact-integer?) (v s16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -484,7 +484,7 @@ Alias of @racket[glMultiTexCoord2sv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord3dARB (target exact-integer?) (s real?) (t real?) (r real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -493,7 +493,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord3dvARB (target exact-integer?) (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -504,7 +504,7 @@ Alias of @racket[glMultiTexCoord3dv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord3fARB (target exact-integer?) (s flonum?) (t flonum?) (r flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -513,7 +513,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord3fvARB (target exact-integer?) (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -530,7 +530,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord3iARB (target exact-integer?) (s exact-integer?) (t exact-integer?) (r exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -539,7 +539,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord3ivARB (target exact-integer?) (v s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -550,7 +550,7 @@ Alias of @racket[glMultiTexCoord3iv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord3sARB (target exact-integer?) (s (integer-in -32768 32767)) (t (integer-in -32768 32767)) (r (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -559,7 +559,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord3svARB (target exact-integer?) (v s16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -570,7 +570,7 @@ Alias of @racket[glMultiTexCoord3sv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord4dARB (target exact-integer?) (s real?) (t real?) (r real?) (q real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -579,7 +579,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord4dvARB (target exact-integer?) (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -590,7 +590,7 @@ Alias of @racket[glMultiTexCoord4dv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord4fARB (target exact-integer?) (s flonum?) (t flonum?) (r flonum?) (q flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -599,7 +599,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord4fvARB (target exact-integer?) (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -616,7 +616,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord4iARB (target exact-integer?) (s exact-integer?) (t exact-integer?) (r exact-integer?) (q exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -625,7 +625,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord4ivARB (target exact-integer?) (v s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -636,7 +636,7 @@ Alias of @racket[glMultiTexCoord4iv].
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord4sARB (target exact-integer?) (s (integer-in -32768 32767)) (t (integer-in -32768 32767)) (r (integer-in -32768 32767)) (q (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -645,7 +645,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"
 Version 1.3.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glMultiTexCoord.xml"]{glMultiTexCoord manpage}.
 }
 @defproc[(glMultiTexCoord4svARB (target exact-integer?) (v s16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.

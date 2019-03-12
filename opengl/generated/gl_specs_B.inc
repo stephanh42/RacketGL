@@ -3,12 +3,12 @@
 @defproc[(glBegin (mode exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glBegin.xml"]{glBegin manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glBegin.xml"]{glBegin manpage}.
 }
 @defproc[(glBeginConditionalRender (id exact-nonnegative-integer?) (mode exact-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBeginConditionalRender.xml"]{glBeginConditionalRender manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBeginConditionalRender.xhtml"]{glBeginConditionalRender manpage}.
 }
 @defproc[(glBeginConditionalRenderNV (id exact-nonnegative-integer?) (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/conditional_render.txt"]{@racket[GL_NV_conditional_render]}.
@@ -27,7 +27,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monit
 @defproc[(glBeginQuery (target exact-integer?) (id exact-nonnegative-integer?)) any]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBeginQuery.xml"]{glBeginQuery manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBeginQuery.xhtml"]{glBeginQuery manpage}.
 }
 @defproc[(glBeginQueryARB (target exact-integer?) (id exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
@@ -37,12 +37,12 @@ Alias of @racket[glBeginQuery].
 @defproc[(glBeginQueryIndexed (target exact-integer?) (index exact-nonnegative-integer?) (id exact-nonnegative-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBeginQueryIndexed.xml"]{glBeginQueryIndexed manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBeginQueryIndexed.xhtml"]{glBeginQueryIndexed manpage}.
 }
 @defproc[(glBeginTransformFeedback (primitiveMode exact-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBeginTransformFeedback.xml"]{glBeginTransformFeedback manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBeginTransformFeedback.xhtml"]{glBeginTransformFeedback manpage}.
 }
 @defproc[(glBeginTransformFeedbackEXT (primitiveMode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/transform_feedback.txt"]{@racket[GL_EXT_transform_feedback]}.
@@ -63,7 +63,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/video_capture.txt"
 @defproc[(glBindAttribLocation (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (name (or/c string? bytes?))) any]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindAttribLocation.xml"]{glBindAttribLocation manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindAttribLocation.xhtml"]{glBindAttribLocation manpage}.
 }
 @defproc[(glBindAttribLocationARB (programObj exact-nonnegative-integer?) (index exact-nonnegative-integer?) (name (or/c string? bytes?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_shader.txt"]{@racket[GL_ARB_vertex_shader]}.
@@ -73,7 +73,7 @@ Alias of @racket[glBindAttribLocation].
 @defproc[(glBindBuffer (target exact-integer?) (buffer exact-nonnegative-integer?)) any]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindBuffer.xml"]{glBindBuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindBuffer.xhtml"]{glBindBuffer manpage}.
 }
 @defproc[(glBindBufferARB (target exact-integer?) (buffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.
@@ -83,7 +83,7 @@ Alias of @racket[glBindBuffer].
 @defproc[(glBindBufferBase (target exact-integer?) (index exact-nonnegative-integer?) (buffer exact-nonnegative-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindBufferBase.xml"]{glBindBufferBase manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindBufferBase.xhtml"]{glBindBufferBase manpage}.
 }
 @defproc[(glBindBufferBaseEXT (target exact-integer?) (index exact-nonnegative-integer?) (buffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/transform_feedback.txt"]{@racket[GL_EXT_transform_feedback]}.
@@ -106,7 +106,7 @@ Alias of @racket[glBindBufferOffsetEXT].
 @defproc[(glBindBufferRange (target exact-integer?) (index exact-nonnegative-integer?) (buffer exact-nonnegative-integer?) (offset exact-integer?) (size exact-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindBufferRange.xml"]{glBindBufferRange manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindBufferRange.xhtml"]{glBindBufferRange manpage}.
 }
 @defproc[(glBindBufferRangeEXT (target exact-integer?) (index exact-nonnegative-integer?) (buffer exact-nonnegative-integer?) (offset exact-integer?) (size exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/transform_feedback.txt"]{@racket[GL_EXT_transform_feedback]}.
@@ -121,7 +121,7 @@ Alias of @racket[glBindBufferRange].
 @defproc[(glBindFragDataLocation (program exact-nonnegative-integer?) (color exact-nonnegative-integer?) (name (or/c string? bytes?))) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindFragDataLocation.xml"]{glBindFragDataLocation manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindFragDataLocation.xhtml"]{glBindFragDataLocation manpage}.
 }
 @defproc[(glBindFragDataLocationEXT (program exact-nonnegative-integer?) (color exact-nonnegative-integer?) (name (or/c string? bytes?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/gpu_shader4.txt"]{@racket[GL_EXT_gpu_shader4]}.
@@ -131,7 +131,7 @@ Alias of @racket[glBindFragDataLocation].
 @defproc[(glBindFragDataLocationIndexed (program exact-nonnegative-integer?) (colorNumber exact-nonnegative-integer?) (index exact-nonnegative-integer?) (name (or/c string? bytes?))) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindFragDataLocationIndexed.xml"]{glBindFragDataLocationIndexed manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindFragDataLocationIndexed.xhtml"]{glBindFragDataLocationIndexed manpage}.
 }
 @defproc[(glBindFragmentShaderATI (id exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/fragment_shader.txt"]{@racket[GL_ATI_fragment_shader]}.
@@ -139,7 +139,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/fragment_shader.t
 @defproc[(glBindFramebuffer (target exact-integer?) (framebuffer exact-nonnegative-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindFramebuffer.xml"]{glBindFramebuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindFramebuffer.xhtml"]{glBindFramebuffer manpage}.
 }
 @defproc[(glBindFramebufferEXT (target exact-integer?) (framebuffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -147,7 +147,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_objec
 @defproc[(glBindImageTexture (unit exact-nonnegative-integer?) (texture exact-nonnegative-integer?) (level exact-integer?) (layered boolean?) (layer exact-integer?) (access exact-integer?) (format exact-integer?)) any]{
 Version 4.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindImageTexture.xml"]{glBindImageTexture manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindImageTexture.xhtml"]{glBindImageTexture manpage}.
 }
 @defproc[(glBindImageTextureEXT (index exact-nonnegative-integer?) (texture exact-nonnegative-integer?) (level exact-integer?) (layered boolean?) (layer exact-integer?) (access exact-integer?) (format exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/shader_image_load_store.txt"]{@racket[GL_EXT_shader_image_load_store]}.
@@ -175,12 +175,12 @@ Alias of @racket[glBindProgramARB].
 @defproc[(glBindProgramPipeline (pipeline exact-nonnegative-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindProgramPipeline.xml"]{glBindProgramPipeline manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindProgramPipeline.xhtml"]{glBindProgramPipeline manpage}.
 }
 @defproc[(glBindRenderbuffer (target exact-integer?) (renderbuffer exact-nonnegative-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindRenderbuffer.xml"]{glBindRenderbuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindRenderbuffer.xhtml"]{glBindRenderbuffer manpage}.
 }
 @defproc[(glBindRenderbufferEXT (target exact-integer?) (renderbuffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -188,7 +188,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_objec
 @defproc[(glBindSampler (unit exact-nonnegative-integer?) (sampler exact-nonnegative-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindSampler.xml"]{glBindSampler manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindSampler.xhtml"]{glBindSampler manpage}.
 }
 @defproc[(glBindTexGenParameterEXT (unit exact-integer?) (coord exact-integer?) (value exact-integer?)) exact-nonnegative-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt"]{@racket[GL_EXT_vertex_shader]}.
@@ -196,7 +196,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glBindTexture (target exact-integer?) (texture exact-nonnegative-integer?)) any]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindTexture.xml"]{glBindTexture manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindTexture.xhtml"]{glBindTexture manpage}.
 }
 @defproc[(glBindTextureEXT (target exact-integer?) (texture exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.txt"]{@racket[GL_EXT_texture_object]}.
@@ -209,7 +209,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glBindTransformFeedback (target exact-integer?) (id exact-nonnegative-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindTransformFeedback.xml"]{glBindTransformFeedback manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindTransformFeedback.xhtml"]{glBindTransformFeedback manpage}.
 }
 @defproc[(glBindTransformFeedbackNV (target exact-integer?) (id exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback2.txt"]{@racket[GL_NV_transform_feedback2]}.
@@ -217,7 +217,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback
 @defproc[(glBindVertexArray (array exact-nonnegative-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBindVertexArray.xml"]{glBindVertexArray manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBindVertexArray.xhtml"]{glBindVertexArray manpage}.
 }
 @defproc[(glBindVertexArrayAPPLE (array exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/vertex_array_object.txt"]{@racket[GL_APPLE_vertex_array_object]}.
@@ -272,12 +272,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/coordinate_frame.
 @defproc[(glBitmap (width exact-integer?) (height exact-integer?) (xorig flonum?) (yorig flonum?) (xmove flonum?) (ymove flonum?) (bitmap (or/c string? bytes?))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glBitmap.xml"]{glBitmap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glBitmap.xml"]{glBitmap manpage}.
 }
 @defproc[(glBlendColor (red flonum?) (green flonum?) (blue flonum?) (alpha flonum?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlendColor.xml"]{glBlendColor manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendColor.xhtml"]{glBlendColor manpage}.
 }
 @defproc[(glBlendColorEXT (red flonum?) (green flonum?) (blue flonum?) (alpha flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/blend_color.txt"]{@racket[GL_EXT_blend_color]}.
@@ -287,7 +287,7 @@ Alias of @racket[glBlendColor].
 @defproc[(glBlendEquation (mode exact-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquation.xml"]{glBlendEquation manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendEquation.xhtml"]{glBlendEquation manpage}.
 }
 @defproc[(glBlendEquationEXT (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/blend_minmax.txt"]{@racket[GL_EXT_blend_minmax]}.
@@ -300,7 +300,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/draw_buffers_blen
 @defproc[(glBlendEquationSeparate (modeRGB exact-integer?) (modeAlpha exact-integer?)) any]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquationSeparate.xml"]{glBlendEquationSeparate manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendEquationSeparate.xhtml"]{glBlendEquationSeparate manpage}.
 }
 @defproc[(glBlendEquationSeparateEXT (modeRGB exact-integer?) (modeAlpha exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/blend_equation_separate.txt"]{@racket[GL_EXT_blend_equation_separate]}.
@@ -313,7 +313,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/draw_buffers_blen
 @defproc[(glBlendEquationSeparatei (buf exact-nonnegative-integer?) (modeRGB exact-integer?) (modeAlpha exact-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquationSeparate.xml"]{glBlendEquationSeparate manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendEquationSeparate.xhtml"]{glBlendEquationSeparate manpage}.
 }
 @defproc[(glBlendEquationSeparateiARB (buf exact-nonnegative-integer?) (modeRGB exact-integer?) (modeAlpha exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/draw_buffers_blend.txt"]{@racket[GL_ARB_draw_buffers_blend]}.
@@ -323,7 +323,7 @@ Alias of @racket[glBlendEquationSeparatei].
 @defproc[(glBlendEquationi (buf exact-nonnegative-integer?) (mode exact-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlendEquation.xml"]{glBlendEquation manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendEquation.xhtml"]{glBlendEquation manpage}.
 }
 @defproc[(glBlendEquationiARB (buf exact-nonnegative-integer?) (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/draw_buffers_blend.txt"]{@racket[GL_ARB_draw_buffers_blend]}.
@@ -332,7 +332,7 @@ Alias of @racket[glBlendEquationi].
 }
 @defproc[(glBlendFunc (sfactor exact-integer?) (dfactor exact-integer?)) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlendFunc.xml"]{glBlendFunc manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml"]{glBlendFunc manpage}.
 }
 @defproc[(glBlendFuncIndexedAMD (buf exact-nonnegative-integer?) (src exact-integer?) (dst exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/draw_buffers_blend.txt"]{@racket[GL_AMD_draw_buffers_blend]}.
@@ -340,7 +340,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/draw_buffers_blen
 @defproc[(glBlendFuncSeparate (sfactorRGB exact-integer?) (dfactorRGB exact-integer?) (sfactorAlpha exact-integer?) (dfactorAlpha exact-integer?)) any]{
 Version 1.4.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlendFuncSeparate.xml"]{glBlendFuncSeparate manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFuncSeparate.xhtml"]{glBlendFuncSeparate manpage}.
 }
 @defproc[(glBlendFuncSeparateEXT (sfactorRGB exact-integer?) (dfactorRGB exact-integer?) (sfactorAlpha exact-integer?) (dfactorAlpha exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/blend_func_separate.txt"]{@racket[GL_EXT_blend_func_separate]}.
@@ -358,7 +358,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/draw_buffers_blen
 @defproc[(glBlendFuncSeparatei (buf exact-nonnegative-integer?) (srcRGB exact-integer?) (dstRGB exact-integer?) (srcAlpha exact-integer?) (dstAlpha exact-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlendFuncSeparate.xml"]{glBlendFuncSeparate manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFuncSeparate.xhtml"]{glBlendFuncSeparate manpage}.
 }
 @defproc[(glBlendFuncSeparateiARB (buf exact-nonnegative-integer?) (srcRGB exact-integer?) (dstRGB exact-integer?) (srcAlpha exact-integer?) (dstAlpha exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/draw_buffers_blend.txt"]{@racket[GL_ARB_draw_buffers_blend]}.
@@ -368,7 +368,7 @@ Alias of @racket[glBlendFuncSeparatei].
 @defproc[(glBlendFunci (buf exact-nonnegative-integer?) (src exact-integer?) (dst exact-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlendFunc.xml"]{glBlendFunc manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml"]{glBlendFunc manpage}.
 }
 @defproc[(glBlendFunciARB (buf exact-nonnegative-integer?) (src exact-integer?) (dst exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/draw_buffers_blend.txt"]{@racket[GL_ARB_draw_buffers_blend]}.
@@ -378,7 +378,7 @@ Alias of @racket[glBlendFunci].
 @defproc[(glBlitFramebuffer (srcX0 exact-integer?) (srcY0 exact-integer?) (srcX1 exact-integer?) (srcY1 exact-integer?) (dstX0 exact-integer?) (dstY0 exact-integer?) (dstX1 exact-integer?) (dstY1 exact-integer?) (mask exact-nonnegative-integer?) (filter exact-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBlitFramebuffer.xml"]{glBlitFramebuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlitFramebuffer.xhtml"]{glBlitFramebuffer manpage}.
 }
 @defproc[(glBlitFramebufferEXT (srcX0 exact-integer?) (srcY0 exact-integer?) (srcX1 exact-integer?) (srcY1 exact-integer?) (dstX0 exact-integer?) (dstY0 exact-integer?) (dstX1 exact-integer?) (dstY1 exact-integer?) (mask exact-nonnegative-integer?) (filter exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_blit.txt"]{@racket[GL_EXT_framebuffer_blit]}.
@@ -391,7 +391,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unif
 @defproc[(glBufferData (target exact-integer?) (size exact-integer?) (data gl-pointer?) (usage exact-integer?)) any]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBufferData.xml"]{glBufferData manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBufferData.xhtml"]{glBufferData manpage}.
 }
 @defproc[(glBufferDataARB (target exact-integer?) (size exact-integer?) (data gl-pointer?) (usage exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.
@@ -404,7 +404,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/flush_buffer_ra
 @defproc[(glBufferSubData (target exact-integer?) (offset exact-integer?) (size exact-integer?) (data gl-pointer?)) any]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glBufferSubData.xml"]{glBufferSubData manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBufferSubData.xhtml"]{glBufferSubData manpage}.
 }
 @defproc[(glBufferSubDataARB (target exact-integer?) (offset exact-integer?) (size exact-integer?) (data gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.

@@ -27,7 +27,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/index_func.txt"]{
 @defproc[(glIndexMask (mask exact-nonnegative-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndexMask.xml"]{glIndexMask manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndexMask.xml"]{glIndexMask manpage}.
 }
 @defproc[(glIndexMaterialEXT (face exact-integer?) (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/index_material.txt"]{@racket[GL_EXT_index_material]}.
@@ -36,7 +36,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/index_material.tx
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndexPointer.xml"]{glIndexPointer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndexPointer.xml"]{glIndexPointer manpage}.
 }
 @defproc[(glIndexPointerEXT (type exact-integer?) (stride exact-integer?) (count exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.
@@ -47,57 +47,57 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/IBM/vertex_array_list
 @defproc[(glIndexd (c real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexdv (c real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexf (c flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexfv (c flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexi (c exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexiv (c exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexs (c (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexsv (c (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexub (c (integer-in 0 255))) any]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glIndexubv (c (integer-in 0 255))) any]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIndex.xml"]{glIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIndex.xml"]{glIndex manpage}.
 }
 @defproc[(glInitNames) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glInitNames.xml"]{glInitNames manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glInitNames.xml"]{glInitNames manpage}.
 }
 @defproc[(glInsertComponentEXT (res exact-nonnegative-integer?) (src exact-nonnegative-integer?) (num exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt"]{@racket[GL_EXT_vertex_shader]}.
@@ -109,7 +109,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/instruments.txt"
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glInterleavedArrays.xml"]{glInterleavedArrays manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glInterleavedArrays.xml"]{glInterleavedArrays manpage}.
 }
 @defproc[(glInterpolatePathsNV (resultPath exact-nonnegative-integer?) (pathA exact-nonnegative-integer?) (pathB exact-nonnegative-integer?) (weight flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
@@ -138,7 +138,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/async.txt"]{@rac
 @defproc[(glIsBuffer (buffer exact-nonnegative-integer?)) boolean?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsBuffer.xml"]{glIsBuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsBuffer.xhtml"]{glIsBuffer manpage}.
 }
 @defproc[(glIsBufferARB (buffer exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.
@@ -150,7 +150,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/shader_buffer_load
 }
 @defproc[(glIsEnabled (cap exact-integer?)) boolean?]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsEnabled.xml"]{glIsEnabled manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsEnabled.xhtml"]{glIsEnabled manpage}.
 }
 @defproc[(glIsEnabledIndexedEXT (target exact-integer?) (index exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/draw_buffers2.txt"]{@racket[GL_EXT_draw_buffers2]}.
@@ -160,7 +160,7 @@ Alias of @racket[glIsEnabledi].
 @defproc[(glIsEnabledi (target exact-integer?) (index exact-nonnegative-integer?)) boolean?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsEnabled.xml"]{glIsEnabled manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsEnabled.xhtml"]{glIsEnabled manpage}.
 }
 @defproc[(glIsFenceAPPLE (fence exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/fence.txt"]{@racket[GL_APPLE_fence]}.
@@ -171,7 +171,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/fence.txt"]{@racke
 @defproc[(glIsFramebuffer (framebuffer exact-nonnegative-integer?)) boolean?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsFramebuffer.xml"]{glIsFramebuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsFramebuffer.xhtml"]{glIsFramebuffer manpage}.
 }
 @defproc[(glIsFramebufferEXT (framebuffer exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -184,7 +184,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.t
 @defproc[(glIsList (list exact-nonnegative-integer?)) boolean?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glIsList.xml"]{glIsList manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glIsList.xml"]{glIsList manpage}.
 }
 @defproc[(glIsNameAMD (identifier exact-integer?) (name exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/name_gen_delete.txt"]{@racket[GL_AMD_name_gen_delete]}.
@@ -213,7 +213,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt
 @defproc[(glIsProgram (program exact-nonnegative-integer?)) boolean?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsProgram.xml"]{glIsProgram manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsProgram.xhtml"]{glIsProgram manpage}.
 }
 @defproc[(glIsProgramARB (program exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -228,12 +228,12 @@ Alias of @racket[glIsProgram].
 @defproc[(glIsProgramPipeline (pipeline exact-nonnegative-integer?)) boolean?]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsProgramPipeline.xml"]{glIsProgramPipeline manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsProgramPipeline.xhtml"]{glIsProgramPipeline manpage}.
 }
 @defproc[(glIsQuery (id exact-nonnegative-integer?)) boolean?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsQuery.xml"]{glIsQuery manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsQuery.xhtml"]{glIsQuery manpage}.
 }
 @defproc[(glIsQueryARB (id exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
@@ -243,7 +243,7 @@ Alias of @racket[glIsQuery].
 @defproc[(glIsRenderbuffer (renderbuffer exact-nonnegative-integer?)) boolean?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsRenderbuffer.xml"]{glIsRenderbuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsRenderbuffer.xhtml"]{glIsRenderbuffer manpage}.
 }
 @defproc[(glIsRenderbufferEXT (renderbuffer exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -253,22 +253,22 @@ Alias of @racket[glIsRenderbuffer].
 @defproc[(glIsSampler (sampler exact-nonnegative-integer?)) boolean?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsSampler.xml"]{glIsSampler manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsSampler.xhtml"]{glIsSampler manpage}.
 }
 @defproc[(glIsShader (shader exact-nonnegative-integer?)) boolean?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsShader.xml"]{glIsShader manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsShader.xhtml"]{glIsShader manpage}.
 }
 @defproc[(glIsSync (sync GLsync?)) boolean?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsSync.xml"]{glIsSync manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsSync.xhtml"]{glIsSync manpage}.
 }
 @defproc[(glIsTexture (texture exact-nonnegative-integer?)) boolean?]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsTexture.xml"]{glIsTexture manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsTexture.xhtml"]{glIsTexture manpage}.
 }
 @defproc[(glIsTextureEXT (texture exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.txt"]{@racket[GL_EXT_texture_object]}.
@@ -279,7 +279,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.t
 @defproc[(glIsTransformFeedback (id exact-nonnegative-integer?)) boolean?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsTransformFeedback.xml"]{glIsTransformFeedback manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsTransformFeedback.xhtml"]{glIsTransformFeedback manpage}.
 }
 @defproc[(glIsTransformFeedbackNV (id exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback2.txt"]{@racket[GL_NV_transform_feedback2]}.
@@ -290,7 +290,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glIsVertexArray (array exact-nonnegative-integer?)) boolean?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glIsVertexArray.xml"]{glIsVertexArray manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glIsVertexArray.xhtml"]{glIsVertexArray manpage}.
 }
 @defproc[(glIsVertexArrayAPPLE (array exact-nonnegative-integer?)) boolean?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/vertex_array_object.txt"]{@racket[GL_APPLE_vertex_array_object]}.

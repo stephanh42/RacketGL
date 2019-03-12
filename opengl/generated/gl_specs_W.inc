@@ -3,7 +3,7 @@
 @defproc[(glWaitSync (sync GLsync?) (flags exact-nonnegative-integer?) (timeout exact-nonnegative-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glWaitSync.xml"]{glWaitSync manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glWaitSync.xhtml"]{glWaitSync manpage}.
 }
 @defproc[(glWeightPathsNV (resultPath exact-nonnegative-integer?) (numPaths exact-integer?) (paths u32vector?) (weights f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
@@ -39,7 +39,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_blend.txt"
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos2dARB (x real?) (y real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -55,7 +55,7 @@ Alias of @racket[glWindowPos2dARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos2dvARB (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -71,7 +71,7 @@ Alias of @racket[glWindowPos2dvARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos2fARB (x flonum?) (y flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -87,7 +87,7 @@ Alias of @racket[glWindowPos2fARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos2fvARB (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -103,7 +103,7 @@ Alias of @racket[glWindowPos2fvARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos2iARB (x exact-integer?) (y exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -119,7 +119,7 @@ Alias of @racket[glWindowPos2iARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos2ivARB (v s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -135,7 +135,7 @@ Alias of @racket[glWindowPos2ivARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos2sARB (x (integer-in -32768 32767)) (y (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -151,7 +151,7 @@ Alias of @racket[glWindowPos2sARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos2svARB (v s16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -167,7 +167,7 @@ Alias of @racket[glWindowPos2svARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos3dARB (x real?) (y real?) (z real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -183,7 +183,7 @@ Alias of @racket[glWindowPos3dARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos3dvARB (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -199,7 +199,7 @@ Alias of @racket[glWindowPos3dvARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos3fARB (x flonum?) (y flonum?) (z flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -215,7 +215,7 @@ Alias of @racket[glWindowPos3fARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos3fvARB (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -231,7 +231,7 @@ Alias of @racket[glWindowPos3fvARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos3iARB (x exact-integer?) (y exact-integer?) (z exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -247,7 +247,7 @@ Alias of @racket[glWindowPos3iARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos3ivARB (v s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -263,7 +263,7 @@ Alias of @racket[glWindowPos3ivARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos3sARB (x (integer-in -32768 32767)) (y (integer-in -32768 32767)) (z (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.
@@ -279,7 +279,7 @@ Alias of @racket[glWindowPos3sARB].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glWindowPos.xml"]{glWindowPos manpage}.
 }
 @defproc[(glWindowPos3svARB (v s16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/window_pos.txt"]{@racket[GL_ARB_window_pos]}.

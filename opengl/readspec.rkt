@@ -189,11 +189,11 @@
   (cond
     ((set-member? manpages4 name)
      (list
-       (format "http://www.opengl.org/sdk/docs/man4/xhtml/gl~a.xml" name)
+       (format "https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/gl~a.xhtml" name)
        name))
     ((set-member? manpages name)
      (list
-       (format "http://www.opengl.org/sdk/docs/man2/xhtml/gl~a.xml" name)
+       (format "https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/gl~a.xml" name)
        name))
     (else #f)))
 
