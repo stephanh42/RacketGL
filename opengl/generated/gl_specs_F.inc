@@ -3,19 +3,19 @@
 @defproc[(glFeedbackBuffer (size exact-integer?) (type exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFeedbackBuffer.xml"]{glFeedbackBuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFeedbackBuffer.xml"]{glFeedbackBuffer manpage}.
 }
 @defproc[(glFenceSync (condition exact-integer?) (flags exact-nonnegative-integer?)) GLsync?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFenceSync.xml"]{glFenceSync manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glFenceSync.xhtml"]{glFenceSync manpage}.
 }
 @defproc[(glFinalCombinerInputNV (variable exact-integer?) (input exact-integer?) (mapping exact-integer?) (componentUsage exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/register_combiners.txt"]{@racket[GL_NV_register_combiners]}.
 }
 @defproc[(glFinish) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFinish.xml"]{glFinish manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glFinish.xhtml"]{glFinish manpage}.
 }
 @defproc[(glFinishAsyncSGIX) (values exact-integer? exact-nonnegative-integer?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/async.txt"]{@racket[GL_SGIX_async]}.
@@ -34,12 +34,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SUNX/constant_data.tx
 }
 @defproc[(glFlush) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFlush.xml"]{glFlush manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glFlush.xhtml"]{glFlush manpage}.
 }
 @defproc[(glFlushMappedBufferRange (target exact-integer?) (offset exact-integer?) (length exact-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFlushMappedBufferRange.xml"]{glFlushMappedBufferRange manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glFlushMappedBufferRange.xhtml"]{glFlushMappedBufferRange manpage}.
 }
 @defproc[(glFlushMappedBufferRangeAPPLE (target exact-integer?) (offset exact-integer?) (size exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/flush_buffer_range.txt"]{@racket[GL_APPLE_flush_buffer_range]}.
@@ -68,7 +68,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unif
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoordPointer.xml"]{glFogCoordPointer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFogCoordPointer.xml"]{glFogCoordPointer manpage}.
 }
 @defproc[(glFogCoordPointerEXT (type exact-integer?) (stride exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -82,7 +82,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/IBM/vertex_array_list
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
 }
 @defproc[(glFogCoorddEXT (coord real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -93,7 +93,7 @@ Alias of @racket[glFogCoordd].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
 }
 @defproc[(glFogCoorddvEXT (coord real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -104,7 +104,7 @@ Alias of @racket[glFogCoorddv].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
 }
 @defproc[(glFogCoordfEXT (coord flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -115,7 +115,7 @@ Alias of @racket[glFogCoordf].
 Version 1.4.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFogCoord.xml"]{glFogCoord manpage}.
 }
 @defproc[(glFogCoordfvEXT (coord flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/fog_coord.txt"]{@racket[GL_EXT_fog_coord]}.
@@ -134,22 +134,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/fog_function.txt
 @defproc[(glFogf (pname exact-integer?) (param flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFog.xml"]{glFog manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFog.xml"]{glFog manpage}.
 }
 @defproc[(glFogfv (pname exact-integer?) (params f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFog.xml"]{glFog manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFog.xml"]{glFog manpage}.
 }
 @defproc[(glFogi (pname exact-integer?) (param exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFog.xml"]{glFog manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFog.xml"]{glFog manpage}.
 }
 @defproc[(glFogiv (pname exact-integer?) (params s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFog.xml"]{glFog manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFog.xml"]{glFog manpage}.
 }
 @defproc[(glFragmentColorMaterialSGIX (face exact-integer?) (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/fragment_lighting.txt"]{@racket[GL_SGIX_fragment_lighting]}.
@@ -211,7 +211,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glFramebufferRenderbuffer (target exact-integer?) (attachment exact-integer?) (renderbuffertarget exact-integer?) (renderbuffer exact-nonnegative-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferRenderbuffer.xml"]{glFramebufferRenderbuffer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glFramebufferRenderbuffer.xhtml"]{glFramebufferRenderbuffer manpage}.
 }
 @defproc[(glFramebufferRenderbufferEXT (target exact-integer?) (attachment exact-integer?) (renderbuffertarget exact-integer?) (renderbuffer exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -221,7 +221,7 @@ Alias of @racket[glFramebufferRenderbuffer].
 @defproc[(glFramebufferTexture (target exact-integer?) (attachment exact-integer?) (texture exact-nonnegative-integer?) (level exact-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTexture.xml"]{glFramebufferTexture manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glFramebufferTexture.xhtml"]{glFramebufferTexture manpage}.
 }
 @defproc[(glFramebufferTexture1D (target exact-integer?) (attachment exact-integer?) (textarget exact-integer?) (texture exact-nonnegative-integer?) (level exact-integer?)) any]{
 Version 3.0.
@@ -266,7 +266,7 @@ Alias of @racket[glFramebufferTextureFaceARB].
 @defproc[(glFramebufferTextureLayer (target exact-integer?) (attachment exact-integer?) (texture exact-nonnegative-integer?) (level exact-integer?) (layer exact-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFramebufferTextureLayer.xml"]{glFramebufferTextureLayer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glFramebufferTextureLayer.xhtml"]{glFramebufferTextureLayer manpage}.
 }
 @defproc[(glFramebufferTextureLayerARB (target exact-integer?) (attachment exact-integer?) (texture exact-nonnegative-integer?) (level exact-integer?) (layer exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/geometry_shader4.txt"]{@racket[GL_ARB_geometry_shader4]}.
@@ -283,10 +283,10 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_array_obje
 }
 @defproc[(glFrontFace (mode exact-integer?)) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glFrontFace.xml"]{glFrontFace manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glFrontFace.xhtml"]{glFrontFace manpage}.
 }
 @defproc[(glFrustum (left real?) (right real?) (bottom real?) (top real?) (zNear real?) (zFar real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glFrustum.xml"]{glFrustum manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glFrustum.xml"]{glFrustum manpage}.
 }

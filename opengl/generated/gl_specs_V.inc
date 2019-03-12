@@ -9,7 +9,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vdpau_interop.txt"
 @defproc[(glValidateProgram (program exact-nonnegative-integer?)) any]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glValidateProgram.xml"]{glValidateProgram manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glValidateProgram.xhtml"]{glValidateProgram manpage}.
 }
 @defproc[(glValidateProgramARB (programObj exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.txt"]{@racket[GL_ARB_shader_objects]}.
@@ -19,7 +19,7 @@ Alias of @racket[glValidateProgram].
 @defproc[(glValidateProgramPipeline (pipeline exact-nonnegative-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glValidateProgramPipeline.xml"]{glValidateProgramPipeline manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glValidateProgramPipeline.xhtml"]{glValidateProgramPipeline manpage}.
 }
 @defproc[(glVariantArrayObjectATI (id exact-nonnegative-integer?) (type exact-integer?) (stride exact-integer?) (buffer exact-nonnegative-integer?) (offset exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/vertex_array_object.txt"]{@racket[GL_ATI_vertex_array_object]}.
@@ -54,22 +54,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glVertex2d (x real?) (y real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2f (x flonum?) (y flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2hNV (x (integer-in 0 65535)) (y (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -80,42 +80,42 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glVertex2i (x exact-integer?) (y exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2s (x (integer-in -32768 32767)) (y (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex2sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3d (x real?) (y real?) (z real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3f (x flonum?) (y flonum?) (z flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3hNV (x (integer-in 0 65535)) (y (integer-in 0 65535)) (z (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -126,42 +126,42 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glVertex3i (x exact-integer?) (y exact-integer?) (z exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3s (x (integer-in -32768 32767)) (y (integer-in -32768 32767)) (z (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex3sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4d (x real?) (y real?) (z real?) (w real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4dv (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4f (x flonum?) (y flonum?) (z flonum?) (w flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4fv (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4hNV (x (integer-in 0 65535)) (y (integer-in 0 65535)) (z (integer-in 0 65535)) (w (integer-in 0 65535))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@racket[GL_NV_half_float]}.
@@ -172,22 +172,22 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 @defproc[(glVertex4i (x exact-integer?) (y exact-integer?) (z exact-integer?) (w exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4iv (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4s (x (integer-in -32768 32767)) (y (integer-in -32768 32767)) (z (integer-in -32768 32767)) (w (integer-in -32768 32767))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertex4sv (v s16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertex.xml"]{glVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertex.xml"]{glVertex manpage}.
 }
 @defproc[(glVertexArrayBindVertexBufferEXT (vaobj exact-nonnegative-integer?) (bindingindex exact-nonnegative-integer?) (buffer exact-nonnegative-integer?) (offset exact-integer?) (stride exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_attrib_binding.txt"]{@racket[GL_ARB_vertex_attrib_binding]}.
@@ -223,7 +223,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_attrib_bin
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib1dARB (index exact-nonnegative-integer?) (x real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -239,7 +239,7 @@ Alias of @racket[glVertexAttrib1d].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib1dvARB (index exact-nonnegative-integer?) (v real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -255,7 +255,7 @@ Alias of @racket[glVertexAttrib1dv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib1fARB (index exact-nonnegative-integer?) (x flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -271,7 +271,7 @@ Alias of @racket[glVertexAttrib1f].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib1fvARB (index exact-nonnegative-integer?) (v flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -293,7 +293,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib1sARB (index exact-nonnegative-integer?) (x (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -309,7 +309,7 @@ Alias of @racket[glVertexAttrib1s].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib1svARB (index exact-nonnegative-integer?) (v (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -325,7 +325,7 @@ Alias of @racket[glVertexAttrib1sv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib2dARB (index exact-nonnegative-integer?) (x real?) (y real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -341,7 +341,7 @@ Alias of @racket[glVertexAttrib2d].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib2dvARB (index exact-nonnegative-integer?) (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -357,7 +357,7 @@ Alias of @racket[glVertexAttrib2dv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib2fARB (index exact-nonnegative-integer?) (x flonum?) (y flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -373,7 +373,7 @@ Alias of @racket[glVertexAttrib2f].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib2fvARB (index exact-nonnegative-integer?) (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -395,7 +395,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib2sARB (index exact-nonnegative-integer?) (x (integer-in -32768 32767)) (y (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -411,7 +411,7 @@ Alias of @racket[glVertexAttrib2s].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib2svARB (index exact-nonnegative-integer?) (v s16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -427,7 +427,7 @@ Alias of @racket[glVertexAttrib2sv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib3dARB (index exact-nonnegative-integer?) (x real?) (y real?) (z real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -443,7 +443,7 @@ Alias of @racket[glVertexAttrib3d].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib3dvARB (index exact-nonnegative-integer?) (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -459,7 +459,7 @@ Alias of @racket[glVertexAttrib3dv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib3fARB (index exact-nonnegative-integer?) (x flonum?) (y flonum?) (z flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -475,7 +475,7 @@ Alias of @racket[glVertexAttrib3f].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib3fvARB (index exact-nonnegative-integer?) (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -497,7 +497,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib3sARB (index exact-nonnegative-integer?) (x (integer-in -32768 32767)) (y (integer-in -32768 32767)) (z (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -513,7 +513,7 @@ Alias of @racket[glVertexAttrib3s].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib3svARB (index exact-nonnegative-integer?) (v s16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -592,7 +592,7 @@ Alias of @racket[glVertexAttrib4Nusv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4bvARB (index exact-nonnegative-integer?) (v s8vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -603,7 +603,7 @@ Alias of @racket[glVertexAttrib4bv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4dARB (index exact-nonnegative-integer?) (x real?) (y real?) (z real?) (w real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -619,7 +619,7 @@ Alias of @racket[glVertexAttrib4d].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4dvARB (index exact-nonnegative-integer?) (v f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -635,7 +635,7 @@ Alias of @racket[glVertexAttrib4dv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4fARB (index exact-nonnegative-integer?) (x flonum?) (y flonum?) (z flonum?) (w flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -651,7 +651,7 @@ Alias of @racket[glVertexAttrib4f].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4fvARB (index exact-nonnegative-integer?) (v f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -673,7 +673,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/half_float.txt"]{@
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4ivARB (index exact-nonnegative-integer?) (v s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -684,7 +684,7 @@ Alias of @racket[glVertexAttrib4iv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4sARB (index exact-nonnegative-integer?) (x (integer-in -32768 32767)) (y (integer-in -32768 32767)) (z (integer-in -32768 32767)) (w (integer-in -32768 32767))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -700,7 +700,7 @@ Alias of @racket[glVertexAttrib4s].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4svARB (index exact-nonnegative-integer?) (v s16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -721,7 +721,7 @@ Alias of @racket[glVertexAttrib4Nub].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4ubvARB (index exact-nonnegative-integer?) (v (or/c string? bytes?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -737,7 +737,7 @@ Alias of @racket[glVertexAttrib4Nubv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4uivARB (index exact-nonnegative-integer?) (v u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -748,7 +748,7 @@ Alias of @racket[glVertexAttrib4uiv].
 Version 2.0.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttrib.xml"]{glVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttrib.xhtml"]{glVertexAttrib manpage}.
 }
 @defproc[(glVertexAttrib4usvARB (index exact-nonnegative-integer?) (v u16vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -764,7 +764,7 @@ Version 4.3.
 @defproc[(glVertexAttribDivisor (index exact-nonnegative-integer?) (divisor exact-nonnegative-integer?)) any]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribDivisor.xml"]{glVertexAttribDivisor manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttribDivisor.xhtml"]{glVertexAttribDivisor manpage}.
 }
 @defproc[(glVertexAttribDivisorARB (index exact-nonnegative-integer?) (divisor exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/instanced_arrays.txt"]{@racket[GL_ARB_instanced_arrays]}.
@@ -1104,7 +1104,7 @@ Version 1.2.
 @defproc[(glVertexAttribPointer (index exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (normalized boolean?) (stride exact-integer?) (pointer gl-pointer?)) any]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glVertexAttribPointer.xml"]{glVertexAttribPointer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glVertexAttribPointer.xhtml"]{glVertexAttribPointer manpage}.
 }
 @defproc[(glVertexAttribPointerARB (index exact-nonnegative-integer?) (size exact-integer?) (type exact-integer?) (normalized boolean?) (stride exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -1202,7 +1202,7 @@ Version 1.2.
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glVertexPointer.xml"]{glVertexPointer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glVertexPointer.xml"]{glVertexPointer manpage}.
 }
 @defproc[(glVertexPointerEXT (size exact-integer?) (type exact-integer?) (stride exact-integer?) (count exact-integer?) (pointer gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.
@@ -1338,7 +1338,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/video_capture.txt"
 }
 @defproc[(glViewport (x exact-integer?) (y exact-integer?) (width exact-integer?) (height exact-integer?)) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glViewport.xml"]{glViewport manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glViewport.xhtml"]{glViewport manpage}.
 }
 @defproc[(glViewportArrayv (first exact-nonnegative-integer?) (count exact-integer?) (v f32vector?)) any]{
 Version 4.1.
@@ -1346,10 +1346,10 @@ Version 4.1.
 @defproc[(glViewportIndexedf (index exact-nonnegative-integer?) (x flonum?) (y flonum?) (w flonum?) (h flonum?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glViewportIndexed.xml"]{glViewportIndexed manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glViewportIndexed.xhtml"]{glViewportIndexed manpage}.
 }
 @defproc[(glViewportIndexedfv (index exact-nonnegative-integer?) (v f32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glViewportIndexed.xml"]{glViewportIndexed manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glViewportIndexed.xhtml"]{glViewportIndexed manpage}.
 }

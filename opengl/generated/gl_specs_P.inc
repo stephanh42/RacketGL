@@ -12,17 +12,17 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/fragment_shader.t
 @defproc[(glPassThrough (token flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPassThrough.xml"]{glPassThrough manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPassThrough.xml"]{glPassThrough manpage}.
 }
 @defproc[(glPatchParameterfv (pname exact-integer?) (the-values f32vector?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPatchParameter.xml"]{glPatchParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPatchParameter.xhtml"]{glPatchParameter manpage}.
 }
 @defproc[(glPatchParameteri (pname exact-integer?) (value exact-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPatchParameter.xml"]{glPatchParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPatchParameter.xhtml"]{glPatchParameter manpage}.
 }
 @defproc[(glPathColorGenNV (color exact-integer?) (genMode exact-integer?) (colorFormat exact-integer?) (coeffs f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
@@ -81,7 +81,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt
 @defproc[(glPauseTransformFeedback) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPauseTransformFeedback.xml"]{glPauseTransformFeedback manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPauseTransformFeedback.xhtml"]{glPauseTransformFeedback manpage}.
 }
 @defproc[(glPauseTransformFeedbackNV) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback2.txt"]{@racket[GL_NV_transform_feedback2]}.
@@ -92,25 +92,25 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/pixel_data_range.t
 @defproc[(glPixelMapfv (map exact-integer?) (mapsize exact-integer?) (the-values f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
 }
 @defproc[(glPixelMapuiv (map exact-integer?) (mapsize exact-integer?) (the-values u32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
 }
 @defproc[(glPixelMapusv (map exact-integer?) (mapsize exact-integer?) (the-values u16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPixelMap.xml"]{glPixelMap manpage}.
 }
 @defproc[(glPixelStoref (pname exact-integer?) (param flonum?)) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPixelStore.xml"]{glPixelStore manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPixelStore.xhtml"]{glPixelStore manpage}.
 }
 @defproc[(glPixelStorei (pname exact-integer?) (param exact-integer?)) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPixelStore.xml"]{glPixelStore manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPixelStore.xhtml"]{glPixelStore manpage}.
 }
 @defproc[(glPixelTexGenParameterfSGIS (pname exact-integer?) (param flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/pixel_texture.txt"]{@racket[GL_SGIS_pixel_texture]}.
@@ -130,12 +130,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/pixel_texture.tx
 @defproc[(glPixelTransferf (pname exact-integer?) (param flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelTransfer.xml"]{glPixelTransfer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPixelTransfer.xml"]{glPixelTransfer manpage}.
 }
 @defproc[(glPixelTransferi (pname exact-integer?) (param exact-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelTransfer.xml"]{glPixelTransfer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPixelTransfer.xml"]{glPixelTransfer manpage}.
 }
 @defproc[(glPixelTransformParameterfEXT (target exact-integer?) (pname exact-integer?) (param flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/pixel_transform.txt"]{@racket[GL_EXT_pixel_transform]}.
@@ -152,7 +152,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/pixel_transform.t
 @defproc[(glPixelZoom (xfactor flonum?) (yfactor flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPixelZoom.xml"]{glPixelZoom manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPixelZoom.xml"]{glPixelZoom manpage}.
 }
 @defproc[(glPointAlongPathNV (path exact-nonnegative-integer?) (startSegment exact-integer?) (numSegments exact-integer?) (distance flonum?)) (values boolean? flonum? flonum? flonum? flonum?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt"]{@racket[GL_NV_path_rendering]}.
@@ -160,7 +160,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/path_rendering.txt
 @defproc[(glPointParameterf (pname exact-integer?) (param flonum?)) any]{
 Version 1.4.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPointParameter.xml"]{glPointParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPointParameter.xhtml"]{glPointParameter manpage}.
 }
 @defproc[(glPointParameterfARB (pname exact-integer?) (param flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/point_parameters.txt"]{@racket[GL_ARB_point_parameters]}.
@@ -180,7 +180,7 @@ Alias of @racket[glPointParameterfARB].
 @defproc[(glPointParameterfv (pname exact-integer?) (params f32vector?)) any]{
 Version 1.4.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPointParameter.xml"]{glPointParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPointParameter.xhtml"]{glPointParameter manpage}.
 }
 @defproc[(glPointParameterfvARB (pname exact-integer?) (params flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/point_parameters.txt"]{@racket[GL_ARB_point_parameters]}.
@@ -200,7 +200,7 @@ Alias of @racket[glPointParameterfvARB].
 @defproc[(glPointParameteri (pname exact-integer?) (param exact-integer?)) any]{
 Version 1.4.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPointParameter.xml"]{glPointParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPointParameter.xhtml"]{glPointParameter manpage}.
 }
 @defproc[(glPointParameteriNV (pname exact-integer?) (param exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/point_sprite.txt"]{@racket[GL_NV_point_sprite]}.
@@ -210,7 +210,7 @@ Alias of @racket[glPointParameteri].
 @defproc[(glPointParameteriv (pname exact-integer?) (params s32vector?)) any]{
 Version 1.4.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPointParameter.xml"]{glPointParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPointParameter.xhtml"]{glPointParameter manpage}.
 }
 @defproc[(glPointParameterivNV (pname exact-integer?) (params s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/point_sprite.txt"]{@racket[GL_NV_point_sprite]}.
@@ -219,7 +219,7 @@ Alias of @racket[glPointParameteriv].
 }
 @defproc[(glPointSize (size flonum?)) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPointSize.xml"]{glPointSize manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPointSize.xhtml"]{glPointSize manpage}.
 }
 @defproc[(glPollAsyncSGIX) (values exact-integer? exact-nonnegative-integer?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/async.txt"]{@racket[GL_SGIX_async]}.
@@ -229,12 +229,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/instruments.txt"
 }
 @defproc[(glPolygonMode (face exact-integer?) (mode exact-integer?)) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPolygonMode.xml"]{glPolygonMode manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPolygonMode.xhtml"]{glPolygonMode manpage}.
 }
 @defproc[(glPolygonOffset (factor flonum?) (units flonum?)) any]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPolygonOffset.xml"]{glPolygonOffset manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPolygonOffset.xhtml"]{glPolygonOffset manpage}.
 }
 @defproc[(glPolygonOffsetEXT (factor flonum?) (bias flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/polygon_offset.txt"]{@racket[GL_EXT_polygon_offset]}.
@@ -242,18 +242,18 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/polygon_offset.tx
 @defproc[(glPolygonStipple (mask (or/c string? bytes?))) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPolygonStipple.xml"]{glPolygonStipple manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPolygonStipple.xml"]{glPolygonStipple manpage}.
 }
 @defproc[(glPopAttrib) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPopAttrib.xml"]{glPopAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPopAttrib.xml"]{glPopAttrib manpage}.
 }
 @defproc[(glPopClientAttrib) any]{
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPopClientAttrib.xml"]{glPopClientAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPopClientAttrib.xml"]{glPopClientAttrib manpage}.
 }
 @defproc[(glPopDebugGroup) any]{
 Version 4.3.
@@ -261,12 +261,12 @@ Version 4.3.
 @defproc[(glPopMatrix) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPopMatrix.xml"]{glPopMatrix manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPopMatrix.xml"]{glPopMatrix manpage}.
 }
 @defproc[(glPopName) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPopName.xml"]{glPopName manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPopName.xml"]{glPopName manpage}.
 }
 @defproc[(glPresentFrameDualFillNV (video_slot exact-nonnegative-integer?) (minPresentTime exact-nonnegative-integer?) (beginPresentTimeId exact-nonnegative-integer?) (presentDurationId exact-nonnegative-integer?) (type exact-integer?) (target0 exact-integer?) (fill0 exact-nonnegative-integer?) (target1 exact-integer?) (fill1 exact-nonnegative-integer?) (target2 exact-integer?) (fill2 exact-nonnegative-integer?) (target3 exact-integer?) (fill3 exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/present_video.txt"]{@racket[GL_NV_present_video]}.
@@ -277,7 +277,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/present_video.txt"
 @defproc[(glPrimitiveRestartIndex (index exact-nonnegative-integer?)) any]{
 Version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glPrimitiveRestartIndex.xml"]{glPrimitiveRestartIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glPrimitiveRestartIndex.xhtml"]{glPrimitiveRestartIndex manpage}.
 }
 @defproc[(glPrimitiveRestartIndexNV (index exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/primitive_restart.txt"]{@racket[GL_NV_primitive_restart]}.
@@ -289,7 +289,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/primitive_restart.
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPrioritizeTextures.xml"]{glPrioritizeTextures manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPrioritizeTextures.xml"]{glPrioritizeTextures manpage}.
 }
 @defproc[(glPrioritizeTexturesEXT (n exact-integer?) (textures u32vector?) (priorities f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.txt"]{@racket[GL_EXT_texture_object]}.
@@ -299,7 +299,7 @@ Alias of @racket[glPrioritizeTextures].
 @defproc[(glProgramBinary (program exact-nonnegative-integer?) (binaryFormat exact-integer?) (binary gl-pointer?) (length exact-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramBinary.xml"]{glProgramBinary manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramBinary.xhtml"]{glProgramBinary manpage}.
 }
 @defproc[(glProgramBufferParametersIivNV (target exact-integer?) (buffer exact-nonnegative-integer?) (index exact-nonnegative-integer?) (count exact-integer?) (params s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/parameter_buffer_object.txt"]{@racket[GL_NV_parameter_buffer_object]}.
@@ -403,7 +403,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 @defproc[(glProgramParameteri (program exact-nonnegative-integer?) (pname exact-integer?) (value exact-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramParameter.xml"]{glProgramParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramParameter.xhtml"]{glProgramParameter manpage}.
 }
 @defproc[(glProgramParameteriARB (program exact-nonnegative-integer?) (pname exact-integer?) (value exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/geometry_shader4.txt"]{@racket[GL_ARB_geometry_shader4]}.
@@ -430,7 +430,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_program5.txt"]
 @defproc[(glProgramUniform1d (program exact-nonnegative-integer?) (location exact-integer?) (v0 real?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform1dEXT (program exact-nonnegative-integer?) (location exact-integer?) (x real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -438,7 +438,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform1dv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f64vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform1dvEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -446,7 +446,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform1f (program exact-nonnegative-integer?) (location exact-integer?) (v0 flonum?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform1fEXT (program exact-nonnegative-integer?) (location exact-integer?) (v0 flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -454,7 +454,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform1fv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform1fvEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -462,7 +462,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform1i (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform1i64NV (program exact-nonnegative-integer?) (location exact-integer?) (x exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{@racket[GL_NV_gpu_shader5]}.
@@ -476,7 +476,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform1iv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value s32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform1ivEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -484,7 +484,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform1ui (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-nonnegative-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform1ui64NV (program exact-nonnegative-integer?) (location exact-integer?) (x exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{@racket[GL_NV_gpu_shader5]}.
@@ -498,7 +498,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform1uiv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform1uivEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -506,7 +506,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform2d (program exact-nonnegative-integer?) (location exact-integer?) (v0 real?) (v1 real?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform2dEXT (program exact-nonnegative-integer?) (location exact-integer?) (x real?) (y real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -514,7 +514,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform2dv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f64vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform2dvEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -522,7 +522,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform2f (program exact-nonnegative-integer?) (location exact-integer?) (v0 flonum?) (v1 flonum?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform2fEXT (program exact-nonnegative-integer?) (location exact-integer?) (v0 flonum?) (v1 flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -530,7 +530,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform2fv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform2fvEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -538,7 +538,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform2i (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-integer?) (v1 exact-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform2i64NV (program exact-nonnegative-integer?) (location exact-integer?) (x exact-integer?) (y exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{@racket[GL_NV_gpu_shader5]}.
@@ -552,7 +552,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform2iv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value s32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform2ivEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -560,7 +560,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform2ui (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-nonnegative-integer?) (v1 exact-nonnegative-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform2ui64NV (program exact-nonnegative-integer?) (location exact-integer?) (x exact-nonnegative-integer?) (y exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{@racket[GL_NV_gpu_shader5]}.
@@ -574,7 +574,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform2uiv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform2uivEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -582,7 +582,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform3d (program exact-nonnegative-integer?) (location exact-integer?) (v0 real?) (v1 real?) (v2 real?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform3dEXT (program exact-nonnegative-integer?) (location exact-integer?) (x real?) (y real?) (z real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -590,7 +590,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform3dv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f64vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform3dvEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -598,7 +598,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform3f (program exact-nonnegative-integer?) (location exact-integer?) (v0 flonum?) (v1 flonum?) (v2 flonum?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform3fEXT (program exact-nonnegative-integer?) (location exact-integer?) (v0 flonum?) (v1 flonum?) (v2 flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -606,7 +606,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform3fv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform3fvEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -614,7 +614,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform3i (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-integer?) (v1 exact-integer?) (v2 exact-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform3i64NV (program exact-nonnegative-integer?) (location exact-integer?) (x exact-integer?) (y exact-integer?) (z exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{@racket[GL_NV_gpu_shader5]}.
@@ -628,7 +628,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform3iv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value s32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform3ivEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -636,7 +636,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform3ui (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-nonnegative-integer?) (v1 exact-nonnegative-integer?) (v2 exact-nonnegative-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform3ui64NV (program exact-nonnegative-integer?) (location exact-integer?) (x exact-nonnegative-integer?) (y exact-nonnegative-integer?) (z exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{@racket[GL_NV_gpu_shader5]}.
@@ -650,7 +650,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform3uiv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform3uivEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -658,7 +658,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform4d (program exact-nonnegative-integer?) (location exact-integer?) (v0 real?) (v1 real?) (v2 real?) (v3 real?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform4dEXT (program exact-nonnegative-integer?) (location exact-integer?) (x real?) (y real?) (z real?) (w real?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -666,7 +666,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform4dv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f64vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform4dvEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f64vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -674,7 +674,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform4f (program exact-nonnegative-integer?) (location exact-integer?) (v0 flonum?) (v1 flonum?) (v2 flonum?) (v3 flonum?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform4fEXT (program exact-nonnegative-integer?) (location exact-integer?) (v0 flonum?) (v1 flonum?) (v2 flonum?) (v3 flonum?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -682,7 +682,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform4fv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform4fvEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -690,7 +690,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform4i (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-integer?) (v1 exact-integer?) (v2 exact-integer?) (v3 exact-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform4i64NV (program exact-nonnegative-integer?) (location exact-integer?) (x exact-integer?) (y exact-integer?) (z exact-integer?) (w exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{@racket[GL_NV_gpu_shader5]}.
@@ -704,7 +704,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform4iv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value s32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform4ivEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -712,7 +712,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform4ui (program exact-nonnegative-integer?) (location exact-integer?) (v0 exact-nonnegative-integer?) (v1 exact-nonnegative-integer?) (v2 exact-nonnegative-integer?) (v3 exact-nonnegative-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform4ui64NV (program exact-nonnegative-integer?) (location exact-integer?) (x exact-nonnegative-integer?) (y exact-nonnegative-integer?) (z exact-nonnegative-integer?) (w exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{@racket[GL_NV_gpu_shader5]}.
@@ -726,7 +726,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glProgramUniform4uiv (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProgramUniform.xml"]{glProgramUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProgramUniform.xhtml"]{glProgramUniform manpage}.
 }
 @defproc[(glProgramUniform4uivEXT (program exact-nonnegative-integer?) (location exact-integer?) (count exact-integer?) (value u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -857,7 +857,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/geometry_program4.
 @defproc[(glProvokingVertex (mode exact-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glProvokingVertex.xml"]{glProvokingVertex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glProvokingVertex.xhtml"]{glProvokingVertex manpage}.
 }
 @defproc[(glProvokingVertexEXT (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/provoking_vertex.txt"]{@racket[GL_EXT_provoking_vertex]}.
@@ -865,13 +865,13 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/provoking_vertex.
 @defproc[(glPushAttrib (mask exact-nonnegative-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPushAttrib.xml"]{glPushAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPushAttrib.xml"]{glPushAttrib manpage}.
 }
 @defproc[(glPushClientAttrib (mask exact-nonnegative-integer?)) any]{
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPushClientAttrib.xml"]{glPushClientAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPushClientAttrib.xml"]{glPushClientAttrib manpage}.
 }
 @defproc[(glPushClientAttribDefaultEXT (mask exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -882,10 +882,10 @@ Version 4.3.
 @defproc[(glPushMatrix) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPushMatrix.xml"]{glPushMatrix manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPushMatrix.xml"]{glPushMatrix manpage}.
 }
 @defproc[(glPushName (name exact-nonnegative-integer?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glPushName.xml"]{glPushName manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glPushName.xml"]{glPushName manpage}.
 }

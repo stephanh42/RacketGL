@@ -3,7 +3,7 @@
 @defproc[(glEdgeFlag (flag boolean?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEdgeFlag.xml"]{glEdgeFlag manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEdgeFlag.xml"]{glEdgeFlag manpage}.
 }
 @defproc[(glEdgeFlagFormatNV (stride exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unified_memory.txt"]{@racket[GL_NV_vertex_buffer_unified_memory]}.
@@ -12,7 +12,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_buffer_unif
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEdgeFlagPointer.xml"]{glEdgeFlagPointer manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEdgeFlagPointer.xml"]{glEdgeFlagPointer manpage}.
 }
 @defproc[(glEdgeFlagPointerEXT (stride exact-integer?) (count exact-integer?) (pointer (vectorof boolean?))) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.
@@ -31,13 +31,13 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/element_array.txt
 }
 @defproc[(glEnable (cap exact-integer?)) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glEnable.xml"]{glEnable manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glEnable.xhtml"]{glEnable manpage}.
 }
 @defproc[(glEnableClientState (array exact-integer?)) any]{
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEnableClientState.xml"]{glEnableClientState manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEnableClientState.xml"]{glEnableClientState manpage}.
 }
 @defproc[(glEnableClientStateIndexedEXT (array exact-integer?) (index exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_access.txt"]{@racket[GL_EXT_direct_state_access]}.
@@ -56,7 +56,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/vertex_program_
 @defproc[(glEnableVertexAttribArray (index exact-nonnegative-integer?)) any]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glEnableVertexAttribArray.xml"]{glEnableVertexAttribArray manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glEnableVertexAttribArray.xhtml"]{glEnableVertexAttribArray manpage}.
 }
 @defproc[(glEnableVertexAttribArrayARB (index exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -66,17 +66,17 @@ Alias of @racket[glEnableVertexAttribArray].
 @defproc[(glEnablei (target exact-integer?) (index exact-nonnegative-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glEnable.xml"]{glEnable manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glEnable.xhtml"]{glEnable manpage}.
 }
 @defproc[(glEnd) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEnd.xml"]{glEnd manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEnd.xml"]{glEnd manpage}.
 }
 @defproc[(glEndConditionalRender) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glEndConditionalRender.xml"]{glEndConditionalRender manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glEndConditionalRender.xhtml"]{glEndConditionalRender manpage}.
 }
 @defproc[(glEndConditionalRenderNV) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/conditional_render.txt"]{@racket[GL_NV_conditional_render]}.
@@ -89,7 +89,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/fragment_shader.t
 @defproc[(glEndList) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEndList.xml"]{glEndList manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEndList.xml"]{glEndList manpage}.
 }
 @defproc[(glEndOcclusionQueryNV) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/occlusion_query.txt"]{@racket[GL_NV_occlusion_query]}.
@@ -100,7 +100,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monit
 @defproc[(glEndQuery (target exact-integer?)) any]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glEndQuery.xml"]{glEndQuery manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glEndQuery.xhtml"]{glEndQuery manpage}.
 }
 @defproc[(glEndQueryARB (target exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
@@ -110,12 +110,12 @@ Alias of @racket[glEndQuery].
 @defproc[(glEndQueryIndexed (target exact-integer?) (index exact-nonnegative-integer?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glEndQueryIndexed.xml"]{glEndQueryIndexed manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glEndQueryIndexed.xhtml"]{glEndQueryIndexed manpage}.
 }
 @defproc[(glEndTransformFeedback) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glEndTransformFeedback.xml"]{glEndTransformFeedback manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glEndTransformFeedback.xhtml"]{glEndTransformFeedback manpage}.
 }
 @defproc[(glEndTransformFeedbackEXT) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/transform_feedback.txt"]{@racket[GL_EXT_transform_feedback]}.
@@ -136,42 +136,42 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/video_capture.txt"
 @defproc[(glEvalCoord1d (u real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord1dv (u real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord1f (u flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord1fv (u flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord2d (u real?) (v real?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord2dv (u f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord2f (u flonum?) (v flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalCoord2fv (u f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEvalCoord.xml"]{glEvalCoord manpage}.
 }
 @defproc[(glEvalMapsNV (target exact-integer?) (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/evaluators.txt"]{@racket[GL_NV_evaluators]}.

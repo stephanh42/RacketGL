@@ -6,7 +6,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/async.txt"]{@rac
 @defproc[(glGenBuffers (n exact-integer?)) u32vector?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenBuffers.xml"]{glGenBuffers manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenBuffers.xhtml"]{glGenBuffers manpage}.
 }
 @defproc[(glGenBuffersARB (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.
@@ -25,7 +25,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/fragment_shader.t
 @defproc[(glGenFramebuffers (n exact-integer?)) u32vector?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenFramebuffers.xml"]{glGenFramebuffers manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenFramebuffers.xhtml"]{glGenFramebuffers manpage}.
 }
 @defproc[(glGenFramebuffersEXT (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -35,7 +35,7 @@ Alias of @racket[glGenFramebuffers].
 @defproc[(glGenLists (range exact-integer?)) exact-nonnegative-integer?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGenLists.xml"]{glGenLists manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGenLists.xml"]{glGenLists manpage}.
 }
 @defproc[(glGenNamesAMD (identifier exact-integer?) (num exact-nonnegative-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/name_gen_delete.txt"]{@racket[GL_AMD_name_gen_delete]}.
@@ -52,7 +52,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monit
 @defproc[(glGenProgramPipelines (n exact-integer?)) u32vector?]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenProgramPipelines.xml"]{glGenProgramPipelines manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenProgramPipelines.xhtml"]{glGenProgramPipelines manpage}.
 }
 @defproc[(glGenProgramsARB (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -65,7 +65,7 @@ Alias of @racket[glGenProgramsARB].
 @defproc[(glGenQueries (n exact-integer?)) u32vector?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenQueries.xml"]{glGenQueries manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenQueries.xhtml"]{glGenQueries manpage}.
 }
 @defproc[(glGenQueriesARB (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
@@ -75,7 +75,7 @@ Alias of @racket[glGenQueries].
 @defproc[(glGenRenderbuffers (n exact-integer?)) u32vector?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenRenderbuffers.xml"]{glGenRenderbuffers manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenRenderbuffers.xhtml"]{glGenRenderbuffers manpage}.
 }
 @defproc[(glGenRenderbuffersEXT (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -85,7 +85,7 @@ Alias of @racket[glGenRenderbuffers].
 @defproc[(glGenSamplers (count exact-integer?)) u32vector?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenSamplers.xml"]{glGenSamplers manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenSamplers.xhtml"]{glGenSamplers manpage}.
 }
 @defproc[(glGenSymbolsEXT (datatype exact-integer?) (storagetype exact-integer?) (range exact-integer?) (components exact-nonnegative-integer?)) exact-nonnegative-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt"]{@racket[GL_EXT_vertex_shader]}.
@@ -93,7 +93,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glGenTextures (n exact-integer?)) u32vector?]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenTextures.xml"]{glGenTextures manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenTextures.xhtml"]{glGenTextures manpage}.
 }
 @defproc[(glGenTexturesEXT (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.txt"]{@racket[GL_EXT_texture_object]}.
@@ -101,7 +101,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.tx
 @defproc[(glGenTransformFeedbacks (n exact-integer?)) u32vector?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenTransformFeedbacks.xml"]{glGenTransformFeedbacks manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenTransformFeedbacks.xhtml"]{glGenTransformFeedbacks manpage}.
 }
 @defproc[(glGenTransformFeedbacksNV (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback2.txt"]{@racket[GL_NV_transform_feedback2]}.
@@ -109,7 +109,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback
 @defproc[(glGenVertexArrays (n exact-integer?)) u32vector?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenVertexArrays.xml"]{glGenVertexArrays manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenVertexArrays.xhtml"]{glGenVertexArrays manpage}.
 }
 @defproc[(glGenVertexArraysAPPLE (n exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/vertex_array_object.txt"]{@racket[GL_APPLE_vertex_array_object]}.
@@ -122,7 +122,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glGenerateMipmap (target exact-integer?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGenerateMipmap.xml"]{glGenerateMipmap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGenerateMipmap.xhtml"]{glGenerateMipmap manpage}.
 }
 @defproc[(glGenerateMipmapEXT (target exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -138,12 +138,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glGetActiveAtomicCounterBufferiv (program exact-nonnegative-integer?) (bufferIndex exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 4.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveAtomicCounterBufferiv.xml"]{glGetActiveAtomicCounterBufferiv manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveAtomicCounterBufferiv.xhtml"]{glGetActiveAtomicCounterBufferiv manpage}.
 }
 @defproc[(glGetActiveAttrib (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveAttrib.xml"]{glGetActiveAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveAttrib.xhtml"]{glGetActiveAttrib manpage}.
 }
 @defproc[(glGetActiveAttribARB (programObj exact-nonnegative-integer?) (index exact-nonnegative-integer?) (maxLength exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_shader.txt"]{@racket[GL_ARB_vertex_shader]}.
@@ -153,22 +153,22 @@ Alias of @racket[glGetActiveAttrib].
 @defproc[(glGetActiveSubroutineName (program exact-nonnegative-integer?) (shadertype exact-integer?) (index exact-nonnegative-integer?) (bufsize exact-integer?)) (values exact-integer? bytes?)]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineName.xml"]{glGetActiveSubroutineName manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveSubroutineName.xhtml"]{glGetActiveSubroutineName manpage}.
 }
 @defproc[(glGetActiveSubroutineUniformName (program exact-nonnegative-integer?) (shadertype exact-integer?) (index exact-nonnegative-integer?) (bufsize exact-integer?)) (values exact-integer? bytes?)]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineUniformName.xml"]{glGetActiveSubroutineUniformName manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveSubroutineUniformName.xhtml"]{glGetActiveSubroutineUniformName manpage}.
 }
 @defproc[(glGetActiveSubroutineUniformiv (program exact-nonnegative-integer?) (shadertype exact-integer?) (index exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveSubroutineUniform.xml"]{glGetActiveSubroutineUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveSubroutineUniform.xhtml"]{glGetActiveSubroutineUniform manpage}.
 }
 @defproc[(glGetActiveUniform (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniform.xml"]{glGetActiveUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveUniform.xhtml"]{glGetActiveUniform manpage}.
 }
 @defproc[(glGetActiveUniformARB (programObj exact-nonnegative-integer?) (index exact-nonnegative-integer?) (maxLength exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.txt"]{@racket[GL_ARB_shader_objects]}.
@@ -178,22 +178,22 @@ Alias of @racket[glGetActiveUniform].
 @defproc[(glGetActiveUniformBlockName (program exact-nonnegative-integer?) (uniformBlockIndex exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformBlockName.xml"]{glGetActiveUniformBlockName manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveUniformBlockName.xhtml"]{glGetActiveUniformBlockName manpage}.
 }
 @defproc[(glGetActiveUniformBlockiv (program exact-nonnegative-integer?) (uniformBlockIndex exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformBlock.xml"]{glGetActiveUniformBlock manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveUniformBlock.xhtml"]{glGetActiveUniformBlock manpage}.
 }
 @defproc[(glGetActiveUniformName (program exact-nonnegative-integer?) (uniformIndex exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformName.xml"]{glGetActiveUniformName manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveUniformName.xhtml"]{glGetActiveUniformName manpage}.
 }
 @defproc[(glGetActiveUniformsiv (program exact-nonnegative-integer?) (uniformCount exact-integer?) (uniformIndices u32vector?) (pname exact-integer?)) s32vector?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetActiveUniformsiv.xml"]{glGetActiveUniformsiv manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetActiveUniformsiv.xhtml"]{glGetActiveUniformsiv manpage}.
 }
 @defproc[(glGetActiveVaryingNV (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/transform_feedback.txt"]{@racket[GL_NV_transform_feedback]}.
@@ -212,12 +212,12 @@ Alias of @racket[glGetAttachedShaders].
 @defproc[(glGetAttachedShaders (program exact-nonnegative-integer?) (maxCount exact-integer?)) (values exact-integer? u32vector?)]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetAttachedShaders.xml"]{glGetAttachedShaders manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetAttachedShaders.xhtml"]{glGetAttachedShaders manpage}.
 }
 @defproc[(glGetAttribLocation (program exact-nonnegative-integer?) (name (or/c string? bytes?))) exact-integer?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetAttribLocation.xml"]{glGetAttribLocation manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetAttribLocation.xhtml"]{glGetAttribLocation manpage}.
 }
 @defproc[(glGetAttribLocationARB (programObj exact-nonnegative-integer?) (name (or/c string? bytes?))) exact-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_shader.txt"]{@racket[GL_ARB_vertex_shader]}.
@@ -240,7 +240,7 @@ Version 3.2.
 @defproc[(glGetBufferParameteriv (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetBufferParameteriv.xml"]{glGetBufferParameteriv manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetBufferParameteriv.xml"]{glGetBufferParameteriv manpage}.
 }
 @defproc[(glGetBufferParameterivARB (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.
@@ -253,7 +253,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/shader_buffer_load
 @defproc[(glGetBufferPointerv (target exact-integer?) (pname exact-integer?)) gl-pointer?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferPointerv.xml"]{glGetBufferPointerv manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetBufferPointerv.xhtml"]{glGetBufferPointerv manpage}.
 }
 @defproc[(glGetBufferPointervARB (target exact-integer?) (pname exact-integer?)) gl-pointer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.
@@ -263,7 +263,7 @@ Alias of @racket[glGetBufferPointerv].
 @defproc[(glGetBufferSubData (target exact-integer?) (offset exact-integer?) (size exact-integer?) (data gl-pointer?)) any]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetBufferSubData.xml"]{glGetBufferSubData manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetBufferSubData.xhtml"]{glGetBufferSubData manpage}.
 }
 @defproc[(glGetBufferSubDataARB (target exact-integer?) (offset exact-integer?) (size exact-integer?) (data gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_buffer_object.txt"]{@racket[GL_ARB_vertex_buffer_object]}.
@@ -273,13 +273,13 @@ Alias of @racket[glGetBufferSubData].
 @defproc[(glGetClipPlane (plane exact-integer?)) f64vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetClipPlane.xml"]{glGetClipPlane manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetClipPlane.xml"]{glGetClipPlane manpage}.
 }
 @defproc[(glGetColorTable (target exact-integer?) (format exact-integer?) (type exact-integer?) (table gl-pointer?)) any]{
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetColorTable.xml"]{glGetColorTable manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetColorTable.xml"]{glGetColorTable manpage}.
 }
 @defproc[(glGetColorTableEXT (target exact-integer?) (format exact-integer?) (type exact-integer?) (data gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/paletted_texture.txt"]{@racket[GL_EXT_paletted_texture]}.
@@ -288,7 +288,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/paletted_texture.
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetColorTableParameter.xml"]{glGetColorTableParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetColorTableParameter.xml"]{glGetColorTableParameter manpage}.
 }
 @defproc[(glGetColorTableParameterfvEXT (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/paletted_texture.txt"]{@racket[GL_EXT_paletted_texture]}.
@@ -300,7 +300,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGI/color_table.txt"]
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetColorTableParameter.xml"]{glGetColorTableParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetColorTableParameter.xml"]{glGetColorTableParameter manpage}.
 }
 @defproc[(glGetColorTableParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/paletted_texture.txt"]{@racket[GL_EXT_paletted_texture]}.
@@ -332,7 +332,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glGetCompressedTexImage (target exact-integer?) (level exact-integer?) (img gl-pointer?)) any]{
 Version 1.3.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetCompressedTexImage.xml"]{glGetCompressedTexImage manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetCompressedTexImage.xhtml"]{glGetCompressedTexImage manpage}.
 }
 @defproc[(glGetCompressedTexImageARB (target exact-integer?) (level exact-integer?) (img gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/texture_compression.txt"]{@racket[GL_ARB_texture_compression]}.
@@ -346,7 +346,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetConvolutionFilter.xml"]{glGetConvolutionFilter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetConvolutionFilter.xml"]{glGetConvolutionFilter manpage}.
 }
 @defproc[(glGetConvolutionFilterEXT (target exact-integer?) (format exact-integer?) (type exact-integer?) (image gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
@@ -355,7 +355,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetConvolutionParameter.xml"]{glGetConvolutionParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetConvolutionParameter.xml"]{glGetConvolutionParameter manpage}.
 }
 @defproc[(glGetConvolutionParameterfvEXT (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
@@ -364,7 +364,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetConvolutionParameter.xml"]{glGetConvolutionParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetConvolutionParameter.xml"]{glGetConvolutionParameter manpage}.
 }
 @defproc[(glGetConvolutionParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
@@ -391,7 +391,7 @@ Version 4.1.
 }
 @defproc[(glGetError) exact-integer?]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetError.xml"]{glGetError manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetError.xhtml"]{glGetError manpage}.
 }
 @defproc[(glGetFenceivNV (fence exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/fence.txt"]{@racket[GL_NV_fence]}.
@@ -416,12 +416,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/fog_function.txt
 @defproc[(glGetFragDataIndex (program exact-nonnegative-integer?) (name (or/c string? bytes?))) exact-integer?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetFragDataIndex.xml"]{glGetFragDataIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetFragDataIndex.xhtml"]{glGetFragDataIndex manpage}.
 }
 @defproc[(glGetFragDataLocation (program exact-nonnegative-integer?) (name (or/c string? bytes?))) exact-integer?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetFragDataLocation.xml"]{glGetFragDataLocation manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetFragDataLocation.xhtml"]{glGetFragDataLocation manpage}.
 }
 @defproc[(glGetFragDataLocationEXT (program exact-nonnegative-integer?) (name (or/c string? bytes?))) exact-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/gpu_shader4.txt"]{@racket[GL_EXT_gpu_shader4]}.
@@ -443,7 +443,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/fragment_lightin
 @defproc[(glGetFramebufferAttachmentParameteriv (target exact-integer?) (attachment exact-integer?) (pname exact-integer?)) s32vector?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetFramebufferAttachmentParameter.xml"]{glGetFramebufferAttachmentParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetFramebufferAttachmentParameter.xhtml"]{glGetFramebufferAttachmentParameter manpage}.
 }
 @defproc[(glGetFramebufferAttachmentParameterivEXT (target exact-integer?) (attachment exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -466,7 +466,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.tx
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetHistogram.xml"]{glGetHistogram manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetHistogram.xml"]{glGetHistogram manpage}.
 }
 @defproc[(glGetHistogramEXT (target exact-integer?) (reset boolean?) (format exact-integer?) (type exact-integer?) (the-values gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -475,7 +475,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetHistogramParameter.xml"]{glGetHistogramParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetHistogramParameter.xml"]{glGetHistogramParameter manpage}.
 }
 @defproc[(glGetHistogramParameterfvEXT (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -484,7 +484,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetHistogramParameter.xml"]{glGetHistogramParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetHistogramParameter.xml"]{glGetHistogramParameter manpage}.
 }
 @defproc[(glGetHistogramParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -544,12 +544,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_shader.txt
 @defproc[(glGetLightfv (light exact-integer?) (pname exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetLight.xml"]{glGetLight manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetLight.xml"]{glGetLight manpage}.
 }
 @defproc[(glGetLightiv (light exact-integer?) (pname exact-integer?)) s32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetLight.xml"]{glGetLight manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetLight.xml"]{glGetLight manpage}.
 }
 @defproc[(glGetListParameterfvSGIX (list exact-nonnegative-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIX/list_priority.txt"]{@racket[GL_SGIX_list_priority]}.
@@ -584,33 +584,33 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/evaluators.txt"]{@
 @defproc[(glGetMapdv (target exact-integer?) (query exact-integer?) (v f64vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMap.xml"]{glGetMap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetMap.xml"]{glGetMap manpage}.
 }
 @defproc[(glGetMapfv (target exact-integer?) (query exact-integer?) (v f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMap.xml"]{glGetMap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetMap.xml"]{glGetMap manpage}.
 }
 @defproc[(glGetMapiv (target exact-integer?) (query exact-integer?) (v s32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMap.xml"]{glGetMap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetMap.xml"]{glGetMap manpage}.
 }
 @defproc[(glGetMaterialfv (face exact-integer?) (pname exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMaterial.xml"]{glGetMaterial manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetMaterial.xml"]{glGetMaterial manpage}.
 }
 @defproc[(glGetMaterialiv (face exact-integer?) (pname exact-integer?)) s32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMaterial.xml"]{glGetMaterial manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetMaterial.xml"]{glGetMaterial manpage}.
 }
 @defproc[(glGetMinmax (target exact-integer?) (reset boolean?) (format exact-integer?) (type exact-integer?) (the-values gl-pointer?)) any]{
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMinmax.xml"]{glGetMinmax manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetMinmax.xml"]{glGetMinmax manpage}.
 }
 @defproc[(glGetMinmaxEXT (target exact-integer?) (reset boolean?) (format exact-integer?) (type exact-integer?) (the-values gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -619,7 +619,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMinmaxParameter.xml"]{glGetMinmaxParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetMinmaxParameter.xml"]{glGetMinmaxParameter manpage}.
 }
 @defproc[(glGetMinmaxParameterfvEXT (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -628,7 +628,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetMinmaxParameter.xml"]{glGetMinmaxParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetMinmaxParameter.xml"]{glGetMinmaxParameter manpage}.
 }
 @defproc[(glGetMinmaxParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/histogram.txt"]{@racket[GL_EXT_histogram]}.
@@ -672,7 +672,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glGetMultisamplefv (pname exact-integer?) (index exact-nonnegative-integer?)) f32vector?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetMultisample.xml"]{glGetMultisample manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetMultisample.xhtml"]{glGetMultisample manpage}.
 }
 @defproc[(glGetMultisamplefvNV (pname exact-integer?) (index exact-nonnegative-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/explicit_multisample.txt"]{@racket[GL_NV_explicit_multisample]}.
@@ -809,17 +809,17 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/AMD/performance_monit
 @defproc[(glGetPixelMapfv (map exact-integer?) (the-values f32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
 }
 @defproc[(glGetPixelMapuiv (map exact-integer?) (the-values u32vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
 }
 @defproc[(glGetPixelMapusv (map exact-integer?) (the-values u16vector?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetPixelMap.xml"]{glGetPixelMap manpage}.
 }
 @defproc[(glGetPixelTexGenParameterfvSGIS (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/pixel_texture.txt"]{@racket[GL_SGIS_pixel_texture]}.
@@ -839,7 +839,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/direct_state_acce
 @defproc[(glGetPointerv (pname exact-integer?)) gl-pointer?]{
 Version 1.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPointerv.xml"]{glGetPointerv manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetPointerv.xml"]{glGetPointerv manpage}.
 }
 @defproc[(glGetPointervEXT (pname exact-integer?)) gl-pointer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.
@@ -849,12 +849,12 @@ Alias of @racket[glGetPointerv].
 @defproc[(glGetPolygonStipple (mask bytes?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetPolygonStipple.xml"]{glGetPolygonStipple manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetPolygonStipple.xml"]{glGetPolygonStipple manpage}.
 }
 @defproc[(glGetProgramBinary (program exact-nonnegative-integer?) (bufSize exact-integer?) (binary gl-pointer?)) (values exact-integer? exact-integer?)]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramBinary.xml"]{glGetProgramBinary manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetProgramBinary.xhtml"]{glGetProgramBinary manpage}.
 }
 @defproc[(glGetProgramEnvParameterIivNV (target exact-integer?) (index exact-nonnegative-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_program4.txt"]{@racket[GL_NV_gpu_program4]}.
@@ -871,7 +871,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.tx
 @defproc[(glGetProgramInfoLog (program exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramInfoLog.xml"]{glGetProgramInfoLog manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetProgramInfoLog.xhtml"]{glGetProgramInfoLog manpage}.
 }
 @defproc[(glGetProgramInterfaceiv (program exact-nonnegative-integer?) (programInterface exact-integer?) (pname exact-integer?)) s32vector?]{
 Version 4.3.
@@ -903,12 +903,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 @defproc[(glGetProgramPipelineInfoLog (pipeline exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramPipelineInfoLog.xml"]{glGetProgramPipelineInfoLog manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetProgramPipelineInfoLog.xhtml"]{glGetProgramPipelineInfoLog manpage}.
 }
 @defproc[(glGetProgramPipelineiv (pipeline exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramPipeline.xml"]{glGetProgramPipeline manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetProgramPipeline.xhtml"]{glGetProgramPipeline manpage}.
 }
 @defproc[(glGetProgramResourceIndex (program exact-nonnegative-integer?) (programInterface exact-integer?) (name (or/c string? bytes?))) exact-nonnegative-integer?]{
 Version 4.3.
@@ -928,7 +928,7 @@ Version 4.3.
 @defproc[(glGetProgramStageiv (program exact-nonnegative-integer?) (shadertype exact-integer?) (pname exact-integer?)) exact-integer?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgramStage.xml"]{glGetProgramStage manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetProgramStage.xhtml"]{glGetProgramStage manpage}.
 }
 @defproc[(glGetProgramStringARB (target exact-integer?) (pname exact-integer?) (string gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -942,7 +942,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_program5.txt"]
 @defproc[(glGetProgramiv (program exact-nonnegative-integer?) (pname exact-integer?)) exact-integer?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetProgram.xml"]{glGetProgram manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetProgram.xhtml"]{glGetProgram manpage}.
 }
 @defproc[(glGetProgramivARB (target exact-integer?) (pname exact-integer?)) exact-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -953,7 +953,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 @defproc[(glGetQueryIndexediv (target exact-integer?) (index exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryIndexed.xml"]{glGetQueryIndexed manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetQueryIndexed.xhtml"]{glGetQueryIndexed manpage}.
 }
 @defproc[(glGetQueryObjecti64v (id exact-nonnegative-integer?) (pname exact-integer?)) s64vector?]{
 Version 1.2.
@@ -964,7 +964,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/timer_query.txt"]
 @defproc[(glGetQueryObjectiv (id exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObject.xml"]{glGetQueryObject manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetQueryObject.xhtml"]{glGetQueryObject manpage}.
 }
 @defproc[(glGetQueryObjectivARB (id exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
@@ -980,7 +980,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/timer_query.txt"]
 @defproc[(glGetQueryObjectuiv (id exact-nonnegative-integer?) (pname exact-integer?)) u32vector?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryObject.xml"]{glGetQueryObject manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetQueryObject.xhtml"]{glGetQueryObject manpage}.
 }
 @defproc[(glGetQueryObjectuivARB (id exact-nonnegative-integer?) (pname exact-integer?)) u32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
@@ -990,7 +990,7 @@ Alias of @racket[glGetQueryObjectuiv].
 @defproc[(glGetQueryiv (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Version 1.5.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetQueryiv.xml"]{glGetQueryiv manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetQueryiv.xhtml"]{glGetQueryiv manpage}.
 }
 @defproc[(glGetQueryivARB (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/occlusion_query.txt"]{@racket[GL_ARB_occlusion_query]}.
@@ -1000,7 +1000,7 @@ Alias of @racket[glGetQueryiv].
 @defproc[(glGetRenderbufferParameteriv (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetRenderbufferParameter.xml"]{glGetRenderbufferParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetRenderbufferParameter.xhtml"]{glGetRenderbufferParameter manpage}.
 }
 @defproc[(glGetRenderbufferParameterivEXT (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/framebuffer_object.txt"]{@racket[GL_EXT_framebuffer_object]}.
@@ -1016,18 +1016,18 @@ Version 1.2.
 @defproc[(glGetSamplerParameterfv (sampler exact-nonnegative-integer?) (pname exact-integer?)) f32vector?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameter.xml"]{glGetSamplerParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetSamplerParameter.xhtml"]{glGetSamplerParameter manpage}.
 }
 @defproc[(glGetSamplerParameteriv (sampler exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetSamplerParameter.xml"]{glGetSamplerParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetSamplerParameter.xhtml"]{glGetSamplerParameter manpage}.
 }
 @defproc[(glGetSeparableFilter (target exact-integer?) (format exact-integer?) (type exact-integer?) (row gl-pointer?) (column gl-pointer?) (span gl-pointer?)) any]{
 Version 1.2.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetSeparableFilter.xml"]{glGetSeparableFilter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetSeparableFilter.xml"]{glGetSeparableFilter manpage}.
 }
 @defproc[(glGetSeparableFilterEXT (target exact-integer?) (format exact-integer?) (type exact-integer?) (row gl-pointer?) (column gl-pointer?) (span gl-pointer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]{@racket[GL_EXT_convolution]}.
@@ -1035,17 +1035,17 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/convolution.txt"]
 @defproc[(glGetShaderInfoLog (shader exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderInfoLog.xml"]{glGetShaderInfoLog manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetShaderInfoLog.xhtml"]{glGetShaderInfoLog manpage}.
 }
 @defproc[(glGetShaderPrecisionFormat (shadertype exact-integer?) (precisiontype exact-integer?)) (values s32vector? exact-integer?)]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderPrecisionFormat.xml"]{glGetShaderPrecisionFormat manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetShaderPrecisionFormat.xhtml"]{glGetShaderPrecisionFormat manpage}.
 }
 @defproc[(glGetShaderSource (shader exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? bytes?)]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetShaderSource.xml"]{glGetShaderSource manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetShaderSource.xhtml"]{glGetShaderSource manpage}.
 }
 @defproc[(glGetShaderSourceARB (obj exact-nonnegative-integer?) (maxLength exact-integer?)) (values exact-integer? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.txt"]{@racket[GL_ARB_shader_objects]}.
@@ -1055,34 +1055,34 @@ Alias of @racket[glGetShaderSource].
 @defproc[(glGetShaderiv (shader exact-nonnegative-integer?) (pname exact-integer?)) exact-integer?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetShader.xml"]{glGetShader manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetShader.xhtml"]{glGetShader manpage}.
 }
 @defproc[(glGetSharpenTexFuncSGIS (target exact-integer?) (points f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/sharpen_texture.txt"]{@racket[GL_SGIS_sharpen_texture]}.
 }
 @defproc[(glGetString (name exact-integer?)) (or/c string? bytes?)]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetString.xml"]{glGetString manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetString.xhtml"]{glGetString manpage}.
 }
 @defproc[(glGetStringi (name exact-integer?) (index exact-nonnegative-integer?)) (or/c string? bytes?)]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetString.xml"]{glGetString manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetString.xhtml"]{glGetString manpage}.
 }
 @defproc[(glGetSubroutineIndex (program exact-nonnegative-integer?) (shadertype exact-integer?) (name (or/c string? bytes?))) exact-nonnegative-integer?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetSubroutineIndex.xml"]{glGetSubroutineIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetSubroutineIndex.xhtml"]{glGetSubroutineIndex manpage}.
 }
 @defproc[(glGetSubroutineUniformLocation (program exact-nonnegative-integer?) (shadertype exact-integer?) (name (or/c string? bytes?))) exact-integer?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetSubroutineUniformLocation.xml"]{glGetSubroutineUniformLocation manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetSubroutineUniformLocation.xhtml"]{glGetSubroutineUniformLocation manpage}.
 }
 @defproc[(glGetSynciv (sync GLsync?) (pname exact-integer?) (bufSize exact-integer?)) (values exact-integer? s32vector?)]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetSync.xml"]{glGetSync manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetSync.xhtml"]{glGetSync manpage}.
 }
 @defproc[(glGetTexBumpParameterfvATI (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/envmap_bumpmap.txt"]{@racket[GL_ATI_envmap_bumpmap]}.
@@ -1093,12 +1093,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/envmap_bumpmap.tx
 @defproc[(glGetTexEnvfv (target exact-integer?) (pname exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexEnv.xml"]{glGetTexEnv manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetTexEnv.xml"]{glGetTexEnv manpage}.
 }
 @defproc[(glGetTexEnviv (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexEnv.xml"]{glGetTexEnv manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetTexEnv.xml"]{glGetTexEnv manpage}.
 }
 @defproc[(glGetTexFilterFuncSGIS (target exact-integer?) (filter exact-integer?) (weights f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/texture_filter4.txt"]{@racket[GL_SGIS_texture_filter4]}.
@@ -1106,29 +1106,29 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/SGIS/texture_filter4.
 @defproc[(glGetTexGendv (coord exact-integer?) (pname exact-integer?)) f64vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
 }
 @defproc[(glGetTexGenfv (coord exact-integer?) (pname exact-integer?)) f32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
 }
 @defproc[(glGetTexGeniv (coord exact-integer?) (pname exact-integer?)) s32vector?]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glGetTexGen.xml"]{glGetTexGen manpage}.
 }
 @defproc[(glGetTexImage (target exact-integer?) (level exact-integer?) (format exact-integer?) (type exact-integer?) (pixels gl-pointer?)) any]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexImage.xml"]{glGetTexImage manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetTexImage.xhtml"]{glGetTexImage manpage}.
 }
 @defproc[(glGetTexLevelParameterfv (target exact-integer?) (level exact-integer?) (pname exact-integer?)) f32vector?]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexLevelParameter.xml"]{glGetTexLevelParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetTexLevelParameter.xhtml"]{glGetTexLevelParameter manpage}.
 }
 @defproc[(glGetTexLevelParameteriv (target exact-integer?) (level exact-integer?) (pname exact-integer?)) s32vector?]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexLevelParameter.xml"]{glGetTexLevelParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetTexLevelParameter.xhtml"]{glGetTexLevelParameter manpage}.
 }
 @defproc[(glGetTexParameterIiv (target exact-integer?) (pname exact-integer?)) s32vector?]{
 Version 3.0.
@@ -1151,11 +1151,11 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/APPLE/texture_range.t
 }
 @defproc[(glGetTexParameterfv (target exact-integer?) (pname exact-integer?)) f32vector?]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameter.xml"]{glGetTexParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetTexParameter.xhtml"]{glGetTexParameter manpage}.
 }
 @defproc[(glGetTexParameteriv (target exact-integer?) (pname exact-integer?)) s32vector?]{
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetTexParameter.xml"]{glGetTexParameter manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetTexParameter.xhtml"]{glGetTexParameter manpage}.
 }
 @defproc[(glGetTextureHandleNV (texture exact-nonnegative-integer?)) exact-nonnegative-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/NV/bindless_texture.txt"]{@racket[GL_NV_bindless_texture]}.
@@ -1190,7 +1190,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 @defproc[(glGetTransformFeedbackVarying (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetTransformFeedbackVarying.xml"]{glGetTransformFeedbackVarying manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetTransformFeedbackVarying.xhtml"]{glGetTransformFeedbackVarying manpage}.
 }
 @defproc[(glGetTransformFeedbackVaryingEXT (program exact-nonnegative-integer?) (index exact-nonnegative-integer?) (bufSize exact-integer?)) (values exact-integer? exact-integer? exact-integer? bytes?)]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/transform_feedback.txt"]{@racket[GL_EXT_transform_feedback]}.
@@ -1205,7 +1205,7 @@ Alias of @racket[glGetTransformFeedbackVarying].
 @defproc[(glGetUniformBlockIndex (program exact-nonnegative-integer?) (uniformBlockName (or/c string? bytes?))) exact-nonnegative-integer?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformBlockIndex.xml"]{glGetUniformBlockIndex manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetUniformBlockIndex.xhtml"]{glGetUniformBlockIndex manpage}.
 }
 @defproc[(glGetUniformBufferSizeEXT (program exact-nonnegative-integer?) (location exact-integer?)) exact-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/bindable_uniform.txt"]{@racket[GL_EXT_bindable_uniform]}.
@@ -1213,12 +1213,12 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/bindable_uniform.
 @defproc[(glGetUniformIndices (program exact-nonnegative-integer?) (uniformCount exact-integer?) (uniformNames (vectorof (or/c string? bytes?)))) u32vector?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformIndices.xml"]{glGetUniformIndices manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetUniformIndices.xhtml"]{glGetUniformIndices manpage}.
 }
 @defproc[(glGetUniformLocation (program exact-nonnegative-integer?) (name (or/c string? bytes?))) exact-integer?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformLocation.xml"]{glGetUniformLocation manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetUniformLocation.xhtml"]{glGetUniformLocation manpage}.
 }
 @defproc[(glGetUniformLocationARB (programObj exact-nonnegative-integer?) (name (or/c string? bytes?))) exact-integer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.txt"]{@racket[GL_ARB_shader_objects]}.
@@ -1231,17 +1231,17 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/bindable_uniform.
 @defproc[(glGetUniformSubroutineuiv (shadertype exact-integer?) (location exact-integer?)) exact-nonnegative-integer?]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniformSubroutine.xml"]{glGetUniformSubroutine manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetUniformSubroutine.xhtml"]{glGetUniformSubroutine manpage}.
 }
 @defproc[(glGetUniformdv (program exact-nonnegative-integer?) (location exact-integer?) (params f64vector?)) any]{
 Version 1.2.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniform.xml"]{glGetUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetUniform.xhtml"]{glGetUniform manpage}.
 }
 @defproc[(glGetUniformfv (program exact-nonnegative-integer?) (location exact-integer?) (params f32vector?)) any]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniform.xml"]{glGetUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetUniform.xhtml"]{glGetUniform manpage}.
 }
 @defproc[(glGetUniformfvARB (programObj exact-nonnegative-integer?) (location exact-integer?) (params f32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.txt"]{@racket[GL_ARB_shader_objects]}.
@@ -1254,7 +1254,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/gpu_shader5.txt"]{
 @defproc[(glGetUniformiv (program exact-nonnegative-integer?) (location exact-integer?) (params s32vector?)) any]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniform.xml"]{glGetUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetUniform.xhtml"]{glGetUniform manpage}.
 }
 @defproc[(glGetUniformivARB (programObj exact-nonnegative-integer?) (location exact-integer?) (params s32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/shader_objects.txt"]{@racket[GL_ARB_shader_objects]}.
@@ -1267,7 +1267,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/shader_buffer_load
 @defproc[(glGetUniformuiv (program exact-nonnegative-integer?) (location exact-integer?) (params u32vector?)) any]{
 Version 3.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetUniform.xml"]{glGetUniform manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetUniform.xhtml"]{glGetUniform manpage}.
 }
 @defproc[(glGetUniformuivEXT (program exact-nonnegative-integer?) (location exact-integer?) (params u32vector?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/gpu_shader4.txt"]{@racket[GL_EXT_gpu_shader4]}.
@@ -1332,7 +1332,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_attrib_inte
 @defproc[(glGetVertexAttribPointerv (index exact-nonnegative-integer?) (pname exact-integer?)) gl-pointer?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttribPointerv.xml"]{glGetVertexAttribPointerv manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetVertexAttribPointerv.xhtml"]{glGetVertexAttribPointerv manpage}.
 }
 @defproc[(glGetVertexAttribPointervARB (index exact-nonnegative-integer?) (pname exact-integer?)) gl-pointer?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -1347,7 +1347,7 @@ Alias of @racket[glGetVertexAttribPointerv].
 @defproc[(glGetVertexAttribdv (index exact-nonnegative-integer?) (pname exact-integer?)) f64vector?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttrib.xml"]{glGetVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetVertexAttrib.xhtml"]{glGetVertexAttrib manpage}.
 }
 @defproc[(glGetVertexAttribdvARB (index exact-nonnegative-integer?) (pname exact-integer?)) f64vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -1362,7 +1362,7 @@ Alias of @racket[glGetVertexAttribdv].
 @defproc[(glGetVertexAttribfv (index exact-nonnegative-integer?) (pname exact-integer?)) f32vector?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttrib.xml"]{glGetVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetVertexAttrib.xhtml"]{glGetVertexAttrib manpage}.
 }
 @defproc[(glGetVertexAttribfvARB (index exact-nonnegative-integer?) (pname exact-integer?)) f32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.
@@ -1377,7 +1377,7 @@ Alias of @racket[glGetVertexAttribfv].
 @defproc[(glGetVertexAttribiv (index exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glGetVertexAttrib.xml"]{glGetVertexAttrib manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glGetVertexAttrib.xhtml"]{glGetVertexAttrib manpage}.
 }
 @defproc[(glGetVertexAttribivARB (index exact-nonnegative-integer?) (pname exact-integer?)) s32vector?]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/vertex_program.txt"]{@racket[GL_ARB_vertex_program]}.

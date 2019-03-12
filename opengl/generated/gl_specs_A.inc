@@ -3,7 +3,7 @@
 @defproc[(glAccum (op exact-integer?) (value flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glAccum.xml"]{glAccum manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glAccum.xml"]{glAccum manpage}.
 }
 @defproc[(glActiveProgramEXT (program exact-nonnegative-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/separate_shader_objects.txt"]{@racket[GL_EXT_separate_shader_objects]}.
@@ -11,7 +11,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/separate_shader_o
 @defproc[(glActiveShaderProgram (pipeline exact-nonnegative-integer?) (program exact-nonnegative-integer?)) any]{
 Version 4.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glActiveShaderProgram.xml"]{glActiveShaderProgram manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glActiveShaderProgram.xhtml"]{glActiveShaderProgram manpage}.
 }
 @defproc[(glActiveStencilFaceEXT (face exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/stencil_two_side.txt"]{@racket[GL_EXT_stencil_two_side]}.
@@ -19,7 +19,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/stencil_two_side.
 @defproc[(glActiveTexture (texture exact-integer?)) any]{
 Version 1.3.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glActiveTexture.xml"]{glActiveTexture manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glActiveTexture.xhtml"]{glActiveTexture manpage}.
 }
 @defproc[(glActiveTextureARB (texture exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/ARB/multitexture.txt"]{@racket[GL_ARB_multitexture]}.
@@ -41,7 +41,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/ATI/fragment_shader.t
 @defproc[(glAlphaFunc (func exact-integer?) (ref flonum?)) any]{
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glAlphaFunc.xml"]{glAlphaFunc manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glAlphaFunc.xml"]{glAlphaFunc manpage}.
 }
 @defproc[(glApplyTextureEXT (mode exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/light_texture.txt"]{@racket[GL_EXT_light_texture]}.
@@ -53,7 +53,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/NV/vertex_program.txt
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glAreTexturesResident.xml"]{glAreTexturesResident manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glAreTexturesResident.xml"]{glAreTexturesResident manpage}.
 }
 @defproc[(glAreTexturesResidentEXT (n exact-integer?) (textures u32vector?)) (values boolean? (vectorof boolean?))]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.txt"]{@racket[GL_EXT_texture_object]}.
@@ -62,7 +62,7 @@ Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/texture_object.tx
 Version 1.1.
 Deprecated in version 3.1.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man2/xhtml/glArrayElement.xml"]{glArrayElement manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glArrayElement.xml"]{glArrayElement manpage}.
 }
 @defproc[(glArrayElementEXT (i exact-integer?)) any]{
 Extension @hyperlink["http://www.opengl.org/registry/specs/EXT/vertex_array.txt"]{@racket[GL_EXT_vertex_array]}.
@@ -83,5 +83,5 @@ Alias of @racket[glAttachShader].
 @defproc[(glAttachShader (program exact-nonnegative-integer?) (shader exact-nonnegative-integer?)) any]{
 Version 2.0.
 
-See the @hyperlink["http://www.opengl.org/sdk/docs/man4/xhtml/glAttachShader.xml"]{glAttachShader manpage}.
+See the @hyperlink["https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glAttachShader.xhtml"]{glAttachShader manpage}.
 }
